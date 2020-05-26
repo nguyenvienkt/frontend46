@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7 - Các tag cơ bản</title>
+</head>
+<body>
+    <h3>Thẻ a liên kết - anchor</h3>
+        <ul type="circle">
+            <li>Cú pháp</li>
+                <xmp>
+                    <a href="URL" target="">Linked content</a>
+                </xmp>
+            <li>Thuộc tính "target" của thẻ a</li>
+                <ul>
+                    <li>name: tải trang web vào frame có tên NAME</li>
+                    <li>_blank:tải trang web vào cửa sổ mới</li>
+                    <li>_parent:tải trang web vào cửa sổ cha của nó</li>
+                    <li>_sel:tải trang web vào cửa sổ hiện hành</li>
+                    <li>_top: tải trang web vào cửa sổ cao nhất</li>
+                </ul>
+            <li>Ví dụ</li>
+                <a href="#">Yahoo</a> 
+        </ul>
+    <p>Phân loại:</p>
+        <ul>
+            <li>Liên kết ngoại (external)</li>
+                <ul type="square">
+                    <li>
+                        <xmp>
+                            <a href="url"> External link</a>
+                        </xmp>
+                    </li>
+                </ul>
+            <li>Liên kết nội (internal)</li>
+                <ul>
+                    <li>Liên kết trong cùng một trang ví dụ:</li>
+                    <li>
+                        <xmp>
+                            <a name="TenViTri"> Vị trí bắt đầu</a>
+                            <a href="#TenViTri"> Text đại diện</a>
+                        </xmp>
+                    </li>
+                </ul>
+            <li>Liên kết email (email)</li>
+                <ul>
+                    <li>
+                        <xmp>
+                            <a href="mailto:emailAddress">Liên hệ Admin</a>
+                        </xmp>
+                    </li>
+                    <li><a href="mailto:email.com">Liên hệ Admin</a></li>
+                </ul>
+        </ul>
+        <!-- This is comment -->
+<h3> Thẻ liên kết trang </h3>
+    <p>- URL chia làm 2 loại</p>
+        <ul>
+            <li>Địa chỉ tuyệt đối so với mạng internet</li>
+            <li>Địa chỉ tương đối so với trang web hiện hành đang chứa liên kết</li>
+        </ul>
+    <p>- Một số ký hiệu đường dẫn đặc biệt</p>
+        <xmp>
+            /: Trở về thư mục gốc của website
+            ./: Thư mục hiện tại của trang web sử dụng link (mặc định)
+            ../: Quay ra thư mục cha / đi ngược lại 1 cấp thư mục
+        </xmp>
+        <table style="border:1px solid #000">
+            <thead style="background-color:aqua">
+                <tr>
+                    <td>Ký hiệu</td>
+                    <td>Ý nghĩa</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/</td>
+                    <td>Trở về thư mục gốc của website</td>
+                </tr>
+                <tr>
+                    <td>./</td>
+                    <td>Thư mục hiện tại của trang web sử dụng link (mặc định)</td>
+                </tr>
+                <tr>
+                    <td>../</td>
+                    <td>Quay ra thư mục cha / đi ngược lại 1 cấp thư mục</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+    
+    
+</body>
+</html>

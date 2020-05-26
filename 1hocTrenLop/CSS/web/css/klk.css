@@ -1,0 +1,17 @@
+.header img{
+  width:150px;
+}
+
+.navbar{
+  background-color: indigo;
+  padding:10px;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:600;
+  margin-right:20px;
+  font-size:16px;
+}

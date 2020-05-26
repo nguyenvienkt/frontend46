@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript - for</title>
+		<script>
+			/*
+			   function xetHocLucSinhVien(dtb) {
+				var thongBao = '';
+				switch (dtb) {
+					case 9:
+						thongBao = 'Học lực xuất sắc';
+						break;
+					case 8:
+						thongBao = 'Học lực giỏi';
+						break;
+					case 7:
+						thongBao = 'Học lực khá';
+						break;
+					case 6:
+						thongBao = 'Học lực trung bình';
+						break;
+					default:
+						thongBao = 'Chưa xét được học lực';
+				}
+				alert(thongBao);
+			   }
+			   */
+
+			/*
+			function xuatLoiChao() {
+				document.write('Xin Chào nhé <br>');
+				document.write('Xin Chào nhé <br>');
+				document.write('Xin Chào nhé <br>');
+				document.write('Xin Chào nhé <br>');
+				document.write('Xin Chào nhé <br>');
+				document.write('Xin Chào nhé <br>');
+			   }
+			   */
+
+			function xuatLoiChao() {
+				document.write('Xuất ra chỉ số lẻ <br>');
+				for (i = 1; i < 100; i++) {
+					// document.write('Hello nhé lần thứ ' + i + '<br>');
+
+					if (i % 2 != 0) {
+						document.write('Số lẻ thứ ' + i + '<br>');
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input
+			type="button"
+			value="Kiem Tra Hoc Luc"
+			onclick="xetHocLucSinhVien(8)"
+		/>
+		<input type="button" value="xuatLoiChao" onclick="xuatLoiChao()" />
+	</body>
+</html>

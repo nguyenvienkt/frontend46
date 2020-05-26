@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<h1>Script là gì</h1>
+		<ul>
+			<li>Client-side script</li>
+			<ul>
+				<li>
+					Script được thực thi tại Client-Side (trình duyệt): Thực hiện các
+					tương tác với người dùng ( tạo menu chuyển động...) kiểm tra nhập liệu
+				</li>
+			</ul>
+			<li>Server-Side Script</li>
+			<ul>
+				<li>
+					Script được xử lý tại Server-Side, nhằm tạo các trang web có khả năng
+					phát sinh nội dung động. Một số xử lý chính: Kết nối CSDL, truy cập hệ
+					thống file trên server, phát sinh nội dung html trả về người dùng...
+				</li>
+			</ul>
+		</ul>
+		<h2>JavaScript là gì</h2>
+		<p>Không phải là ngôn ngữ của Java</p>
+		<ul>
+			<li>
+				JavaScript là ngôn ngữ Client-side script hoạt động trên trình duyệt của
+				người dùng (client)
+			</li>
+			<li>
+				<strong>Chia sẻ xử lý</strong> trong ứng dụng web. Giảm các xử lý không
+				cần thiết trên server
+			</li>
+			<li>Giúp tạo các hiệu ứng tương tác cho trang web</li>
+		</ul>
+		<h3>Nhúng JavaScript vào trong HTML</h3>
+		<ul>
+			<li>
+				Nhúng vào trang web với tag script
+				<xmp>
+                    <script>//Lệnh Javascript</script>
+                </xmp>
+			</li>
+			<li>
+				Nhúng vào từ file bên ngoài
+				<xmp>
+                    <script src="main.js"></script>
+                </xmp>
+			</li>
+			<li>Web browser sẽ thực thi script theo thứ tự từ trên xuống dưới</li>
+			<li>
+				Đối với external source code JavaScript có thể đặt trong các file .js sẽ
+				được nhúng vào HTML trước khi hoạt động
+			</li>
+			<li>
+				các đoạn code JavaScript được browser xử lý cùng thứ tự với các thẻ
+				HTML. Trừ các hàm (function) chỉ được thực hiện khi có lời gọi hàm
+			</li>
+			<li>Chèn JavaScript trong thẻ body hoặc trong thẻ head đều được</li>
+			<ul>
+				<li>Nếu đặt giữa tag Head thì script sẽ thực hiện ngay khi mở web</li>
+				<li>
+					Nếu đặt giữa tab body thì script được thực thi khi trang web đang mở
+				</li>
+			</ul>
+			<li>Số lượng script đặt trong website không hạn chế</li>
+		</ul>
+	</body>
+</html>

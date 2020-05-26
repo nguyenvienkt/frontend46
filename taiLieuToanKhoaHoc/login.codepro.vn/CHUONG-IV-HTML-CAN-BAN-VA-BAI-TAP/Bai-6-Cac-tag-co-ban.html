@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 - Các tag cơ bản</title>
+</head>
+<body>
+    <ul>
+        <li>
+            < img >: Không có thẻ đóng
+        </li>
+        <li>
+           Các thuộc tính của thẻ <img>
+           <ul>
+               <li>src: Đường dẫn tới file ảnh</li>
+               <li>alt: Chú thích cho ảnh</li>
+               <li>border: Độ dày nét viền quanh ảnh</li>
+           </ul>
+        </li>
+        <li>Đặt ảnh nền cho trang web</li>
+            <ul>
+                <li>Sử dụng thẻ <body background='đường dẫn hình ảnh'> 
+                </li>
+            </ul>
+    </ul>
+
+    Các tag về danh sách <br>
+    ol (order list) và phần tử bên trong là li <br>
+    ul (unorder list) và phần tử bên trong là li <br>
+    dl (define list danh sách tự định nghĩa) phần tử bên trong là dt, di <br>
+    Danh sách lồng nhau <br>
+    dạng khác: < menu >, < dir >
+
+<h3>Thực hành</h3>
+<h4>Order list</h4>
+1. Number list
+<ol>
+    <li>apples</li>
+    <li>bananas</li>
+    <li>coconut</li>
+</ol>
+
+2. Letters list
+<ol type="a">
+    <li>apples</li>
+    <li>bananas</li>
+    <li>coconut</li>
+</ol>
+
+3. Roman number list
+<ol type="i">
+    <li>apples</li>
+    <li>bananas</li>
+    <li>coconut</li>
+</ol>
+
+4. Nested (lồng nhau)
+List danh sách là số bắt đầu từ 8, type = a
+<ol start="8" type="a">
+    <li>This is h, số thứ tự 8 tính từ a</li>
+    <li value="3">Value 3 is c</li>
+        <ol>
+            <li>List can be nested</li>
+                <ol>
+                    <li>Nested 1</li>
+                    <li>Nested 2</li>
+                </ol>
+        </ol>
+</ol>
+<h4>Unorder list</h4>
+<p>Disc bullet list, type="disc"</p>
+<ul>
+    <li>Mot</li>
+    <li>Hai</li>
+    <li>Ba</li>
+</ul>
+<p>Circle bullets list, type="cicle"</p>
+<ul type="circle">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+<p>Square bullets list, type="square"</p>
+<ul type="square">
+    <li>Yi</li>
+    <li>er</li>
+    <li>san</li>
+</ul>
+
+    
+    
+</body>
+</html>

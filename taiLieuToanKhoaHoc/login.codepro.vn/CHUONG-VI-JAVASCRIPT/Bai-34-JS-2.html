@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript - Đặt tên biến</title>
+	</head>
+	<body>
+		<h1>Biến số trong JavaScript</h1>
+		<ul>
+			<li>Cách đặt tên biến</li>
+			<ul>
+				<li>Bắt đầu bằng chữ cái hoặc dấu_</li>
+				<li>A...Z, a...z, 0...9,_: phân biệt HOA, thường</li>
+				<li>Ví dụ: var chuoiSo var ChuoiSo</li>
+			</ul>
+			<li>Khai báo biến</li>
+			<ul>
+				<li>Sử dụng từ khóa var</li>
+				<li>Ví dụ var count = 10, amount;</li>
+				<li>
+					Không cần khai báo biến trước khi sử dụng, biến thật sự tồn tại khi
+					bắt đầu sử dụng lần đầu tiên
+				</li>
+				<li>
+					Biến không cần khai báo kiểu dữ liệu vì biến trong JavaScript không có
+					kiểu dữ liệu nhất định
+				</li>
+			</ul>
+			<li>Kiểu dữ liệu</li>
+			<table border="1">
+				<tr bgcolor="cyan">
+					<th>Kiểu dữ liệu</th>
+					<th>Ví dụ</th>
+					<th>Mô tả</th>
+				</tr>
+				<tr>
+					<td>Object</td>
+					<td>var listBooks = new Array (10)</td>
+					<td>Trước khi sử dụng phải cấp phát bằng từ khóa new</td>
+				</tr>
+				<tr>
+					<td>String</td>
+					<td>"The cow jum.. "40"</td>
+					<td>Chứa được chuỗi unicode, chuỗi rỗng ""</td>
+				</tr>
+				<tr>
+					<td>Number</td>
+					<td>0.99000 or 12</td>
+					<td>Theo chuẩn IEEE 754</td>
+				</tr>
+				<tr>
+					<td>boolean</td>
+					<td>true/false</td>
+				</tr>
+				<tr>
+					<td>undefined</td>
+					<td>var myVariable</td>
+					<td>myVariable = undefined</td>
+				</tr>
+				<tr>
+					<td>null</td>
+					<td>connection.Close();</td>
+					<td>connection = null</td>
+				</tr>
+			</table>
+			<br />
+			<li>Đổi kiểu dữ liệu</li>
+			<ul>
+				<li>
+					Biến tự đổi kiểu dữ liệu khi giá trị mà nó lưu trữ thay đổi
+					<xmp
+> 				
+					Ví dụ: var x = 10; // x kiểu Number
+					x ="Hello world!"; // x kiểu String
+				</xmp
+					>
+				</li>
+				<li>Có thể cộng 2 biến khác kiểu dữ liệu</li>
+				<p>
+					Ví dụ
+					<xmp
+>
+					var x;
+					x = "12" + 34.5 // KQ x = "1234.5"
+				</xmp
+					>
+				</p>
+				<li>
+					Hàm parseInt(...), parseFloat(...): Đổi kiểu dữ liệu từ chuỗi sang số
+				</li>
+			</ul>
+			<li><strong>Hàm</strong> trong JavaScript</li>
+			<ul>
+				<li>
+					<p>
+						Là tập hợp các lệnh có dạng thức khai báo chung:
+						<xmp
+>
+							function Tên_hàm (thamso1, thamso2...) {
+								// lệnh của hàm 
+							}
+						</xmp
+						>
+					</p>
+				</li>
+				<li>Hàm có giá trị trả về</li>
+				<p>
+					Ví dụ
+					<xmp
+>
+						function Tên_hàm (thamso1, thamso2, ...) {
+							return (value);
+						}
+					</xmp
+					>
+				</p>
+			</ul>
+			<p>
+				Ví dụ hàm trong JavaScript
+				<xmp
+>
+					function Sum(x,y) {
+						tong = x + y;
+						return tong;
+					}
+				</xmp
+				>
+			</p>
+			<p>
+				Gọi hàm
+				<xmp
+>
+					var x = Sum(10,20);
+				</xmp
+				>
+			</p>
+			<p>
+				hiển thị xuất ra kết quả hàm
+				<xmp
+>
+					alert(x);
+				</xmp
+				>
+			</p>
+			<li>Khối lệnh bao trong dấu {}</li>
+			<li>Mỗi lệnh nên kết thúc bằng dấu ;</li>
+			<li>
+				Chú thích
+				<xmp
+>
+					// chú thích 1 dòng
+					/* chú thích
+					nhiều dòng
+					*/
+				</xmp
+				>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 8 - Các tag cơ bản</title>
+  </head>
+  <body>
+    <h1>Thẻ table</h1>
+    <xmp>
+        <table> Khởi tạo bảng
+        <tr> --> dòng
+        <th> --> tiêu đề
+        <td> --> dữ liệu trong ô
+    </xmp>
+       
+  </body>
+  <h2>Ví dụ</h2>
+  <xmp>
+      <table>
+          <tr>
+              <th>Tiêu đề 1</th>
+              <th>Mô tả</th>
+          </tr>
+          <!-- data của bảng -->
+          <tr>
+              <td>Một</td>
+              <td>Là số 1</td>
+          </tr>
+          <tr>
+              <td>Hai</td>
+              <td>Là số 2</td>
+          </tr>
+          <tr>
+              <td>Ba</td>
+              <td>Là số 3</td>
+          </tr>
+      </table>
+  </xmp>
+
+<table>
+    <tr>
+        <th>Tiêu đề 1</th>
+        <th>Mô tả</th>
+    </tr>
+    <!-- data của bảng -->
+    <tr>
+        <td>Một</td>
+        <td>Là số 1</td>
+    </tr>
+    <tr>
+        <td>Hai</td>
+        <td>Là số 2</td>
+    </tr>
+    <tr>
+        <td>Ba</td>
+        <td>Là số 3</td>
+    </tr>
+</table>
+
+<h3>Một số thuộc tính của thẻ</h3>
+<table border="1">
+    <tr >
+        <th>Thuộc tính</th>
+        <th>Ý nghĩa</th>
+    </tr>
+    <tr>
+        <td>colspan</td>
+        <td>Giãn merge cột cho ô</td>
+    </tr>
+    <tr>
+        <td>rowspan</td>
+        <td>Giãn merge dòng cho ô</td>
+
+    </tr>
+    <tr>
+        <td>background</td>
+        <td>Thiết lập ảnh nền cho bảng</td>
+    </tr>
+    <tr>
+        <td>bgcolor</td>
+        <td>Thiết lập màu nền cho bảng, ô</td>
+    </tr>
+    <tr>
+        <td>Align</td>
+        <td>canh lề dữ liệu theo chiều ngang (trái, phải, giữa, tự động--> left, right, center, justify) </td>
+    </tr>
+    <tr>
+        <td>Valign</td>
+        <td>Vị trí dữ liệu theo chiều dọc (trên, dưới, giữa, baseline --> top, middle, bottom, baseline)</td>
+    </tr>
+    <tr>
+        <td>Cellpadding</td>
+        <td>Quy định khoảng cách từ biên của ô đến nội dung</td>
+    </tr>
+    <tr>
+        <td>Cellspacing</td>
+        <td>Quy định khoảng cách giữa các ô với nhau</td>
+    </tr>
+</table>
+<h2>Ví dụ</h2>
+<xmp>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Tel</th>
+        </tr>
+        <tr>
+            <td>Bill Gate</td>
+            <td>09090090090</td>
+            <td>89789898999</td>
+        </tr>
+    </table>
+</xmp>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Tel</th>
+    </tr>
+    <tr>
+        <td>Bill Gate</td>
+        <td>09090090090</td>
+        <td>89789898999</td>
+    </tr>
+</table>
+
+<xmp>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th >Tel</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Bill Gate</td>
+            <td>09090090090</td>
+        </tr>
+        <tr>
+            <td>89789898999</td>
+        </tr>
+    </table>
+</xmp>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Tel</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Bill Gate</td>
+        <td>09090090090</td>
+    </tr>
+    <tr>
+        <td>89789898999</td>
+    </tr>
+</table>
+<h3>Kết hợp rowspan & colspan</h3>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>Tel</th>
+        <th>Country</th>
+        <th>Center</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Bill Gate</td>
+        <td>090809090900</td>
+        <td colspan="2" rowspan="3">Silicon valley - USA</td>
+    </tr>
+    <tr>
+        <td>898978989999</td>
+    </tr>
+    <tr>
+        <td>Steve Job</td>
+        <td>8997987987989</td>
+    </tr>
+</table>
+<h3>Thuộc tính background picture</h3>
+<table border="1" background="https://via.placeholder.com/150">
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Tel</th>
+    </tr>
+    <tr>
+        <td rowspan="2">BillGate</td>
+        <td>909090909</td>
+        <td>909090909</td>
+    </tr>
+    <tr>
+        <td>90909090</td>
+        
+    </tr>
+</table>
+
+<h3>Thuộc tính background color</h3>
+<table border="1" bgcolor="#f58c02">
+    <tr bgcolor="cyan">
+        <th>Name</th>
+        <th colspan="2">Tel</th>
+    </tr>
+    <tr>
+        <td rowspan="2">BillGate</td>
+        <td>909090909</td>
+        <td>909090909</td>
+    </tr>
+    <tr>
+        <td>90909090</td>
+        
+    </tr>
+</table>
+<h3>Thuộc tính cellspacing</h3>
+<table border="1" cellspacing="10">
+    <tr>
+        <th>Name</th>
+        <th>Tel</th>
+    </tr>
+    <tr>
+        <td>Bill Gate</td>
+        <td>90909090</td>
+    </tr>
+</table>
+<h3>Thuộc tính cellpadding</h3>
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Tel</th>
+    </tr>
+    <tr>
+        <td>Bill Gate</td>
+        <td>90909090</td>
+    </tr>
+</table>
+</html>

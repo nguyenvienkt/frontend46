@@ -1,0 +1,30 @@
+h1 {
+  background-color: red;
+  color: white;
+}
+
+.gioithieu {
+  background-color: red;
+  color: white;
+}
+
+.gioithieu h1 {
+  text-align: center;
+}
+
+.gioithieu p span {
+  color:#333;
+}
+
+.lichsu{
+  background-color:red;
+  color:white;
+}
+
+.lichsu h1 {
+  text-align: center;
+}
+
+.gianuoc h3 {
+  text-align:center;
+}

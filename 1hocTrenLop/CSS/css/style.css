@@ -1,0 +1,22 @@
+h1 {
+  background-color: aqua;
+  color:red
+}
+
+#texth2{
+  font-size:30px;
+  color:blue;
+}
+
+.texth2{
+  color:gray;
+  text-decoration:underline;
+}
+
+.container p{
+  background-color: gray;
+}
+
+.container p span{
+  background-color:yellow;
+}
