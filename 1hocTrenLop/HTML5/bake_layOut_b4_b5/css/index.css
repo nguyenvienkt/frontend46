@@ -1,0 +1,312 @@
+* {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-color: #4e2a83;
+	padding: 0 15%;
+	height: 60px; /* nên set header theo chiều cao*/
+	display: flex;
+	justify-content: space-between; /* chỉnh giá trị theo trục chính*/
+	align-items: center; /* chỉnh vị trí phần tử con theo trục phụ*/
+}
+
+/* gọi thẻ a con trực tiếp dấu nhọn > */
+.header > a {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.header__nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+
+.header__nav a:hover {
+	color: #ff0e82;
+}
+
+/* viết class active cùng cấp với thẻ a --> a.active
+ viết cách ra là thẻ con a .active
+ viết 
+*/
+.header__nav a.active {
+	color: #ff0e82;
+}
+
+.carousel {
+	background-image: url(../images/b3.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel p {
+	color: rgb(224, 220, 224);
+	padding: 25px 0;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+.carousel h1 {
+	color: #ffffff;
+	font-size: 50px;
+}
+
+.carousel button {
+	background-color: #ff0382;
+	border: 1px solid #ffffff;
+	padding: 10px 20px;
+	color: #ffffff;
+	font-weight: 600;
+	border-radius: 5px;
+}
+
+.carousel button:hover {
+	color: #ff0382;
+	background-color: #ffffff;
+	border: 1px solid #ff0382;
+}
+
+.intro {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-item: center;
+}
+
+.intro__item {
+	background-color: #4e2a83;
+	color: #ffffff;
+	text-align: center;
+}
+.intro__item img {
+	width: 100%;
+	display: block;
+}
+
+.intro__item--2 {
+	grid-column: 2 / span 2; /*n/span m --> n: vị trí hiện tại. m là số cột nó chiếm*/
+}
+
+.intro__item--4 {
+	grid-column: 1 / span 2; /*n/span m --> n: vị trí hiện tại. m là số cột nó chiếm*/
+}
+
+.intro__item--9 {
+	grid-column: 3 / span 2; /*n/span m --> n: vị trí hiện tại. m là số cột nó chiếm*/
+}
+
+.statistic {
+	display: flex;
+	padding: 30px 40px;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.statistic p {
+	padding: 20px 0;
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.statistic .statistic__number {
+	color: #6115d4;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.video {
+	padding: 20px 10%;
+}
+
+.video__content {
+	display: flex;
+	margin: 0 -10px;
+}
+
+.video__item {
+	width: 50%;
+	padding: 0 10px; /* Nhớ dùng box-sizing cho khỏi bị rớt xuống*/
+}
+
+.team {
+	background-color: #4e2a83;
+	padding: 40px 10%;
+	color: #ffffff;
+}
+
+.team h1 {
+	text-align: center;
+	padding: 30px;
+}
+
+.team__content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	/* grid-column-gap or grid-row-gap */
+}
+
+.team__item img {
+	width: 100%;
+}
+
+/*
+Lưu ý phải chỉnh div cha là position: relative, div con position absolute
+*/
+
+.team__item {
+	position: relative;
+}
+
+.team__item__detail {
+	background-color: #ff0382;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	z-index: 10; /* thuộc tính này chỉ đi chung với position. z-index càng cao thì càng đè*/
+}
+
+.team__item__info {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 30px;
+
+	/* visibility:hidden; */
+	opacity: 0;
+	/* display:none; --> không làm hiệu ứng được*/
+}
+
+.team__item__info p:first-child {
+	color: #ff0382;
+	font-size: 25px;
+}
+
+.team__item__info span {
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+.team__item__info p:nth-child(3) {
+	font-size: 17px;
+	line-height: 1.6;
+}
+
+.team__info__social i {
+	display: inline-block; /* phải dùng inline-block để chỉnh width x height vuông*/
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ffffff;
+	/*dùng text-align và line-height = width của icon thì icon sẽ nằm giữa*/
+	text-align: center;
+	line-height: 40px;
+}
+
+.team__info__social i:hover {
+	color: #ff0382;
+	border-color: #ff0382;
+	cursor: pointer;
+}
+
+.team__item:hover .team__item__info {
+	opacity: 1;
+}
+
+.team__item:hover .team__item__detail {
+	display: none;
+}
+
+.contact {
+	padding: 30px;
+}
+.contact h1 {
+	text-align: center;
+}
+
+.contact__form {
+	padding: 20px 10%;
+}
+
+.contact__form__group {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+
+.contact__form__control {
+	width: 50%;
+	padding: 10px;
+}
+
+.contact__form__group input {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	padding: 0 10px;
+	border: 1px solid #555555;
+	/* border-radius:5px; */
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	outline: none; /* khi đưa chuột vào, focus vào input*/
+}
+
+.contact__form__group input:focus {
+	border-color: #ff0382;
+}
+
+.contact__form__group input::placeholder {
+	color: #ff0382;
+}
+
+.contact__form textarea {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #555555;
+	/* border-radius:5px; */
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: auto;
+	outline: none; /* khi đưa chuột vào, focus vào input*/
+}
+
+.contact__form texarea:focus {
+	border-color: #ff0382;
+}
+
+.contact__form button {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	background-color: #ff0382;
+	font-weight: 600;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+}

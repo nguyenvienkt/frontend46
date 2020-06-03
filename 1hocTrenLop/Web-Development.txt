@@ -1,0 +1,21 @@
+1. Development --> coding... localhost
+2. Tagging --> upload source code to computer. Gắn domain test vào và team sẽ kiểm tra
+3. Production --> đưa web site lên máy tính thực và gắn domain chính thức
+------
+để link CDN thì file của mình phải để dưới file của CDN vì có thể trùng class. và mình bên dưới thì mình sẽ
+đè nó
+------
+semantic --> thẻ ngữ nghĩa, tăng khả năng google index, SEO
+------
+Quy tắc BEM khi đặt tên class
+__ là cha con: là 2 dấu gạch dưới
+-- là modify chỉnh sửa: 2 dấu gạch giữa. Nghĩa là khi khách hàng sửa màu mới thì thêm class mới vào.
+Ko nên chỉnh sửa trực tiếp class cũ
+
+-----
+chỉnh sửa CSS từ trên xuống dưới, từ ngoài vào trong
+
+---
+dùng flex
+---
+dùng grid-layout

@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clear {
+	clear: both;
+}
+/* #942828 */
+
+.wrapper {
+	width: 90%;
+	margin: auto;
+}
+h1 {
+	color: #313131;
+	font-size:30px;
+	font-weight:600;
+}
+
+p {
+	color: #6a6a6a;
+}
+
+.header {
+	padding-right:10%;
+}
+
+.header-left,
+.header-right {
+	float: left;
+	width: 50%;
+}
+
+.header-right {
+	text-align: right;
+}
+
+.nav {
+	padding: 20px 0px;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	display: flex;
+  justify-content: space-between;
+}
+.nav a {
+	text-decoration: none;
+	color: #6a6a6a;
+	text-transform: uppercase;
+	font-weight:600;
+	padding-bottom: 5px;
+	font-size:15px;
+}
+
+.nav .active{
+	border-bottom: 3px solid #942828;
+}
+
+.nav a:hover,
+a:focus {
+	border-bottom: 3px solid #942828;
+}
+
+.carousel {
+	background-image: url(../images/slider_1.png);
+	height: 450px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.intro {
+	text-align: center;
+	margin: 60px 0px;
+}
+.intro p {
+	padding: 10px 0;
+}
+
+.course {
+	text-align: center;
+	margin: 60px -10px;
+}
+
+.course-item {
+	float: left;
+	width: 25%;
+	text-align: left;
+	padding: 10px;
+}
+
+.course-item h2 {
+	font-size: 14px;
+	color: #942828;
+	padding: 10px 0 5px 0;
+}
+
+.course-item p {
+	font-size: 13px;
+	font-weight:600;
+}
+
+.news {
+	text-align: center;
+	margin: 60px -10px;
+	height: 450px;
+}
+
+.news-left,
+.news-right {
+	float: left;
+	width: 50%;
+}
+
+.news-item {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	
+}
+.news-item-content {
+	position: relative;
+	border-bottom: 3px solid #942828;
+}
+
+.item-50 {
+	width: 50%;
+}
+
+.news-item img {
+	width: 100%;
+	display: block; /*do hình là thẻ inline do đó phải cho hiện lại block*/
+}
+
+.text-box {
+	position: absolute;
+	background-color: #313131e3;
+	z-index: 2;
+	bottom: 0;
+	padding: 20px 0px;
+	width: 100%;
+}
+
+.text-box p {
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.right-text-box {
+	position: absolute;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 2;
+	bottom: 0;
+	left:0;
+	padding: 5px 0px;
+	width: 100%;
+}
+
+.top-padding {
+	padding-top: 0px;
+	margin-top:-3px;
+}
+
+.right-text-box p {
+	color: #ffffff;
+	font-weight: 600;
+}

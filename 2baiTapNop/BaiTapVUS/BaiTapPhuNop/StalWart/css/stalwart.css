@@ -1,0 +1,300 @@
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+.clear {
+  clear: both;
+}
+
+.header {
+  padding: 0 10px 0 40px;
+  background-color:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.header__logo{
+  position: relative;
+  top:15px;
+}
+
+
+.header h1 {
+  font-size: 55px;
+  color:#dc4312;
+  font-weight:500;
+}
+
+.header p{
+  font-size:15px;
+  color:#ffffff;
+  text-transform:uppercase;
+  padding-left:10px;
+}
+
+.header a {
+  text-decoration: none;
+  padding-right:20px;
+  color:#29c0ff;
+}
+
+.header .active{
+  color:#dc4312;
+}
+
+.carousel {
+  background-image:url(../img/banner2.jpg);
+  height:450px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top:-10px;
+}
+
+.carousel__text{
+  padding:200px 70px 0 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-end;
+  text-align:center;
+
+}
+
+.carousel__text h1 {
+  font-size:60px;
+  font-weight:500;
+  background-color:#f8f8f883;
+  color:#333;
+  margin:10px;
+}
+
+.carousel__text p {
+  font-size:18px;
+  font-weight:500;
+  background-color:#f8f8f883;
+  color:#333;
+  letter-spacing:10px;
+  margin:10px;
+}
+
+.about {
+  background-color:#29c0ff;
+  padding: 0 0 30px 30px;
+  color:#333333;
+}
+
+
+.about h1{
+  font-weight: 500;
+  background-color:#72afc8;
+  display:inline-block;
+  margin:20px 0;
+  font-weight:500;
+  color:#333333;
+}
+
+.about p {
+  color:#dad3e9;
+}
+
+.welcome{
+  text-align:center;
+  padding:10px 40px;
+}
+
+.welcome h1 {
+  font-weight:500;
+  font-size:45px;
+  padding:30px;
+}
+
+.welcome p{
+  color:#999999;
+}
+
+.welcome__content{
+  
+}
+
+.welcome__left, .welcome__right{
+ float:left;
+ width:50%;
+}
+
+.welcome__item{
+  float:left;
+  width:100%;
+}
+
+.welcome__item i {
+  color:#29c0ff;
+  font-size:20px;
+  padding-left:5px;
+}
+
+.welcome__item p:first-child {
+  font-size:30px;
+  color:#dc4312;
+  padding:20px 0;
+}
+
+.welcome__item__des {
+  color:#999999;
+  padding-left:28px;
+}
+.welcome__item img {
+  width:100%;
+  display:block;
+}
+
+
+.works h1 {
+  font-weight: 500;
+  margin: 30px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.works__left,.works__mid, .works__right{
+  float:left;
+  width:33%;
+}
+
+.works__item {
+  float:left;
+  width:100%;
+  padding:5px;
+}
+
+.works__item img {
+  width:100%;
+  display:block;
+}
+
+.succeed {
+  padding-top:60px;
+}
+
+.succeed h1 {
+  font-weight: 500;
+  margin: 30px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.succeed .succeed__left p {
+  color:#999999;
+  line-height: 25px;
+}
+
+.succeed__left .succeed__item p:first-child {
+  color:#333333;
+  font-size:25px;
+}
+
+.succeed__item i {
+  color:#29c0ff;
+}
+
+.suceed__item__order {
+  color:#29c0ff;
+  margin-right:30px;
+  font-weight: 700;
+}
+
+.succeed__right .succeed__item p {
+  color:#f8f8f8;
+  font-size:25px;
+  line-height:25px;
+  padding:20px;
+}
+
+
+.succeed__right {
+  background-image:url(../img/index-serives.jpg);
+  height:400px;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.succeed__left, .succeed__right{
+  float:left;
+  width:50%;
+}
+
+.succeed__item {
+  width:100%;
+  padding:30px;
+}
+
+.footer{
+  background-color: #242424;
+  margin-top:60px;
+  padding:30px 60px;
+  height:250px;
+}
+.footer__navigation,.footer__address,.footer__contact,.footer__copyright{
+  float:left;
+  width:25%;
+  color:#999999;
+  font-size:15px;
+}
+
+.footer__title{
+ font-size:22px;
+ color:#ffffff;
+ font-weight:600;
+}
+
+.footer__navigation a{
+  text-decoration: none;
+  color:#999999;
+  margin:5px 0;
+  float:left;
+  width:100%;
+}
+
+.footer__address p {
+  margin:5px 0;
+  float:left;
+  width:100%;
+}
+
+.footer__contact p{
+  margin:5px 0;
+  float:left;
+  width:100%;
+}
+
+.footer__contact__form {
+  
+}
+
+.footer__contact__form__left,.footer__contact__form__right {
+  padding:5px 0;
+  float:left;
+}
+
+.footer__contact__form__right{
+  background-color:#eb5424;
+  color:#ffffff;
+  padding:6px 13px;
+}
+
+.footer__copyright h1 {
+  color:#ffffff;
+  margin-left:0;
+  text-align:left;
+}
+
+.footer__copyright p {
+  padding:5px;
+}
+
+.footer__copyright span {
+  color:#eb5424;
+}
