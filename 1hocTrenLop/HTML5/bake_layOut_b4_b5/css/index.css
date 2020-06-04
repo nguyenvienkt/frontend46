@@ -5,6 +5,10 @@
 	padding: 0;
 }
 
+html{
+	scroll-behavior:smooth; /* cho chạy ngược lên trên trong back-to-top*/
+}
+
 .header {
 	background-color: #4e2a83;
 	padding: 0 15%;
@@ -70,6 +74,7 @@
 
 .carousel {
 	background-image: url(../images/b3.jpg);
+	background-attachment:fixed;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -123,7 +128,7 @@
 	flex-direction:column;
 	align-items: center;
 	justify-content: center;
-	padding:20px;
+	/* padding:20px; */
 	/* text-align:center; */
 }
 
@@ -512,4 +517,18 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 .animate--duration{
 	animation-duration:3s;
 	/* animation-iteration-count:infinite; */
+}
+
+.back-to-top {
+	display:block;
+	width:40px;
+	height:40px;
+	border: 2px solid #ff0382;
+	color:#ff0382;
+	border-radius:50%;
+	text-align: center;
+	line-height:40px;
+	position:fixed;
+	bottom:30px;
+	right:30px;
 }
