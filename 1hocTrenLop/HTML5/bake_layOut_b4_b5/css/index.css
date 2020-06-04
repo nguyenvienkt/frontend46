@@ -22,6 +22,10 @@
 	text-decoration: none;
 }
 
+.header__nav {
+	display:flex;
+}
+
 .header__nav a {
 	color: #ffffff;
 	text-decoration: none;
@@ -29,10 +33,31 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-right: 20px;
+	/* text-decoration:underline; */
+	/*dùng border bottom thì không làm hiệu ứng được*/
+	/* border-bottom:1px solid #ff0382;
+	padding-bottom:5px; */
 }
 
-.header__nav a:hover {
+.header__nav a::after{
+	content:"";
+	width:0%;
+	height:3px;
+	background:#ff0382; /*background dùng cho cả imgage và màu */
+	/* thẻ a là inline và after nằm trong thẻ a nên thể after là inline. */
+	display:block; /* sau đó phải sử dụng display:flex cho thẻ header__nav*/
+	margin-top:4px;
+}
+
+.header__nav a:hover,
+.header__nav a:active {
 	color: #ff0e82;
+	
+}
+
+.header__nav a:hover::after,
+.header__nav a:active::after { /* lấy after của thẻ a đang được hover*/
+	width:100%;
 }
 
 /* viết class active cùng cấp với thẻ a --> a.active
@@ -75,6 +100,7 @@
 	color: #ffffff;
 	font-weight: 600;
 	border-radius: 5px;
+	cursor:pointer;
 }
 
 .carousel button:hover {
@@ -86,14 +112,21 @@
 .intro {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	align-item: center;
+	
 }
 
 .intro__item {
-	background-color: #4e2a83;
+	/* background-color: #4e2a83; */
+	background-image:linear-gradient(to bottom right, purple, pink,#4e2a83);
 	color: #ffffff;
-	text-align: center;
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	padding:20px;
+	/* text-align:center; */
 }
+
 .intro__item img {
 	width: 100%;
 	display: block;
@@ -157,6 +190,16 @@
 	padding: 30px;
 }
 
+.team h1::before{
+	content:'The ';
+	color:#ffffff;
+}
+
+.team h1::after{
+	content: '!';
+	color:#ff0382;
+}
+
 .team__content {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -174,6 +217,9 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 
 .team__item {
 	position: relative;
+	box-shadow:10px 2px 10px rgba(0, 0, 0, 0.3);
+	/* x (theo chiều ngang, trái âm, phải dương) |y (theo chiều dọc, trên dương, dưới âm)| shadow | color | inset (đổ vào trong)*/
+	overflow:hidden;/* cái gì của nó mà nằm ngoài nó thì sẽ bị ẩn đi*/
 }
 
 .team__item__detail {
@@ -199,8 +245,20 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 	padding: 0 30px;
 
 	/* visibility:hidden; */
-	opacity: 0;
-	/* display:none; --> không làm hiệu ứng được*/
+	/* opacity: 0; */
+	/* display:none; --> không làm hiệu ứng được */
+
+
+		/* đặc tính transform với hàm translate () để di chuyển phần tử mà không phải dùng position
+	hàm translate() theo chiều x, y trục tọa độ */
+
+	transition-property: all; /* cái nào muốn thấy width, color..*/
+	transition-duration:300ms; /* hoặc 0.5s*/
+	transition-timing-function: linear; /* tốc độ vào, đều hay nhanh chậm*/
+	transition-delay:0s;
+
+
+
 }
 
 .team__item__info p:first-child {
@@ -226,6 +284,7 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 	/*dùng text-align và line-height = width của icon thì icon sẽ nằm giữa*/
 	text-align: center;
 	line-height: 40px;
+	transition: all 0.3s linear 0s;
 }
 
 .team__info__social i:hover {
@@ -233,10 +292,10 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 	border-color: #ff0382;
 	cursor: pointer;
 }
-
+/* 
 .team__item:hover .team__item__info {
 	opacity: 1;
-}
+} */
 
 .team__item:hover .team__item__detail {
 	display: none;
@@ -280,6 +339,22 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 	border-color: #ff0382;
 }
 
+.contact__form__group input::-webkit-input-placeholder {
+	color: #ff0382;
+}
+
+.contact__form__group input::-moz-placeholder {
+	color: #ff0382;
+}
+
+.contact__form__group input:-ms-input-placeholder {
+	color: #ff0382;
+}
+
+.contact__form__group input::-ms-input-placeholder {
+	color: #ff0382;
+}
+
 .contact__form__group input::placeholder {
 	color: #ff0382;
 }
@@ -309,4 +384,132 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 	font-size: 20px;
 	border: none;
 	border-radius: 5px;
+	cursor:pointer;
+}
+
+
+/* Hiệu ứng transition */
+.team__item--1 .team__item__info {
+	transform:translate(-100%,0); /* là kích thước của div con chính nó*/
+}
+
+.team__item--1:hover .team__item__info{
+	transform:translate(0,0)
+}
+
+.team__item--2 .team__item__info {
+	transform:scale(0,0) /*mở rông theo trục x, y*/
+}
+
+.team__item--2:hover .team__item__info{
+	transform:scale(1,1) /* khi rê chuột vào thì hiển thị kích thước ban đầu*/
+}
+
+.team__item--3 .team__item__info {
+	transform:scale(0,0) /*mở rông theo trục x, y*/
+}
+
+.team__item--3:hover .team__item__info{
+	transform:scale(1,1) rotate(360deg); /* khi rê chuột vào thì hiển thị kích thước ban đầu và xoay*/
+}
+
+.team__item--4 .team__item__info {
+	opacity:0;
+}
+
+.team__item--4:hover .team__item__info{
+	opacity:1;	
+}
+
+.demo-position {
+	width:80%;
+	height:400px;
+	position:relative;
+	margin:60px;
+}
+
+.demo-position__1 {
+	height:50%;
+	background:red;
+}
+
+.demo-position__2 {
+	height:50%;
+	background:blue;
+}
+
+.demo-position__item {
+	width:100px;
+	height:100px;
+	background:green;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+
+.demo-animation{
+	
+	width:80%;
+	height:400px;
+	background:cyan;
+	margin:60px auto;
+	position: relative;
+}
+
+.demo-animation__item {
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	background:green;
+	position: absolute;
+	top:0;
+	left:0;
+	animation-name:demo; /*tên mình đặt dưới*/
+	animation-duration:5s; /* tổng 100% thời gian là 5s*/
+	animation-timing-function:ease-in-out; /* kiểu chuyển động*/
+	animation-iteration-count:infinite;
+	animation-delay:0s;
+}
+
+@keyframes demo{
+	/* Toàn bộ thời gian thực hiện hiệu ứng là 100%, ví dụ này có 4 quãng đường trong 10s nên vì vậy sẽ có thời gian là 0% 25% 50% 75% 100%. 
+	tương ứng tổng 10s.
+	ban đầu tiên 0% 	  | --> position: top 0, left 0
+	2.5s tiếp theo 25%	| --> position: top 100%-100px, left 0
+	2.5s tiếp theo 50% | --> position: top (100%-100px), left (100%-100px);
+	2.5s tiếp theo 75% | --> position: top 0, left (100%-100px)
+	2.5s về ban đầu 	 | --> position: top 0, left 0 */
+	0%{
+	}
+	25%{
+		top:calc(100% - 100px);/* Tính toán với hàm calc*/
+		left:0;
+
+	}
+	50%{
+		top:calc(100% - 100px);
+		left:calc(100% - 100px);
+	}
+
+	65% {
+		top:50%;
+		left:50%;
+	}
+	75%{
+		top:0;
+		left:calc(100% - 100px)
+	}
+	100%{
+		top:0;
+		left:0
+	}
+
+}
+
+
+.animate--duration{
+	animation-duration:3s;
+	/* animation-iteration-count:infinite; */
 }
