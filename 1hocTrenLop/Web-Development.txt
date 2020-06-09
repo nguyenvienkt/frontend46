@@ -1,3 +1,5 @@
+https://trunghieudev0906.web.app/
+
 1. Development --> coding... localhost
 2. Tagging --> upload source code to computer. Gắn domain test vào và team sẽ kiểm tra
 3. Production --> đưa web site lên máy tính thực và gắn domain chính thức
