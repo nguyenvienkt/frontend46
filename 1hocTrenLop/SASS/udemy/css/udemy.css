@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* Mỗi trang html sẽ có 1 file scss định dạng*/
+/* Cài extension Live sass compiler
+Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
+/* chỉ build trên file SASS*/
+h1 {
+  color: gray;
+  background: cyan;
+  text-align: center;
+}
+/*# sourceMappingURL=udemy.css.map */

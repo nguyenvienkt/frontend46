@@ -1,0 +1,10 @@
+Vì sao ngày nay ít sử dụng CSS
+Vì lặp code rất nhiều
+Không tính toán được trong CSS
+--> Do đó dự án sử dụng SASS hoặc JSS (khi học reactjs)
+1. SASS là gì: là CSS processor là tiền xử lý CSS
+Code trên SASS theo cú pháp của SASS như một ngôn ngữ lập trình. 
+Sau khi viết xong SASS thì phải sử dụng tool để build SASS ra thành file CSS
+Sau đó sử dụng file CSS này gắn vào html để chạy.
+*.sass ( viết thụt đầu dòng)
+*.scss( viết mình sẽ sử dụng cái này cách viết dễ nắm bắt gần giống với cách viết css)

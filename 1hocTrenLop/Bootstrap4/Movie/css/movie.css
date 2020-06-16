@@ -1,5 +1,9 @@
 /* bootstrap included box-sizing:border-box */
 /* khi chỉnh sửa nên gọi class parent vào để sửa */
+
+body{
+  padding-right:0 !important;
+}
 .header {
 	position: absolute;
 	top: 0;
@@ -47,6 +51,27 @@
 .header .nav-item.active::after {
 	width: 100%;
 }
+
+.slider .carousel-item {
+  height:600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+}
+
+.slider .carousel-item--1 {
+ background-image: url(../images/hero-1.jpg);
+}
+.slider .carousel-item--2 {
+ background-image: url(../images/hero-2.jpg);
+}
+.slider .carousel-item--3 {
+ background-image: url(../images/hero-3.jpg);
+}
+.slider .carousel-item--4 {
+ background-image: url(../images/hero-2.jpg);
+}
+
 
 .slider .carousel-item {
 	position: relative;
@@ -239,4 +264,75 @@
 .showtimes .nav-link:hover{
   border-color:transparent;
   text-decoration:none;
+}
+
+/* MEDIA QUERIES */
+/* Breakpoint BOOTSTRAP là điểm chuyển giao từ các thiết bị với nhau
+Mobile < 576px col-
+Table < 768px --> col-sm
+Table 2 < 992px --> col-md
+Tablet 3 < 1200px --> col-lg
+PC >1200px --> col-xl
+*/
+
+/* PHẢI SẮP XẾP MÀN HÌNH TỪ LỚN XUỐNG NHỎ VÌ CSS SAU SẼ ĐÈ CSS TRƯỚC
+LUÔN LUÔN ĐỂ DƯỚI CÙNG FILE CSS ĐỂ MÀ ĐÈ GIAO DIỆN */
+@media screen and (max-width:1200px){
+  .header .nav-link {
+    font-size:15px;
+  }
+  .header .nav-item {
+    padding:5px 10px !important;/* vì px-3 bootstrap, do đó phải !important để đè lại*/
+  }
+}
+
+@media screen and (max-width:992px){
+
+.header .navbar-collapse {
+  background-color:rgba(255, 255, 255, 0.8)
+}
+  
+}
+
+@media screen and (max-width:768px){
+  
+.slider .carousel-caption >h1 {
+  font-size:40px;
+}
+
+.slider .carousel-caption > p:first-child {
+  font-size:18px;
+}
+
+.slider .carousel-caption > p:nth-child(3) {
+  font-size:16px;
+}
+
+}
+
+@media screen and (max-width:576px){
+.header .container >p {
+  font-size:12px;
+}
+.header .navbar-brand {
+  width:120px;
+}
+.header .navbar-brand img {
+  width:100%;
+}
+
+
+.slider .carousel-caption >h1 {
+  font-size:35px;
+}
+
+.slider .carousel-caption > p:first-child {
+  font-size:17px;
+}
+
+.slider .carousel-caption > p:nth-child(3) {
+  font-size:15px;
+}
+
+
 }

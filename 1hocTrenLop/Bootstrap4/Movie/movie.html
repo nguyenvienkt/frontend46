@@ -24,7 +24,7 @@
         <a class="navbar-brand p-0 m-0" href="#">
           <img src="./images/logo.svg" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,6 +34,7 @@
             <a class="nav-item px-3 nav-link text-white" href="#">WHAT'S ON</a>
             <a class="nav-item px-3 nav-link text-white" href="#">SHORTCODES</a>
             <a class="nav-item px-3 nav-link text-white" href="#">CONTACT</a>
+            <a class="nav-item px-3 nav-link text-white" data-toggle="modal" data-target="#signinModal">SIGN IN</a>
           </div>
         </div>
       </nav>
@@ -49,9 +50,9 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./images/hero-1.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block container text-left">
+        <div class="carousel-item active carousel-item--1">
+          <!-- <img src="./images/hero-1.jpg" class="d-block w-100" alt="..."> -->
+          <div class="carousel-caption d-md-block container text-left">
             <p class="text-warning font-weight-light">ACTION, ADVENTURE, FANTASY</p>
             <h1 class="display-4">End of the World: Part II</h1>
             <p class="lead">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
@@ -67,23 +68,20 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="./images/hero-2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-item carousel-item--2">         
+          <div class="carousel-caption d-md-block">
             <h5>Second slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="./images/hero-3.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-item carousel-item--3">          
+          <div class="carousel-caption d-md-block">
             <h5>Third slide label</h5>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="./images/hero-2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-item carousel-item--4">
+          <div class="carousel-caption d-md-block">
             <h5>Third slide label</h5>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
@@ -104,7 +102,7 @@
     <div class="container">
       <h1 class="display-1">NEW IN</h1>
       <div class="new-in__container row">
-        <div class="col-3">
+        <div class="col-6 col-sm-6 col-md-3">
           <div class="new-in__item">
             <div class="new-in__item__content">
               <img src="./images/movie-1.jpg" alt="">
@@ -127,7 +125,7 @@
             </p>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-sm-6 col-md-3">
           <div class="new-in__item">
             <div class="new-in__item__content">
               <img src="./images/movie-2.jpg" alt="">
@@ -148,7 +146,7 @@
             </p>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-sm-6 col-md-3">
           <div class="new-in__item">
             <div class="new-in__item__content">
               <img src="./images/movie-3.jpg" alt="">
@@ -169,7 +167,7 @@
             </p>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-6 col-sm-6 col-md-3">
           <div class="new-in__item">
             <div class="new-in__item__content">
               <img src="./images/movie-4.jpg" alt="">
@@ -266,7 +264,37 @@
 
 </section>
 
-
+<!-- Modal -->
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" class="form-group">
+          <label for="txtUsername">Username: </label> 
+          <input id ="txtUsername" type = "text" placeholder="username" class="form-control">
+        </form>
+        <form action="" class="form-group">
+          <label for="txtPassword">Password: </label> 
+          <input id ="txtPassword" type = "password" placeholder="password" class="form-control">
+        </form>     
+      <div class="form-group">
+        <input type="checkbox" id="txtSaveLogin"/>
+        <label for="txtSaveLogin">Remember me?</label>
+      </div>
+      <div class="text-center containter">
+        <button class="btn btn-success w-50">Login</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
