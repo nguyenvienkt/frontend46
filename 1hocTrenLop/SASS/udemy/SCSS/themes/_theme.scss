@@ -1,0 +1,55 @@
+/* lưu ý phải có dấu gạch dưới để SASS không build file theme.scss*/
+
+/* Mỗi trang html sẽ có 1 file scss định dạng*/
+/* Cài extension Live sass compiler
+Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
+
+/* chỉ build trên file SASS*/
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+*/
+
+// Tạo bộ theme cho website
+
+// CREATE THEME
+
+//-----COLORS BACKGROUND------
+$primary: #f7f8fa;
+$secondary: #0f7c90;
+$paper: #ffffff;
+$light: #fbfbf7;
+$darkGrey: #73726c; /* #686f7a;*/
+$grey:#989596;
+$lightGrey:#dcdacb;
+
+//-----COLORS TEXT------
+$textPrimary: #29303b;
+$textSecondary: #007791;
+$textWhite: #ffffff;
+$textGrey:#3c3b37; /*#505763;*/
+$textDarkGrey:#73726c; /* #686f7a;*/
+
+//-------FONT SIZE-------
+$body1: 10px;
+$body2: 12px;
+$subtitle: 14px;
+$h6: 16px;
+$h5: 18px;
+$h4: 20px;
+$h3: 30px;
+$h2: 40px;
+$h1: 44px;
+
+//------FONT WEIGHT--------
+$fwBold: 700;
+$fwMedium: 600;
+$fwRegular: 400;
+$fwLight: 300;
+
+//----------SPACING--------- Khoảng cách chuẩn base spacing
+$spacing: 10px;

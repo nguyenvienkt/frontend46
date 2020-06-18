@@ -1,0 +1,6 @@
+// Tạo function
+
+@function spacing($num){
+ @return $num * $spacing;
+}
+

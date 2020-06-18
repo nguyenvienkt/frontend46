@@ -3,9 +3,114 @@
 /* Cài extension Live sass compiler
 Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
 /* chỉ build trên file SASS*/
-h1 {
-  color: gray;
-  background: cyan;
-  text-align: center;
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+-- theme, mixin, functions, header, footer, items (sản phẩm)
+*/
+/* lưu ý phải có dấu gạch dưới để SASS không build file theme.scss*/
+/* Mỗi trang html sẽ có 1 file scss định dạng*/
+/* Cài extension Live sass compiler
+Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
+/* chỉ build trên file SASS*/
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+*/
+/* #686f7a;*/
+/*#505763;*/
+/* #686f7a;*/
+.header {
+  height: 70px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo img {
+  width: 130px;
+}
+
+.header span {
+  color: #3c3b37;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header__search {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0 20px;
+}
+
+.header__search input {
+  width: 100%;
+  border-radius: 200px;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #989596;
+  outline: none;
+  background: #fbfbf7;
+}
+
+.header__search i {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 17px;
+  color: #73726c;
+}
+
+.header__nav a {
+  color: #3c3b37;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 20px;
+}
+
+.header__nav a:hover {
+  color: #007791;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__btn-login {
+  background-color: #ffffff;
+  border: 1px solid #dcdacb;
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #007791;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header__btn-signup {
+  background-color: #0f7c90;
+  border: 1px solid #0f7c90;
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: #ffffff;
+  margin-left: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=udemy.css.map */

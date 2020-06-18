@@ -1,0 +1,15 @@
+
+// --------MIXIN--------------tránh lặp code
+// text, button, table, input --> nên tạo mixin sử dụng
+@mixin Text($color, $fs, $fw){
+  color:$color;
+  font-size:$fs;
+  font-weight:$fw;
+}
+
+@mixin Button ($bg,$bd,$bdRadius,$padding){
+  background-color:$bg;
+  border:$bd;
+  border-radius:$bdRadius;
+  padding:$padding;
+}

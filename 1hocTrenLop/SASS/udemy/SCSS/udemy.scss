@@ -3,9 +3,24 @@
 Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
 
 /* chỉ build trên file SASS*/
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+-- theme, mixin, functions, header, footer, items (sản phẩm)
+*/
 
-h1 {
-  color:gray;
-  background:cyan;
-  text-align:center;
-}
+// Tạo bộ theme cho website và import vào file này
+@import '../SCSS/themes/theme';
+
+// mixin phải import dưới theme vì có thể trong mixin hay sử dụng biến từ theme
+@import '../SCSS/helpers/mixin';
+
+//import function import dưới theme vì trong function có sử dụng biên của theme
+@import './helpers/function';
+
+// nên tách header và footer ra components riêng ra
+@import './components/header';
