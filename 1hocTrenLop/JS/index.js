@@ -331,3 +331,30 @@ function tatDen() {
 	// document.getElementById('bongden').src = './pic_bulboff.gif'
 	document.getElementById('bongden').setAttribute('src', './pic_bulboff.gif')
 }
+
+console.log(
+	`Bài 2 ===========================================================================`
+)
+
+console.log(`
+Bài 2: 2-Jul-2020
+Từ bài này chuyển qua var. Không dùng let nữa nha
+
+`)
+
+// Khai bào function kiểu 1
+// declaration function
+function calcSum(a, b) {
+	return a + b
+}
+
+var sum = calcSum(4, 2)
+
+console.log(sum)
+console.log(calcSum(2, 6))
+
+// Khai báo function kiểu 2 là expression function. tạo hàm đưa vào biến
+const calcSum1 = function (c, d) {
+	// hàm function() --> anomynus function
+	return c + d
+}
