@@ -3,6 +3,7 @@
 
 body{
   padding-right:0 !important;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .header {
 	position: absolute;
@@ -52,6 +53,8 @@ body{
 	width: 100%;
 }
 
+/* Carousel*/
+
 .slider .carousel-item {
   height:600px;
   background-repeat: no-repeat;
@@ -87,6 +90,22 @@ body{
 	left: 0;
 }
 
+.slider .carousel-indicators{
+  bottom:125px;
+  margin-left:9%;
+}
+
+.slider .carousel-indicators li {
+  width:11px;
+  height:11px;
+  background:transparent;
+  border: 1.5px solid #ffffff;
+  border-radius:50%;
+}
+.slider .carousel-indicators li:active {
+  background:#ffffff;
+}
+
 .slider .carousel-caption__trailer span {
 	display: inline-block;
 	width: 40px;
@@ -115,10 +134,6 @@ body{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.new-in {
-  padding:60px 0;
 }
 
 .new-in__container {
@@ -227,6 +242,23 @@ body{
   width:300%;
 }
 
+ .new-in__item__title {
+  text-align:center;
+}
+
+.new-in__item__title >p{
+  font-size:18px;
+  color:#4a4a4a;
+}
+
+
+.new-in__item__title >p:nth-child(2) {
+  color:#fbbd61;
+  font-size:14px;
+}
+
+/* show time */
+
 .showtimes .nav-link{
   color:#4a4a4a;
   font-weight:500;
@@ -265,6 +297,250 @@ body{
   border-color:transparent;
   text-decoration:none;
 }
+
+.showtimes-item {
+  border-bottom: solid 1px #d8d8d8;
+}
+
+.showtimes-item img {
+  border-radius:20px;
+}
+
+.showtime-item__detail >p:first-child {
+  color:#ec7532;
+}
+
+
+.showtime-item__detail > p:nth-child(2){
+  font-size:25px;
+  
+}
+
+.showtime-item__detail a {
+  color: #ec7532;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size:14px;
+}
+
+.showtime-item__detail a:hover{
+  color:#101010;
+}
+
+
+.showtime-item__detail i, .showtime-item__detail span{
+  font-size:14px;
+}
+
+.showtimes--item_time__left >p, 
+.showtimes--item_time__right >p{
+  font-size:14px;
+}
+
+.showtimes--item_time__right span{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  line-height:35px;
+  text-align:center; 
+}
+
+/* COMING SOON  */
+
+.coming{
+  background:#000000;
+}
+
+.coming__bg{
+  padding:80px 0;
+  background-image:url(../images/slide-3.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.coming__bg .container >h1 {
+   color: #ffffff;
+  font-size:22px;
+  position: relative;
+  padding:10px 0;
+  margin-bottom:40px;
+  border-bottom:1px solid #333;
+}
+
+.coming__bg .container >h1::after{
+   content:'';
+  background: linear-gradient(to right, #fbbd61, #ec7532);
+  display:block;
+  bottom:0;
+  left:0;
+  position: absolute;
+  height:3px;
+  width:150px;
+}
+
+.coming__detail span {
+  font-size: 14px;
+  color:#ec7532;
+}
+
+.coming__detail .fa-star {
+  color:#fbbd61;
+  font-size:13px;
+}
+
+.coming__date {
+  opacity:0.8;
+  margin-left:10px;
+  font-size:14px;
+}
+
+.coming__detail a{
+  color:#ec7532;
+  letter-spacing:3px;
+  text-decoration:none;
+}
+
+
+.coming__trailer {
+  position: relative;
+}
+
+.coming__trailer i{
+  width:84px;
+  height:84px;
+  display:block;
+  border: 2px solid #ec7532;
+  border-radius:50%;
+  color:#ffffff;
+  text-align:center;
+  line-height:84px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.coming__trailer i:hover{
+  transition:all 0.4s;
+  cursor: pointer;
+}
+
+.coming__list__item {
+  position: relative;
+}
+
+.coming__list__item span{
+  opacity:0.5;
+  display:block;
+}
+.coming__list__item:hover .coming__list__overlay {
+  opacity:0.1;
+}
+
+.coming__list__overlay {
+  position: absolute;
+  opacity:0.5;
+  transition:all 0.4s;
+  height:100%;
+  width:100%;
+  background:#000000;
+  top:0;
+  left:0;
+  z-index:10;
+  cursor:pointer;
+}
+
+.coming__list .container img {
+  width:100%;
+  display:block;
+  border-radius: 20px;;
+}
+
+
+
+.cta .container p {
+  font-size:22px;
+}
+
+.cta .container span {
+  color:#fbbd61;
+  display:block;
+}
+
+footer {
+    padding: 75px 0 0;
+    color: #fff;
+    background: #101010;
+}
+
+
+.footer-1 p {
+  color:#ec7532;
+  font-size:24px;
+  text-transform: uppercase;
+}
+
+.footer-1 a {
+  color:#ffffff;
+  text-decoration:none;
+  display:block;
+  margin:10px 0;
+}
+
+.footer-1 a:hover {
+  color:#fbbd61;
+}
+
+.footer-1 i {
+  opacity:0.5;
+  width:30px;
+}
+
+
+
+
+.footer-2 {
+  border-top:1px solid #333;
+  padding:20px 0;
+  margin-top:50px;
+}
+
+.footer-2 p {
+  padding:0;
+  margin:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* MEDIA QUERIES */
 /* Breakpoint BOOTSTRAP là điểm chuyển giao từ các thiết bị với nhau

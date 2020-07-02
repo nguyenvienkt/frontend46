@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
@@ -43,12 +46,14 @@
 
   <section class="slider">
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-      </ol>
+      <div class="container">
+        <ol class="carousel-indicators justify-content-start">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+      </div>
       <div class="carousel-inner">
         <div class="carousel-item active carousel-item--1">
           <!-- <img src="./images/hero-1.jpg" class="d-block w-100" alt="..."> -->
@@ -69,22 +74,55 @@
           </div>
         </div>
         <div class="carousel-item carousel-item--2">         
-          <div class="carousel-caption d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+              <div class="carousel-caption d-md-block container text-left">
+                <p class="text-warning font-weight-light">ACTION, ADVENTURE, FANTASY</p>
+                <h1 class="display-4">End of the World: Part II</h1>
+                <p class="lead">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                  est notare
+                  quam littera
+                  gothica, quam nunc putamus parum.</p>
+                <div class="carousel-caption__trailer d-flex justify-content-start align-items-center">
+                  <span>15</span>
+                  <button>
+                    <i class="fa fa-play"></i>
+                    PLAY TRAILER
+                  </button>
+                </div>
+              </div>
         </div>
         <div class="carousel-item carousel-item--3">          
-          <div class="carousel-caption d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
+              <div class="carousel-caption d-md-block container text-left">
+                <p class="text-warning font-weight-light">ACTION, ADVENTURE, FANTASY</p>
+                <h1 class="display-4">End of the World: Part II</h1>
+                <p class="lead">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                  est notare
+                  quam littera
+                  gothica, quam nunc putamus parum.</p>
+                <div class="carousel-caption__trailer d-flex justify-content-start align-items-center">
+                  <span>18</span>
+                  <button>
+                    <i class="fa fa-play"></i>
+                    PLAY TRAILER
+                  </button>
+                </div>
+              </div>
         </div>
         <div class="carousel-item carousel-item--4">
-          <div class="carousel-caption d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </div>
+              <div class="carousel-caption d-md-block container text-left">
+                <p class="text-warning font-weight-light">ACTION, ADVENTURE, FANTASY</p>
+                <h1 class="display-4">End of the World: Part II</h1>
+                <p class="lead">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                  est notare
+                  quam littera
+                  gothica, quam nunc putamus parum.</p>
+                <div class="carousel-caption__trailer d-flex justify-content-start align-items-center">
+                  <span>12</span>
+                  <button>
+                    <i class="fa fa-play"></i>
+                    PLAY TRAILER
+                  </button>
+                </div>
+              </div>
         </div>
       </div>
 
@@ -115,14 +153,16 @@
               </div>
               <div class="new-in__item__overlay"></div>
             </div>
-            <p>The Last post</p>
-            <p>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </p>
+            <div class="new-in__item__title my-4">
+              <p>The Last post</p>
+              <p>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-3">
@@ -136,14 +176,16 @@
               </div>
               <div class="new-in__item__overlay"></div>
             </div>
-            <p>Captain America</p>
-            <p>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </p>
+            <div class="new-in__item__title my-4">
+              <p>Captain America</p>
+              <p>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-3">
@@ -157,14 +199,16 @@
               </div>
               <div class="new-in__item__overlay"></div>
             </div>
-            <p>Star Wars</p>
-            <p>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </p>
+            <div class="new-in__item__title my-4">
+              <p>Star Wars</p>
+              <p>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-6 col-sm-6 col-md-3">
@@ -178,14 +222,16 @@
               </div>
               <div class="new-in__item__overlay"></div>
             </div>
-            <p>Dragon Ball</p>
-            <p>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </p>
+            <div class="new-in__item__title my-4">
+              <p>Dragon Ball</p>
+              <p>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -227,42 +273,929 @@
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="mon" role="tabpanel" aria-labelledby="home-tab">
-      <div class="showtimes-item d-flex">
-        <img src="./images/movie-5.jpg" alt="">
-        <div class="showtime-item__detail">
+
+      <div class="showtimes-item row d-flex py-4">
+        <div class="col-2 ">
+          <img src="./images/movie-5.jpg" class="img-fluid">
+        </div>
+        <div class="showtime-item__detail col-10">
           <p>ACTION, ADVENTURE, FANTASY</p>
-          <p>It's over</p>
+          <p class="display-1">It's over</p>
           <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde of montrouse createure</p>
-          <a href="#">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
-          <div class="showtimes--item__detail__time d-flex align-items-center">
+          <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+          <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
             <div class="showtimes--item_time__left">
-            <p><i class="fa fa-clock"></i> VIEW TIMES
-            <button class="btn btn-light" disabled >11:00</button>
-            <button class="btn btn-light">16:00</button>
-            <button class="btn btn-light">18:00</button>
-            <button class="btn btn-light">21:00</button>
+            <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+            <button class="btn btn-light mr-2" disabled >11:00</button>
+            <button class="btn btn-light mr-2">16:00</button>
+            <button class="btn btn-light mr-2">18:00</button>
+            <button class="btn btn-light mr-2">21:00</button>
             </p>
             </div>
             <div class="showtimes--item_time__right">
-              <p>120 MINS <span>PG</span></p>
+              <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
             </div>
           </div>
         </div>
-      </div>  
+      </div> 
+      <div class="showtimes-item row d-flex py-4">
+        <div class="col-2 ">
+          <img src="./images/movie-11.jpg" class="img-fluid">
+        </div>
+        <div class="showtime-item__detail col-10">
+          <p>ACTION, ADVENTURE, SCI-FI</p>
+          <p class="display-1">Captain America: The First Avenger</p>
+          <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+          serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+          organization.</p>
+          <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+          <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+            <div class="showtimes--item_time__left">
+              <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                <button class="btn btn-light mr-2" disabled>11:00</button>
+                <button class="btn btn-light mr-2">16:00</button>
+                <button class="btn btn-light mr-2">18:00</button>
+                <button class="btn btn-light mr-2">21:00</button>
+              </p>
+            </div>
+            <div class="showtimes--item_time__right">
+              <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showtimes-item row d-flex py-4">
+        <div class="col-2 ">
+          <img src="./images/movie-12.jpg" class="img-fluid">
+        </div>
+        <div class="showtime-item__detail col-10">
+          <p>DRAMA</p>
+          <p class="display-1">Fences</p>
+          <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the events of
+          his life.</p>
+          <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+          <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+            <div class="showtimes--item_time__left">
+              <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                <button class="btn btn-light mr-2" disabled>11:00</button>
+                <button class="btn btn-light mr-2">16:00</button>
+                <button class="btn btn-light mr-2">18:00</button>
+                <button class="btn btn-light mr-2">21:00</button>
+              </p>
+            </div>
+            <div class="showtimes--item_time__right">
+              <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showtimes-item row d-flex py-4">
+        <div class="col-2 ">
+          <img src="./images/movie-13.jpg" class="img-fluid">
+        </div>
+        <div class="showtime-item__detail col-10">
+          <p>DRAMA</p>
+          <p class="display-1">Daylight</p>
+          <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+          neighborhood of Miami.</p>
+          <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+          <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+            <div class="showtimes--item_time__left">
+              <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                <button class="btn btn-light mr-2" disabled>11:00</button>
+                <button class="btn btn-light mr-2">16:00</button>
+                <button class="btn btn-light mr-2">18:00</button>
+                <button class="btn btn-light mr-2">21:00</button>
+              </p>
+            </div>
+            <div class="showtimes--item_time__right">
+              <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
       
       
       </div>
-      <div class="tab-pane fade" id="tue" role="tabpanel" aria-labelledby="profile-tab">tue</div>
-      <div class="tab-pane fade" id="wed" role="tabpanel" aria-labelledby="contact-tab">wed</div>
-      <div class="tab-pane fade" id="thu" role="tabpanel" aria-labelledby="contact-tab">thu</div>
-      <div class="tab-pane fade" id="fri" role="tabpanel" aria-labelledby="contact-tab">fri</div>
-      <div class="tab-pane fade" id="sat" role="tabpanel" aria-labelledby="contact-tab">sat</div>
-      <div class="tab-pane fade" id="sun" role="tabpanel" aria-labelledby="contact-tab">sun</div>
+      <div class="tab-pane fade" id="tue" role="tabpanel" aria-labelledby="profile-tab">
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="tab-pane fade" id="wed" role="tabpanel" aria-labelledby="contact-tab">
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ADVENTURE, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-pane fade" id="thu" role="tabpanel" aria-labelledby="contact-tab">
+
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-9.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="tab-pane fade" id="fri" role="tabpanel" aria-labelledby="contact-tab">
+
+
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-5.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sat" role="tabpanel" aria-labelledby="contact-tab">
+
+
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-14.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="sun" role="tabpanel" aria-labelledby="contact-tab">
+
+
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-5.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, FANTASY</p>
+            <p class="display-1">It's over</p>
+            <p>European meverariese charching for balck powder becom emborided the defence os it's over of China agaise a horde
+              of montrouse createure</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-11.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>ACTION, ADVENTURE, SCI-FI</p>
+            <p class="display-1">Captain America: The First Avenger</p>
+            <p>Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier
+              serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist
+              organization.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">18</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-12.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Fences</p>
+            <p>A working-class African-American father tries to raise his family in the 1950s, while coming to terms with the
+              events of
+              his life.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">12</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="showtimes-item row d-flex py-4">
+          <div class="col-2 ">
+            <img src="./images/movie-13.jpg" class="img-fluid">
+          </div>
+          <div class="showtime-item__detail col-10">
+            <p>DRAMA</p>
+            <p class="display-1">Daylight</p>
+            <p>A chronicle of the childhood, adolescence and burgeoning adulthood of a young black man growing up in a rough
+              neighborhood of Miami.</p>
+            <a href="#" class="d-block mb-4">FULL SYNOPSIS <i class="fa fa-chevron-right"></i></a>
+            <div class="showtimes--item__detail__time d-flex align-items-center justify-content-between">
+              <div class="showtimes--item_time__left">
+                <p><i class="fa fa-clock mr-2"></i> VIEWING TIMES
+                  <button class="btn btn-light mr-2" disabled>11:00</button>
+                  <button class="btn btn-light mr-2">16:00</button>
+                  <button class="btn btn-light mr-2">18:00</button>
+                  <button class="btn btn-light mr-2">21:00</button>
+                </p>
+              </div>
+              <div class="showtimes--item_time__right">
+                <p>120 MINS <span class="d-inline-block bg-dark text-white font-weight-bold ml-2">PG</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 
 </section>
+
+<!-- COMMING SOON  -->
+<section class="coming">
+  <div class="coming__bg">
+    <div class="container">
+      <h1>COMING SOON</h1>
+      <div class="row">
+        <div class="col-6 d-flex align-items-center">
+          <div class="coming__detail text-white">
+            <span>COMEDY, CRIME</span>
+            <h1 class="display-4">The Hangover, Part III</h1>
+            <p>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span class="coming__date text-white">
+                <i class="fa fa-calendar"> 30 September, 2017</i>
+              </span>
+            </p>
+            <p>
+              A dramatization of the April 2010 disaster, when the offshore drilling rig Deepwater Horizon exploded and created the
+              worst oil spill in U.S. history.
+            </p>
+            <a href="#">MORE INFO <i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="coming__trailer">
+            <img src="./images/slide-3-video.png" >
+            <i class="fa fa-play"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="coming__list my-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-6.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-7.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-8.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-9.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-11.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+        <div class="col-2 coming__list__item">
+          <img src="./images/movie-6.jpg" class="img-fluid" alt="">
+          <p class="text-center text-white my-4">Deepwater horizon
+            <span>07 September, 2017</span>
+          </p>
+          <div class="coming__list__overlay"></div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="cta my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="display-4">
+          Need help? Contact our support team on
+          <span class="display-4">
+            0330 123 4567
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-1">
+      <div class="row">
+        <div class="col-3">
+          <p>
+            Get in touch
+          </p>
+          <a href="#">FAQs</a>
+          <a href="#">Give us feedback</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="col-3">
+          <p>
+            ABOUT MOVIE STAR
+          </p>
+          <a href="#">FAQs</a>
+          <a href="#">Give us feedback</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="col-3">
+          <p>
+            LEGAL STUFF
+          </p>
+          <a href="#">FAQs</a>
+          <a href="#">Give us feedback</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div class="col-3">
+          <p>
+            CONNECT WITH US
+          </p>
+          <div>
+            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="#"> <i class="fab fa-twitter"></i>Tiwiter</a>
+            <a href="#"> <i class="fab fa-google-plus-g"></i>Google Plus</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer-2">
+      <p>
+        2017 © Movie Star / Web design by Klever media
+      </p>
+    </div>
+  </div>
+</footer>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
