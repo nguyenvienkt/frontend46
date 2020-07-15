@@ -1,0 +1,95 @@
+/* Mỗi trang html sẽ có 1 file scss định dạng*/
+/* Cài extension Live sass compiler
+Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
+
+/* chỉ build trên file SASS*/
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+-- theme, mixin, functions, header, footer, items (sản phẩm)
+*/
+
+// Tạo bộ theme cho website và import vào file này
+@import '../SCSS/themes/theme';
+
+// mixin phải import dưới theme vì có thể trong mixin hay sử dụng biến từ theme
+@import '../SCSS/helpers/mixin';
+
+//import function import dưới theme vì trong function có sử dụng biên của theme
+@import './helpers/function';
+
+// nên tách header và footer ra components riêng ra
+@import './components/header';
+
+//import footer dưới đây nữa
+
+
+
+
+
+// CAROUSEL
+
+.carousel {
+  background-image: url(../img/cover.jpg);
+  height: 500px;
+  background-position:center center;
+  background-size: cover;
+  // position: relative;
+
+  &__schedule {
+    position: absolute;
+    top:50%;
+    // left:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.08);
+    background-color:#ffffff;
+    padding:spacing(2.4);
+
+    h2 {
+      color:$textGrey;
+      font-size:$h2;
+      line-height: $h2Lh;
+      font-weight: $fwBold;
+      letter-spacing:spacing(0.1);
+  }
+    span {
+      font-size:$subtitle19;
+      display:block;
+      font-weight:$fwRegular;
+      letter-spacing:spacing(0.1);
+      
+    }
+
+    input {
+      padding:spacing(1.6);
+      
+    }
+
+    i {
+      position: absolute;
+      bottom:44px;
+      right:40px;
+      color:$textLightGrey;
+    }
+
+    i:hover{
+      cursor: pointer;
+    }
+
+}
+
+
+//responsive
+
+
+
+
+
+}

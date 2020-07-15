@@ -1,0 +1,6 @@
+// Tạo function ví dụ function tính toán spacing
+
+@function spacing($num){
+ @return $num * $spacing;
+}
+

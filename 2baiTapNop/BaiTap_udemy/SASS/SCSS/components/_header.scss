@@ -1,0 +1,89 @@
+
+
+.header {
+  height:70px;
+  background:$paper;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  &__logo { //& là parent selector
+    img{
+      width:130px; 
+    }
+}
+
+  span {
+    @include Text($textGrey, $subtitle, $fwRegular);
+}
+  &__search {
+    position: relative;
+    flex-grow:1;//header search chiếm toán bộ diện tích còn dư
+    padding:0 20px;
+    input {
+      width:100%;
+      border-radius:200px;
+      padding:10px 10px 10px 35px;
+      border:1px solid $grey;
+      outline:none; //bỏ đi outline khi nhấn vào input
+      background:$light;
+    }
+    
+    i {
+      position: absolute;
+      top:50%;
+      left:30px;
+      transform:translateY(-50%);//cho nằm giữa theo chiều dọc
+      font-size:17px;// không theo biến
+      color:$textLightGrey;
+    }
+  }
+
+  &__nav {
+    a {
+      @include Text($textGrey, $subtitle, $fwRegular);
+      padding-right:spacing(2.0);
+      &:hover{ // dấu & là parent selector
+      color:$textSecondary;
+      text-decoration: none;
+      cursor: pointer;
+      }
+    }
+    
+  }
+
+  &__btn-login {
+    @include Button ($paper, 1px solid $lightGrey,5px,8px 20px )
+    // background:$paper;
+    // border:1px solid $lightGrey;
+    // border-radius:5px;
+    // padding:8px 20px;
+    @include Text($textSecondary, $subtitle, $fwMedium);
+  }
+
+  
+  &__btn-signup {
+    @include Button ($secondary, 1px solid $secondary, 5px, 8px 20px)
+    // background:$secondary;
+    // border:1px solid $secondary;
+    // border-radius:5px;
+    // padding:8px 20px;
+    color:$textWhite;
+    margin-left:spacing(1.0); //dùng hàm function
+    @include Text($textWhite, $subtitle, $fwBold);
+  }
+
+// responsive viết ngay trong từng phần
+  @media screen and (max-width:576px) {
+    height:170px;
+
+    &__logo { //& là parent selector
+    img{
+      width:190px; 
+    }
+
+  }
+
+}
+
+}

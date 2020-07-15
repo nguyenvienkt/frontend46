@@ -8,3 +8,30 @@ Sau khi viết xong SASS thì phải sử dụng tool để build SASS ra th
 Sau đó sử dụng file CSS này gắn vào html để chạy.
 *.sass ( viết thụt đầu dòng)
 *.scss( viết mình sẽ sử dụng cái này cách viết dễ nắm bắt gần giống với cách viết css)
+
+==================================
+đặt tên biến
+A great way to keep modularity in your project is to group 
+variables that share relationships and commonalities
+Then you can name them by arranging words that describe their 
+	function from generic to specific 
+(much the same way CSS works with specificity) from left-to-right.
+- phù hợp với ngữ cảnh --> ko cần
+- phải có gạch ngang giữa --> ok
+- vị trí áp dụng --> ko cần
+- thuộc tính --> ok
+- giá trị css --> ok
+https://sass-guidelin.es/#responsive-web-design-and-breakpoints
+https://fixate.it/blog/make-your-css-variable-names-suck-less
+https://webdesign.tutsplus.com/articles/quick-tip-name-your-sass-variables-modularly--webdesign-13364
+Ví dụ: text, button, background
+$color-text-red-456432:#
+$color-button
+$color-background
+
+$size-text
+$size-button
+$size-background
+
+
+1. color

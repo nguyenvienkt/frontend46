@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/udemy.css">
+  <title>Udemy</title>
+</head>
+
+<body>
+  <div class="menu-button">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <a href="#">
+        <img src="./img/logo-coral.svg" alt="Udemy logo">
+      </a>
+      <a href="#">Categories</a>
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search for anything">
+      <ul class="right-menu">
+        <li> <a href="#">Udemy for Business</a> </li>
+        <li> <a href="#">Teach on Udemy</a> </li>
+        <i class="fa fa-shopping-cart"></i>
+        <button class="log-in">Log in</button>
+        <button class="sign-up">Sign up</button>
+      </ul>
+    </nav>
+    <!-- showcase -->
+    <div class="showcase">
+      <div class="showcase-item">
+        <h1>Learn on your schedule</h1>
+        <p>Anywhere, anytime. Start learning today!
+        </p>
+        <input type="text" placeholder="What do you want to learn?">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+
+    <div class="container-main">
+
+      <!-- headline -->
+      <div class="headline">
+        <div class="headline-main-text">
+          The world's largest selection of courses
+        </div>
+        <div class="headline-sub-text">
+          Choose from 100,000 online video courses with new additions published every month
+        </div>
+      </div>
+
+      <!-- course -->
+      
+      <div class="course-tab">
+        <button class="btn-container" onclick="openCourse('Business')">Business</button>
+        <button class="btn-container" onclick="openCourse('Design')">Design</button>
+        <button class="btn-container" onclick="openCourse('Photography')">Photography</button>
+        <button class="btn-container" onclick="openCourse('Development')">Development</button>
+        <button class="btn-container" onclick="openCourse('Marketing')">Marketing</button>
+        <button class="btn-container" onclick="openCourse('ITsoftware')">IT & Software</button>
+        <button class="btn-container" onclick="openCourse('PersonalDev')">Personal Development</button>
+      </div>
+      <div class="course-detail">
+        <div id="Business" class=" course">
+          <h2>Business</h2>
+          <p>Business is the capital city of England.</p>
+        </div> 
+        <div id="Design" class=" course" style="display:none">
+          <h2>Design</h2>
+          <p>Design is the capital of France.</p>
+        </div>
+        <div id="Photography" class=" course" style="display:none">
+          <h2>Photography</h2>
+          <p>Photography is the capital of Japan.</p>
+        </div>
+        <div id="Development" class ="course"  style="display:none">
+          <h2>Development</h2>
+          <p>Dev is the capital of Japan.</p>
+        </div>
+        <div id="Marketing" class=" course" style="display:none">
+          <h2>Marketing</h2>
+          <p>Marketing is the capital of Japan.</p>
+        </div>
+        <div id="ITsoftware" class=" course" style="display:none">
+          <h2>IT & Software</h2>
+          <p>IT is the capital of Japan.</p>
+        </div>
+        <div id="PersonalDev" class=" course" style="display:none">
+          <h2>Personal Development</h2>
+          <p>Personal Development is the capital of Japan.</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <script>
+    function openCourse(courseName) {
+      var i;
+      var x = document.getElementsByClassName("course");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(courseName).style.display = "block";
+    }
+  </script>
+  <script src="./js/udemy.js"></script>
+
+</body>
+
+</html>
