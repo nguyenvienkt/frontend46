@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<form action="#">
+  Nhập số dòng <input type="text" id="sodong"><br>
+  Nhập số cột <input type="text" id="socot"><br>
+  Tạo bảng <input type="button" value="Tạo Bảng" onclick="return TaoTable()"><br>
+</form>
+<br>
+<div id="container">
+
+</div>
+
+
+  <script>
+  function TaoTable() {
+    var sodongId = document.getElementById('sodong');
+    var socotId = document.getElementById('socot');
+    //NaN = Not a Number --> hảm kiểm tra số 
+    // isNaN(string) is Number --> false
+    // isNaN(string) not a Number --> true
+    // Number
+    if (isNaN(sodong.value) || isNaN(socot.value)) {
+      alert("Nhập vào số dòng và số cột");
+      return false;
+
+    } else {
+      /** tạo Table
+      <table>
+        <tr></tr>
+        <td>0,0</td>
+        <td>0,1</td>
+      </table>
+      */
+      // lấy thẻ div để tạo table
+      var divId = document.getElementById('container');
+      // lấy số dòng, số cột user nhập vào
+      var soDong = parseInt(sodongId.value);
+      var soCot = parseInt(socotId.value);
+      // Tạo thẻ table
+      var tagTable = document.createElement('table');
+      tagTable.border = 1;
+
+      // dùng vòng lặp for
+      for (i = 0; i < soDong; i++) {
+        //tạo thẻ dòng
+        var tagTR = document.createElement('tr');
+        //insert thẻ tr vào tag table
+        tagTable.appendChild(tagTR);
+        // tạo thẻ cột
+        for (j = 0; j < soCot; j++) {
+          var tagTD = document.createElement('td');
+          var textNode = document.createTextNode(i +","+ j);
+          tagTD.appendChild(textNode);
+          tagTR.appendChild(tagTD);
+        }
+      }
+
+      divId.appendChild(tagTable);
+      return true;
+    }
+  }
+  </script>
+  
+</body>
+</html>

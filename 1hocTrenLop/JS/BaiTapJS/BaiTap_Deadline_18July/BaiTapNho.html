@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập nhỏ</title>
+</head>
+<body>
+  <form action="#">
+    Vui lòng nhập số a: <input type="text" id="soa"><br>
+    Vui lòng nhập số b: <input type="text" id="sob"><br>
+    Kết Quả: <input type="text" id="kq">
+    <br>
+    <input type="button" value="Tính Tổng" onclick="return TinhTong()"><br>
+  </form>
+
+  <script>
+    function TinhTong(){
+      var soa = document.getElementById("soa");
+      var sob = document.getElementById("sob");
+
+      if(isNaN(soa.value) || isNaN(sob.value)){
+        alert('Nhập vào số a và b');
+      } else {
+        soa = parseFloat(soa.value);
+        sob = parseFloat(sob.value);
+        var tong = soa + sob;
+        kq.value = tong;
+        return true;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bài tập tổng hợp</title>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#" id="dangky" class="btn" onclick="onDangKy()">ĐĂNG KÝ</a>
+    <a href="#" id="dangnhap" class="btn" onclick="onDangNhap()">ĐĂNG NHẬP</a>
+    <div id="divdangky" class="divForm">
+      <form action="index.html" name="formDangKy">
+        <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+        <hr>
+        <div id="thongbao">
+          <p id="pthongbao">
+            <!-- thông báo lỗi  -->
+          </p>
+        </div>
+        <table>
+          <tr>
+            <td>Tên Đăng nhập</td>
+            <td><input class="inputCss" type="text" id="tendangnhap"></td>
+          </tr>
+          <tr>
+            <td>Mật Khẩu</td>
+            <td><input class="inputCss" type="password" id="matkhau"></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input class="inputCss" type="email" id="email"></td>
+          </tr>
+          <tr>
+            <td>Nghề nghiệp</td>
+            <td>
+              <select class="inputCss" id="nghenghiep">
+                <option>Vui lòng chọn</option>
+                <option>Lập Trình Viên</option>
+                <option>Ngân Hàng</option>
+                <option>Giảng Viên</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Tuổi</td>
+            <td><input class="inputCss" type="text" id="tuoi"></td>
+          </tr>
+          <tr>
+            <td>Giới tính</td>
+            <td>
+              <input type="radio" id="nam" name="gioitinh">Nam
+              <input type="radio" id="nu" name="gioitinh">Nữ
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="submit" value ="ĐĂNG KÝ" id="dangky" class="btn" onclick="return ktraHopLe() ">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+             Bạn đã có tài khoản? Vui lòng click <a href="#" onclick="onDangNhap()">Đăng nhập</a>
+            </td>
+          </tr>
+        </table>
+
+
+      </form>
+    </div>
+    <div id="divdangnhap" class="divForm">
+      <form action="#" name="formDangNhap">
+        <h2>ĐĂNG NHẬP</h2>
+        <hr>
+        <div >
+          <p id="loidangnhap">
+            <!-- thông báo lỗi  -->
+          </p>
+        </div>
+        <table>
+          <tr>
+            <td>Tên Đăng nhập</td>
+            <td><input class="inputCss" type="text" id="iddangnhap"></td>
+          </tr>                 
+          <tr>
+            <td>Mật Khẩu</td>
+            <td><input class="inputCss" type="text" id="idmatkhau"></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="checkbox" id="ghinhomatkhau"> Ghi nhớ mật khẩu <br>
+              <a href="#">Quên mật khẩu</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="submit" value="ĐĂNG NHẬP" id="dangnhap" class="btn" onclick = "return ktraDangNhap()">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              Bạn chưa có tài khoản? Vui lòng click <a href="#" onclick="onDangKy()">Đăng ký</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+
+  </div>
+  <script>
+    // sự kiện khi bấm tab Đăng Ký
+    function onDangKy() {
+      // ẩn đăng nhập
+      // ẩn hiện đăng ký
+      var dangKy = document.getElementById('divdangky')
+      var dangNhap = document.getElementById('divdangnhap')
+      dangKy.style.display = "block";
+      dangNhap.style.display = "none";
+    }
+    // sự kiện khi bấm tab Đăng Nhập
+    function onDangNhap() {
+      // ẩn đăng ký
+      // ẩn hiện đăng nhập
+      var dangKy = document.getElementById('divdangky')
+      var dangNhap = document.getElementById('divdangnhap')
+      dangKy.style.display = "none";
+      dangNhap.style.display = "block";
+    }
+  </script>
+  <script src="./validation.js"></script>
+</body>
+
+</html>

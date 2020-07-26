@@ -254,35 +254,127 @@ const saveData = function(){
 }
 
 const getData = function (){
-	// lúc vào trang
-	/**
-	 * 1. Xuống local lấy danh sách lên
-	 * 2. Chuyển từ chuổi ra mảng (lúc lưu là lưu chuỗi do đó lấy là chuỗi, mình phải chuyển qua mảng)
-	 * 3. Gán employeeList = mảng data cũ thay vì mảng rỗng
+
+		/**
+	 * 1. Mô hình
+	 * 2. API là Application Programing Interface là cách mà 2 hệ thống nói chuyện với nhau
+	 * Là tập hợp cách hướng dẫn sử dụng trong trường hợp frontend giao tiếp với backend thì API chính
+	 * là đường dẫn
+	 * 3. HTTP method là phương thức GET, POST, PUT, DELETE, PATCH
+	 * 4. axios là thư viện giúp chúng ta call API
+	 * 5. Asynchronous (bất đồng bộ)
+	 * 6. Thực hành
+	 * 7. Promise ()
 	 */
-	var employeeListJSON = localStorage.getItem('employees');
-	// check nếu data cũ có tồn tại thì lấy lên gán vào employeeList
-if (employeeListJSON){ //employeeListJSON !== null --> viết theo truthy, faslsy
-	const employeeListFromLocal = JSON.parse(employeeListJSON); // parse ra mảng vì nó là chuổi
-	/**
-	 * 1. Viết hàm map: [EMP1, EMP2] => [new Employee(EMP1), new Employee(EMP2)] --> từ mảng cũ mất method
-	 * do đó phải tạo object mới có thêm thuộc tính và method
-	 * hàm này gọi là hàm map
-	 */
-	for (i = 0;i<employeeListFromLocal.length;i++){
-		const currentEmp = employeeListFromLocal[i];
+
+
+	
+
+	 // -----------------------demo asynchronous (Bất đồng bộ) -----------------------------------
+	//  Thứ tự xử lý javascript là trên dưới, trái phải
+// 	const showMessage = function (){
+// 		console.log ("This is message");
+// 	}
+// 	console.log('a');
+// 	setTimeout(showMessage,550); // là hàm bất đồng bộ
+// 	console.log('c');
+// // Thứ tự hàm setTimeout sẽ chạy sau hàm khác. Do đó thứ tự ra là a, c rồi This is message 
+
+// Link api https://5bd2959ac8f9e400130cb7e9.mockapi.io/api/employee
+
+// Dùng axios để call lên api của backend lấy danh sách nhân viên có sẵn
+// hàm axios config truyền vào object và axios là hàm bất đồng bộ. Sau khi chạy xong thì
+// sẽ trả về đối tượng object promise (pending, result, reject)
+const fetchEmplPromise = axios({
+	url: 'https://5bd2959ac8f9e400130cb7e9.mockapi.io/api/employee',
+	method:'GET',
+
+});
+
+// resolver
+const resolver = function (res) {
+	// console.log(res.data);
+	// luôn luôn code trong resolver để lấy dữ liệu từ backend về rồi xử lý
+	for (i = 0; i < res.data.length; i++) {
+		const currentEmp = res.data[i]
 		const newEmployee = new Employee(
-			currentEmp.lastName, 
-			currentEmp.firstName, 
-			currentEmp.id, 
+			currentEmp.lastName,
+			currentEmp.firstName,
+			currentEmp.id,
 			currentEmp.birthday,
 			currentEmp.position
-			);
-			employeeList.push(newEmployee)
+		)
+		employeeList.push(newEmployee)
 	}
-	renderEmployees(); // lấy dữ liệu cũ hiện lên html cho họ thấy 
-	// saveData(); // nếu muốn save data vào trong localstorage
+	renderEmployees() // lấy dữ liệu cũ hiện lên html cho họ thấy
+
+};
+
+// rejecter
+const rejecter = function(err){
+	console.log(err);
 }
+
+console.log('1');
+// promise có 2 phương thức thành công thì then(), thất bại thì chạy vào catch()
+fetchEmplPromise.then(resolver).catch(rejecter);
+console.log('2');
+
+
+
+// JavaScript chạy ở đâu? chạy ở browser. 
+// 1. Tại sao browser xử lý được javascript
+// --> Mỗi browser có bộ JS engine riêng như google chrome có V8 (viết bằng C++), monkey  
+// trong JS engine có 3 bộ con (Parser, Transfer, execute)
+// - Đầu tiên bộ parser đọc code nếu có lỗi thì báo lỗi thì báo lỗi và dừng
+// - Sau đó nếu không có lỗi thì chuyển qua bộ Transfer chuyển đổi từ code sang mã máy 101010
+// - Sau đó thì bộ Execute thì xử lý mã máy đó 
+// * Cái mình quan tâm là parser bao gồm bộ khung xử lý code: callstack (xử lý code javascript, nếu có bất đồng bộ thì chuyển qua bên webAPI serser ), webAPI Server, callback queue, event loop (quan sát call stack, nếu trống thì sẽ đưa từ callback queue đưa lên chạy)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 	// lúc vào trang
+// 	/**
+// 	 * 1. Xuống local lấy danh sách lên
+// 	 * 2. Chuyển từ chuổi ra mảng (lúc lưu là lưu chuỗi do đó lấy là chuỗi, mình phải chuyển qua mảng)
+// 	 * 3. Gán employeeList = mảng data cũ thay vì mảng rỗng
+// 	 */
+// 	var employeeListJSON = localStorage.getItem('employees');
+// 	// check nếu data cũ có tồn tại thì lấy lên gán vào employeeList
+// if (employeeListJSON){ //employeeListJSON !== null --> viết theo truthy, faslsy
+// 	const employeeListFromLocal = JSON.parse(employeeListJSON); // parse ra mảng vì nó là chuổi
+// 	/**
+// 	 * 1. Viết hàm map: [EMP1, EMP2] => [new Employee(EMP1), new Employee(EMP2)] --> từ mảng cũ mất method
+// 	 * do đó phải tạo object mới có thêm thuộc tính và method
+// 	 * hàm này gọi là hàm map
+// 	 */
+// 	for (i = 0;i<employeeListFromLocal.length;i++){
+// 		const currentEmp = employeeListFromLocal[i];
+// 		const newEmployee = new Employee(
+// 			currentEmp.lastName, 
+// 			currentEmp.firstName, 
+// 			currentEmp.id, 
+// 			currentEmp.birthday,
+// 			currentEmp.position
+// 			);
+// 			employeeList.push(newEmployee)
+// 	}
+// 	renderEmployees(); // lấy dữ liệu cũ hiện lên html cho họ thấy 
+// 	// saveData(); // nếu muốn save data vào trong localstorage
+// }
+
+
 };
 
 // chuyển từ tiếng việt có dấu về tiếng anh
