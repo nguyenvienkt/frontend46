@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./qlnv.css">
+  <title>QLNV_THỰC HÀNH_LẦN 1</title>
+</head>
+<body>
+  
+  <div class="form">
+    <input type = "text" placeholder="Họ" id="ho"> <span class="loihienthi" id="loiho">loi</span>
+    <input type = "text" placeholder="Tên" id="ten"> <span class="loihienthi" id="loiten"></span>
+    <input type = "text" placeholder="Mã Nhân Viên" id="manv"> <span class="loihienthi" id="loimanv"></span>
+    <input type = "date" placeholder="Sinh Nhật" id="birthday"> <span class="loihienthi" id="loingaysinh"></span>
+    <select id="vitri">
+      <option>Sếp</option>
+      <option>Trưởng phòng</option>
+      <option>Nhân viên</option>
+    </select> <span class="loihienthi" id="loivitri"></span>
+    <input type="button" class="btn btn-primary addnv" id="addnv" value="Thêm nhân viên">
+    <input type="button" class="btn btn-secondary updatenv" id="updatenv" value = "Cập nhật">
+    <input id="search" type="text" placeholder="Nhập mã hoặc tên nhân viên">
+
+  </div>
+  <div class="tablenv ">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Họ và Tên</th>
+          <th>Mã NV</th>
+          <th>Ngày sinh</th>
+          <th>Chức Vụ</th>
+          <th>Lương</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyEmployees">
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script src="./qlnv.js"></script>
+</body>
+</html>

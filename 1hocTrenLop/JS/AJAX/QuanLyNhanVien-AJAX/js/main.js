@@ -9,6 +9,10 @@
  * 6. Validate thông tin
  */
 
+// Tạo đối tượng service để thực hiện các phương thức GET, POST, PUT, DELETE qua backend
+
+var empService = new EmployeeService(); // dùng hàm này để lưu vào backend
+
 
 // XÂY DỰNG LỚP ĐỐI TƯỢNG BẰNG PROTOTYPE
 function Employee(lastName, firstName, id, birthday, position) {
@@ -51,7 +55,7 @@ const addEmployee = function () {
 	// || --> check đúng khi một vế đúng
 	// && --> check đúng khi tất cả đều đúng
 	// &= nghĩa là đúng thêm với cộng dồn điều kiện
-	// a &= b nghĩa là a = a & c
+	// a &= b nghĩa là a = a & b
 
 	isValid &= 
 	checkRequired(lastName, 'lastNameError', '*Vui lòng nhập họ') &&
@@ -72,11 +76,23 @@ const addEmployee = function () {
 		}
 	}
 	// Sau khi kiểm tra tồn tại xong thì cho vào trong list
-	const newEmployee = new Employee(lastName, firstname, id, birthday, position)
+	const newEmployee = new Employee(lastName, firstName, id, birthday, position)
 
-	console.log(newEmployee)
+	// console.log(newEmployee)
 	// 3. Bỏ object nhân viên vào danh sách mảng
-	employeeList.push(newEmployee)
+	// employeeList.push(newEmployee)
+
+	// THÊM DỮ LIỆU ADD NHÂN VIÊN VÀO BACKEND SERVER
+	// Gọi api lưu vào server ở backend
+	var promise = empService.add(newEmployee);
+
+	promise.then(function(res){
+		// xử lý thành công gọi lại hàm getData lấy dự liệu mới nhất về
+		getData();
+		console.log('data',res.data);
+	}).catch(function(error){
+		console.log('error',error);
+	})
 	
 	// Lưu danh sách nhân viên xuống local storage của browser
 	saveData();
@@ -126,7 +142,7 @@ const renderEmployees = function(arr){
 			</tr>`
 
 	}
-	console.log(htmlContent);
+	// console.log(htmlContent);
 	document.getElementById('tbodyEmployees').innerHTML = htmlContent;
 
 }
@@ -144,10 +160,19 @@ const deleteEmpl = function(id){
 		renderEmployees();
 		// saveData(); --> xóa local 
 	}
+	// xóa nhân viên tới backend
+	empService.delete(id).then(function(res){
+		getData();
+		console.log("Xóa ok nhé");
+	}).catch(function(error){
+		console.log(error);
+	})
 	
 };
 
-// function 4: cập nhật thông tin nhân viên
+
+
+// function 4: cập nhật thông tin nhân viên VÀO TRONG LOCAL
 
 const getUpdateEmpl = function(id){
 	const index = findById(id);
@@ -198,7 +223,15 @@ const updateUser = function(){
 		document.getElementById('btnReset').click();// tức là sẽ gắn click nút này cho user để reset
 	}
 
-
+	// gọi service cập nhật nhân viên lên trên backend server
+	var promise = empService.update(updatedEmployee.id, updatedEmployee);
+	promise.then(function(res){
+		// xử lý thành công gọi lại hàm getData lấy dự liệu mới nhất về
+		getData();
+		console.log('result',res.data);
+	}).catch(function(error){
+		console.log('error',error);
+	})
 
 }
 
@@ -249,7 +282,7 @@ const findById = function(id){
 const saveData = function(){
 	// chuyển sang chuổi JSON
 	const employeeListJSON = JSON.stringify(employeeList);
-	console.log(employeeListJSON);
+	// console.log(employeeListJSON);
 	localStorage.setItem('employees',employeeListJSON);
 }
 
@@ -287,9 +320,8 @@ const getData = function (){
 // sẽ trả về đối tượng object promise (pending, result, reject)
 const fetchEmplPromise = axios({
 	url: 'https://5bd2959ac8f9e400130cb7e9.mockapi.io/api/employee',
-	method:'GET',
-
-});
+	method: 'GET',
+})
 
 // resolver
 const resolver = function (res) {
@@ -315,10 +347,10 @@ const rejecter = function(err){
 	console.log(err);
 }
 
-console.log('1');
+// console.log('1');
 // promise có 2 phương thức thành công thì then(), thất bại thì chạy vào catch()
 fetchEmplPromise.then(resolver).catch(rejecter);
-console.log('2');
+// console.log('2');
 
 
 
