@@ -11,18 +11,6 @@ var renderSinhVien = function() {
     // tạo <tr> table</tr>
     console.log(res.data)
     
-    
-    
-    
-    // this.MaSV = '';
-    // this.HoTen = '';
-    // this.Email = '';
-    // this.SoDT = '';
-    // this.CMND = '';
-    // this.DiemToan = '';
-    // this.DiemLy = '';
-    // this.DiemHoa = '';
-    
     var contentTable = '';
     for (var index=0;index<res.data.length;index++){
       // mỗi lần duyệt lấy ra 1 đối tướng sinh viên

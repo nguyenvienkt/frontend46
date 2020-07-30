@@ -3,7 +3,11 @@
 var SinhVienService = function(){
   // Thêm mới Sinh Viên
   this.themMoi = function(sinhvien){
-
+    return axios({
+      url:'http://svcy.myclass.vn/api/SinhVien/ThemSinhVien',
+      method:'POST',
+      data:sinhvien
+    })
   }
 
   // Xóa Sinh Viên khỏi danh sách

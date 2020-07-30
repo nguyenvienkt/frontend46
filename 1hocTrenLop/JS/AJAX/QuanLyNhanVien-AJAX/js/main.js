@@ -95,7 +95,7 @@ const addEmployee = function () {
 	})
 	
 	// Lưu danh sách nhân viên xuống local storage của browser
-	saveData();
+	// saveData();
 
 	// 4. Render giao diện mỗi lần add 1 nhân viên mới
 	renderEmployees();
