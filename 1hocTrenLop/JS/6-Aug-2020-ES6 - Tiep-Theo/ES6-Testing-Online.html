@@ -20,11 +20,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ES6</title>
 </head>
+
 <body>
   <h1>Online Test</h1>
   <div id="questionList">
@@ -33,7 +35,7 @@
   <button id="btnSubmit" style="margin:20px 0">Submit</button>
 
 
-<hr>
+  <hr>
 
   <h2>ES6 Notes</h2>
   <h3>I - let và var khác nhau:</h3>
@@ -43,53 +45,59 @@
       <li>- var thì cho khai báo biến giống nhau trong cùng 1 khu vực.</li>
       <li>- let thì không cho khai báo biến giống nhau trong cùng 1 1 khu vực</li>
     </ul>
-  
-   <li>Phạm vi sử dụng:
-     <ul>
-       <li>- let chỉ cho sử dụng trong 1 block (cặp ngoặc {})</li>
-       <li>- var thì cho sử dụng bên ngoài 1 block (cặp ngoặc {})</li>
-     </ul>
-   </li>
-   <li>Hoisting (là cơ chế thu thập biến trước khi chạy code. Nghĩa là khai báo biến trước hay sau cũng được)
-     <ul>
-       <li>- let không hỗ trợ hoisting</li>
-       <li>- var hỗ trợ hoisting</li>
-     </ul>
-   </li>
-</ol>
+
+    <li>Phạm vi sử dụng:
+      <ul>
+        <li>- let chỉ cho sử dụng trong 1 block (cặp ngoặc {})</li>
+        <li>- var thì cho sử dụng bên ngoài 1 block (cặp ngoặc {})</li>
+      </ul>
+    </li>
+    <li>Hoisting (là cơ chế thu thập biến trước khi chạy code. Nghĩa là khai báo biến trước hay sau cũng được)
+      <ul>
+        <li>- let không hỗ trợ hoisting</li>
+        <li>- var hỗ trợ hoisting</li>
+      </ul>
+    </li>
+  </ol>
   <h3>II - Arrow function </h3>
-   const calsSum = () => 1 + 1;
-   const showObject = () =>({name: "hieu"})
-   const testArrow = function(){
-     console.log(this)
-   }
+  const calsSum = () => 1 + 1;
+  const showObject = () =>({name: "hieu"})
+  const testArrow = function(){
+  console.log(this)
+  }
 
   <h5>Khác nhau Arrow function và fucntion bình thường</h5>
   <p>Function thường làm thay đổi ngữ cảnh của this. </p>
   <p>Arrow function không làm thay đổi ngữ cảnh của this</p>
-   <p>Do vậy nếu function có từ khóa this thì phải để ý tới do đó trong class thì không nên dùng Arrow Function</p>
+  <p>Do vậy nếu function có từ khóa this thì phải để ý tới do đó trong class thì không nên dùng Arrow Function</p>
 
-   <h3>III - destructuring - bóc tách phần tử từ trong object ra để sử dụng</h3>
-   <code>
+  <h3>III - destructuring - bóc tách phần tử từ trong object ra để sử dụng</h3>
+  <code>
      const {questionType,_id, content, answers} = currentQuestion;
      // => ES5: const questionType = currentQuestion.questionType
    </code>
 
-   <h3>IV - Vòng for mới trên ES6</h3>
+  <h3>IV - Vòng for mới trên ES6</h3>
 
-   <p>1. for of</p>
+  <p>1. for of</p>
 
-   <p>2. for in</p>
+  <p>2. for in</p>
 
-   <h3>V - Default parameter</h3>
+  <h3>V - Default parameter</h3>
 
-  
+  <h3>VI - Spread operator</h3>
+
+  <h3>VII - Rest parameters</h3>
+
+
   <!-- Thư viện -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-  <script src="./models/question.js"></script>
+  <!-- những file js này được import 
+    <script src="./models/question.js"></script>
   <script src="./models/multipleChoice.js"></script>
-  <script src="./models/fillInBlank.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./models/fillInBlank.js"></script> -->
+  <script type="module" src="./js/main.js"></script>
 
 </body>
+
 </html>
