@@ -1,0 +1,53 @@
+.story{
+  border-bottom:1px solid $lightGrey;
+  border-top:1px solid $lightGrey;
+  padding:60px 0;
+  margin:100px 0 0 0;
+  .story-content{
+    display:flex;
+    width:80%;
+    margin:auto;
+    align-items:center;
+    img{
+      width:100%;
+      height:100%;
+      display:block;
+    }
+    .story-detail{
+      display:flex;
+      flex-direction:column;
+      align-items: flex-start;
+      justify-content: center;
+      width:90%;
+     h2{
+        @include text ($textGrey,$h3,$fwBold);
+        margin:0;
+      }
+      p{
+        @include text ($textLightGrey,$body + 2,$fwRegular);
+        margin:$p-5 0 $p-10 0;
+      }
+    }
+
+    .story-img{
+      position:relative;
+      i{
+        font-size:$h3;
+        color:$textGrey;
+        width:64px;
+        height:64px;
+        background:$paper;
+        line-height: 64px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+      }
+    }
+
+
+
+  }
+}

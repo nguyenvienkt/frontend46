@@ -1,0 +1,147 @@
+*{
+  margin:0;
+  padding:0;
+  /* font-family: 'Nova Mono', monospace; */
+  /* font-family: 'Courgette', cursive; */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+.container{
+ background: #fee9f0;  /* fallback for old browsers */
+
+
+width:50%;
+height:auto;
+margin:0 auto;
+
+}
+
+.task {
+  padding:20px;
+  width:80%;
+  margin: 0 auto;
+}
+
+.task-content {
+  margin:50px;
+  box-shadow:0 2px 3px #ccc;
+  background:#ececec;
+  
+}
+
+.container .task img{
+  width:100%;
+  height:50%;
+  display:block;
+}
+
+.task-content-detail {
+  margin:20px;
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.inputTask {
+  background:#e7859e;
+  border:none;
+  padding:20px 5px;
+  margin:20px 0;
+  outline:none;
+  width:90%;
+  color:#ffffff;
+}
+
+.inputTask input {
+  background:#e7859e;
+  padding:5px;
+  margin:5px;
+  border:none;
+  outline:none;
+  font-size:18px;
+  color:#ffffff;
+}
+
+.inputTask input::placeholder{
+  color:#fff;
+  font-size:18px;
+}
+
+.task-content-detail .btnplus,
+.task-content-detail .btnedit {
+  color:#b44f61;
+  font-size:25px;
+  font-weight: bold;
+  padding:20px;
+  width:25px;
+  height:25px;
+  line-height: 25px;
+  border: 2px solid #b44f61;
+  border-radius:50%;
+  text-align: center;
+  align-self: flex-end;
+  transform:translateY(-111px);
+  background:#fff;
+  cursor:pointer;
+}
+
+.task-content-detail .btnedit{
+  /* transform:translateY(-147px); */
+  display:none;
+}
+
+.task-content-detail .btnplus:hover,
+.task-content-detail .btnedit:hover{
+  background:#e7859e;
+  color:#fff;
+}
+
+.message{
+  color:red;
+}
+
+#tasklist{
+  margin-top: -10%;
+}
+
+.eachtask {
+  margin:10px 5px;
+  background:#ffffff;
+  border-radius:5px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color:#515251;
+  border: 1px solid #a8a8a8;
+}
+
+.eachtask p {
+  padding-left:10px;
+  margin:5px;
+  font-size:18px;
+}
+
+.eachtask span {
+  margin:5px;
+}
+
+.eachtask i {
+  margin:5px;
+  color:#bdc0bf;
+  font-size:22px;
+  cursor: pointer;
+}
+
+.eachtask i:hover{
+  color:#b44f61;
+}
+
+#icontaskdone{
+  color:#42af90;
+}
+
+.item-task-done {
+  text-decoration: line-through;
+  color:#ccc;
+}

@@ -1,0 +1,118 @@
+// Header. Lưu ý ko sửa trên class của bootstrap mà phải thêm 1 class của mình vào sau trên div bọc ngoài
+
+.myNavBar{
+  position:fixed;
+  width:100%;
+  z-index: 5;
+  background-color: $paper;
+  border-bottom:1px solid $light;
+  // thanh chắn ngang
+  &.headerClass{
+    border-bottom: 5px solid $light;
+    .nav-bar{
+      padding:0.1rem 1rem;
+    }
+  }
+  // box-shadow: 5px 10px red;
+    // z-index: 1010;
+  .navbar-brand{
+    // flex-grow:1;
+    img {
+      width: 110px;
+    }
+  }
+  .categories{
+    // flex-grow:1;
+    @include text ($textGrey, $body2, $fwRegular);
+    align-self: center;
+    cursor: pointer;
+    
+  }
+  :hover{
+        color:$secondary;
+      }
+
+  .input_search{
+    flex-grow: 1;
+
+    .form-control {
+      background-color: $light;
+      border:1px solid $grey;
+      border-radius:200px;
+      padding: 22px 22px 22px 60px;
+      &:focus{
+        box-shadow: none;
+        background-color: $paper;
+      }
+      ::placeholder{
+        font-size:$body2;
+      }
+
+      &:hover{
+      border:1px solid $darkGrey;
+    }
+    }
+  }
+
+  .input-group-text{
+    background-color: transparent;
+    border:none;
+    font-size:$h4;
+    color:$textLightGrey;
+    font-weight:$fwLight;
+    z-index: 10;
+    transform: translateX(115%);
+    cursor: pointer;
+  }
+
+
+  .navbar-nav{
+    justify-content: space-between;
+    width: 100%;
+    .nav-item{
+      .nav-link{
+        @include text ($textGrey,$body2,$fwRegular);
+        i{
+          font-size:$h4;
+          font-weight: $fwMedium;
+        }
+      }:hover{
+        color:$secondary;
+      }
+    }
+  }
+
+
+  // responsive này khai báo breakpoint trong biến và hàm viết trong mixin
+  @include respond-to ('extra-large'){
+    .navbar-nav{
+      .nav-item:first-child{
+      display:none;
+    }
+    }
+  }
+  @include respond-to ('large'){
+    .navbar-nav{
+      .nav-item:nth-child(2){
+      display:none;
+    }
+    }
+  }
+
+  @include respond-to ('medium'){
+    .navbar-nav{
+      .nav-item:nth-child(3){
+      display:none;
+    }
+      
+    }
+
+    .navbar {
+        .categories, .input_search {
+          display:none;
+        }
+      }
+
+  }
+
+}

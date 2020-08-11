@@ -1,0 +1,80 @@
+// text and button mixing
+
+/* Must set html{font-size 62.5%} => 1rem = 10px = 62.5%*16px */
+@mixin text($color,$fs,$fw){
+  color:$color;
+  font-size:$fs;
+  font-weight:$fw;
+  /* example
+  .text{
+    @include text (red,20px,600);
+  }
+  */
+}
+
+/* when hover a link*/
+@mixin link($hover){
+  &:hover{
+    color:$hover;
+  }
+}
+
+/*apply button*/
+@mixin button ($color,$bg-color,$fs,$fw,$py,$px,$border,$border-radius,$color-hover,$bg-hover,$border-hover) {
+  color: $color;
+  background-color:$bg-color ;
+  font-size:$fs ;
+  font-weight:$fw;
+  padding: $py $px;
+  border: $border;
+  border-radius:$border-radius;
+  &:hover {
+    color:$color-hover;
+    background:$bg-hover;
+    border:$border-hover;
+  }
+  /*
+  example when using button in button component
+  .button {
+  @include button ($color,$bg-color,$fs,$fw,$py,$px,$border,$border-radius)
+  }
+  */
+}
+
+// RESPONSIVE breakpoints trong variables
+
+// ----------break points use in mixin for media queries
+$breakpoints:(
+  'xl':1200px, /*[.col-xl-] (>= 1200px collapsed to start, grid horizontal above breakpoints)*/
+  'lg':992px,/*[.col-lg-] (>= 992px collapsed to start, grid horizontal above breakpoints)*/
+  'md':768px, /*[.col-md-] (>= 768px collapsed to start, grid horizontal above breakpoints)*/
+  'sm':576px, /*[.col-sm-] (>= 576px collapsed to start, grid horizontal above breakpoints)*/
+  'xs':576px, /*[.col-] (<576px grid horizontal all time)*/
+);
+//-----------------
+
+@mixin respond-to($breakpoint){
+  // biến mảng gọi là map
+  @if map-has-key($map: $breakpoints,$key: $breakpoint){
+    $value: map-get($map: $breakpoints, $key: $breakpoint);
+    @media screen and (max-width: $value){
+      @content;
+    }
+  } 
+  @else {
+    @warn "breakpoint does not exit";
+  }
+
+  /* example using
+   @include respond-to ('md'){
+    .navbar-nav{
+      .nav-item:first-child{
+      display:none;
+    }
+    }
+  }
+  
+  */
+
+
+}

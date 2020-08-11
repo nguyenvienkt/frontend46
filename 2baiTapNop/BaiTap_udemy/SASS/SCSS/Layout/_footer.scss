@@ -1,0 +1,38 @@
+.footer{
+  padding:40px 48px 0 40px;
+  .footer-content{
+    display:flex;
+    justify-content: space-between;
+    ul{
+      flex-basis:20%;
+    }
+    .location{
+      flex-basis:1;
+    } 
+    ul li {
+      list-style: none;
+      a{
+        @include text ($secondary,$body2,$fwLight);
+        text-decoration: none;
+        padding:$p-4 0;
+        &:hover{
+          color:$textSecondary;
+        }
+      }
+    }
+
+  }
+
+  .logo-and-copyright{
+    padding:60px 0;
+    .content{
+      display:flex;
+      justify-content: space-between;
+      .copyright{
+        @include text ($textLightGrey,$body4,$fwLight);
+      }
+    }
+
+  }
+
+}

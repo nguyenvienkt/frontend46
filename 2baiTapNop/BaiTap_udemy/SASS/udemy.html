@@ -2,54 +2,747 @@
 <html lang="en">
 
 <head>
-  <title>Udemy</title>
+  <title>Udemy Clone</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/udemy.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+  <!-- Main CSS  -->
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-  <header class="header">
-    <a href="#" class="header__logo">
-      <img src="./img/logo-coral.svg" alt="">
-    </a>
-    <span>Categories</span>
-    <div class="header__search">
-      <input type="text" placeholder="Search for any thing">
-      <i class="fa fa-search"></i>
-    </div>
-    <nav class="header__nav">
-      <a href="#">Udemy for business</a>
-      <a href="#">Teach on Udemy</a>
+  <!-- header  -->
+  <header class="container-fluid myNavBar">
+    <nav class="navbar navbar-expand-md navbar-light">
+
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo-coral.svg" alt="">
+      </a>
+      <div class="categories">
+        <!-- <i class="fa fa-th"> Categories</i> -->
+        Categories
+      </div>
+      <div class="input_search">
+        <form action="">
+          <div class="input-group">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search"></i>
+              </span>
+              <!-- <button class="btn btn-success" type="submit">Go</button> -->
+            </div>
+            <input type="text" class="form-control" placeholder="Search for anything">
+          </div>
+        </form>
+      </div>
+
+
+
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Udemy for Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Teach on Udemy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <div class="d-flex">
+              <button class="btn btn--white mr-1">Log in</button>
+              <button class="btn btn--green">Sign up</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </nav>
-    <button class="header__btn-login">Log in</button>
-    <button class="header__btn-signup">Sign up</button>
   </header>
-  <!-- CAROUSEL  -->
-  <section class="carousel">
-    <div class="container">
-      <div class="carousel__schedule col-4">
-        <h2>
-          Learn on your schedule
-          <span>
-            Anywhere, anytime. Start learning today!
-          </span>
-        </h2>
-        <input type="text" placeholder="What do you want to learn?"><i class="fa fa-search"></i>
+  <!-- /header  -->
+
+  <!-- cover  -->
+  <section class="myCover">
+    <div class="cover_content">
+      <h1>Learn big. Spend less.</h1>
+      <p>Explore the options and expand your world. Courses from $12.99 through Aug 12.</p>
+      <div class="input_cover">
+        <form action="">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="What do you want to learn">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+
+          </div>
+        </form>
       </div>
     </div>
   </section>
+  <!-- /cover  -->
+  <!-- intro  -->
+  <section class="myIntro">
+    <div class="intro_content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-play"></i>
+            </div>
+            <div class="icon_content">
+              <p>100,000 online courses</p>
+              <p>Enjoy a variety of fresh topics</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-certificate"></i>
+            </div>
+            <div class="icon_content">
+              <p>Expert instruction</p>
+              <p>Find the right instructor for you</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-spinner"></i>
+            </div>
+            <div class="icon_content">
+              <p>Lifetime access</p>
+              <p>Learn on your schedule</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /intro  -->
 
+  <!-- courses -->
+  <div class="myCourse">
+    <div class="course_content">
+      <div class="course_intro">
+        <h2>The world's largest selection of courses</h2>
+        <p>Choose from 100,000 online video courses with new additions published every month</p>
+      </div>
+      <div class="course_detail">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#Business">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Design">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Photography">Photography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Development">Development</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#Marketing">Marketing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#ITSoftware">IT & Software</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#PersonalDevelopment">Personal Development</a>
+          </li>
+        </ul>
 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="Business" class="tab-pane active">
+            <div class="course_item owl-carousel">
+              <div class="card">
+                <img class="card-img-top" src="./img/kh1.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">$13.99</span>
+                    <span class="old-price">$89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./img/kh2.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">13.99</span>
+                    <span class="old-price">89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./img/kh3.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">13.99</span>
+                    <span class="old-price">89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./img/kh4.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">13.99</span>
+                    <span class="old-price">89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./img/kh5.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">13.99</span>
+                    <span class="old-price">89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="./img/kh6.jpg" alt="course-1">
+                <div class="card-body">
+                  <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+                  <p class="card-text">Chris Croft</p>
+                  <div class="rating">
+                    <span class="rated">4.6 </span>
+                    <div class="rating_star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <span class="bought"> (21,145)</span>
+                  </div>
+                  <div class="price">
+                    <span class="new-price">13.99</span>
+                    <span class="old-price">89.99</span>
+                  </div>
+                  <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Design" class="tab-pane fade"><br>
+            <h3>Design</h3>
+          </div>
+          <div id="Photography" class="tab-pane fade"><br>
+            <h3>Photography</h3>
+          </div>
+          <div id="Development" class="tab-pane fade"><br>
+            <h3>Development</h3>
+          </div>
+          <div id="Marketing" class="tab-pane fade"><br>
+            <h3>Marketing</h3>
+          </div>
+          <div id="ITSoftware" class="tab-pane fade"><br>
+            <h3>ITSoftware</h3>
+          </div>
+          <div id="PersonalDevelopment" class="tab-pane fade"><br>
+            <h3>Personal Development</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /courses -->
 
+  <!-- why udemy  -->
+  <div class="whyUdemy">
+    <div class="intro_content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-play"></i>
+            </div>
+            <div class="icon_content">
+              <p>Go at your own pace</p>
+              <p>Enjoy lifetime access to courses on Udemy’s website and app</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-certificate"></i>
+            </div>
+            <div class="icon_content">
+              <p>Learn from industry experts</p>
+              <p>Select from top instructors around the world</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="intro_item">
+            <div class="icon">
+              <i class="fa fa-spinner"></i>
+            </div>
+            <div class="icon_content">
+              <p>Find video courses on almost any topic</p>
+              <p>Build your library for your career and personal growth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /why udemy  -->
 
+  <!-- students are viewing  -->
+  <div class="view">
+    <div class="view_content">
+      <h2>Students are viewing</h2>
+      <div class="view_course">
+        <div class="student_view course_item owl-carousel">
+          <div class="card">
+            <img class="card-img-top" src="./img/kh8.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">$13.99</span>
+                <span class="old-price">$89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./img/kh9.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">13.99</span>
+                <span class="old-price">89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./img/kh10.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">13.99</span>
+                <span class="old-price">89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./img/kh11.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">13.99</span>
+                <span class="old-price">89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./img/kh12.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">13.99</span>
+                <span class="old-price">89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="./img/kh13.jpg" alt="course-1">
+            <div class="card-body">
+              <h4 class="card-title">Leadership: Practical Leadership Skills</h4>
+              <p class="card-text">Chris Croft</p>
+              <div class="rating">
+                <span class="rated">4.6 </span>
+                <div class="rating_star">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+                </div>
+                <span class="bought"> (21,145)</span>
+              </div>
+              <div class="price">
+                <span class="new-price">13.99</span>
+                <span class="old-price">89.99</span>
+              </div>
+              <a href="#" class="btn btn--yellow">Bestseller</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /students are viewing  -->
+
+  <!-- banner  -->
+  <div class="banner">
+    <div class="banner-content">
+      <h2>Get personal learning recommendations</h2>
+      <p>Answer a few questions for your top picks</p>
+      <button class="btn btn--outline">Get started</button>
+    </div>
+  </div>
+
+  <!-- /banner  -->
+
+  <!-- Categories  -->
+  <div class="category">
+    <div class="categories-content">
+      <h2>Top categories</h2>
+      <div class="categories-item">
+        <div class="card cat-card">
+          <img src="./img/lohp-category-design.jpg" alt="">
+          <p>Design</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-development.jpg" alt="">
+          <p>Development</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-marketing.jpg" alt="">
+          <p>Marketing</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-it-and-software.jpg" alt="">
+          <p>IT and Software</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-personal-development.jpg" alt="">
+          <p>Personal Development</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-business.jpg" alt="">
+          <p>Business</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-photography.jpg" alt="">
+          <p>Photography</p>
+        </div>
+        <div class="card cat-card">
+          <img src="./img/lohp-category-music.jpg" alt="">
+          <p>Music</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Categories  -->
+
+  <!-- instructor  -->
+  <div class="instructor">
+    <div class="instructor-data">
+      <div class="instructor-content">
+        <div>
+          <img src="./img/instructor.jpg" alt="">
+        </div>
+        <div class="instructor-detail">
+          <h2>Become an instructor</h2>
+          <p>Top instructors from around the world teach millions of students on Udemy. We provide the tools and skills
+            to teach what
+            you love.</p>
+          <div class="btn btn--green">Start teaching today</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /instructor  -->
+
+  <!-- partners  -->
+  <div class="partner">
+    <div class="partner-content">
+      <h2>Trusted by companies of all sizes</h2>
+      <div class="partner-item">
+        <a href="">
+          <img src="./img/booking.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./img/volkswagen.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./img/mercedes.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./img/adidas.svg" alt="">
+        </a>
+        <a href="">
+          <img src="./img/eventbrite-logo.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- /partners  -->
+
+  <!-- for business  -->
+  <div class="business">
+    <div class="business-data">
+      <div class="business-content">
+        <div class="business-detail">
+          <h2>Udemy for Business</h2>
+          <p>Get unlimited access to 4,000+ of Udemy’s top courses for your team.</p>
+          <div class="btn btn--green">Get Udemy for Business</div>
+        </div>
+        <div>
+          <img src="./img/business.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /for business  -->
+
+  <!-- story -->
+  <div class="story">
+    <div class="story-content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="story-img">
+            <a href="">
+              <i class="fa fa-play"></i>
+            </a>
+            <img src="./img/story.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="story-detail">
+            <h2>Transform your life through education</h2>
+            <p>Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you be able to do?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /story -->
+
+<!-- footer  -->
+<div class="footer">
+  <div class="footer-content">
+    <ul>
+      <li>
+        <a href="">Udemy for Business</a>
+      </li>
+      <li>
+        <a href="">Teach on Udemy</a>
+      </li>
+      <li>
+        <a href="">Get the app</a>
+      </li>
+      <li>
+        <a href="">About us</a>
+      </li>
+      <li>
+        <a href="">Contact us</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a href="">Careers</a>
+      </li>
+      <li>
+        <a href="">Blogs</a>
+      </li>
+      <li>
+        <a href="">Help and support</a>
+      </li>
+      <li>
+        <a href="">Affiliate</a>
+      </li>
+      
+    </ul>
+    <ul>
+      <li>
+        <a href="">Terms</a>
+      </li>
+      <li>
+        <a href="">Privacy policy and cookie policy</a>
+      </li>
+      <li>
+        <a href="">Sitemap</a>
+      </li>
+      <li>
+        <a href="">Feature courses</a>
+      </li>
+    </ul>
+    <div class="location">
+      <div class="input-group mt-3 mb-3">
+        <div class="input-group-prepend">
+          <button type="button" class="btn btn--location dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-globe"></i> English
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Vietnamese</a>
+            <a class="dropdown-item" href="#">Laos</a>
+            <a class="dropdown-item" href="#">Cambodia</a>
+          </div>
+        </div>
+        <!-- <input type="text" class="form-control" placeholder="Username"> -->
+      </div>
+    </div>
+  </div>
+  <div class="logo-and-copyright">
+    <div class="content">
+      <a href="">
+        <img src="./img/logo-coral.svg" width="110px" alt="">
+      </a>
+      <div class="copyright">
+        © 2020 Udemy, Inc.
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /footer  -->
 
 
 
@@ -67,6 +760,57 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <!-- Owl Carousel  -->
+  <script src="./js/owl.carousel.min.js"></script>
+
+  <script>
+    $('.student_view').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+  </script>
+  <!-- Main JS  -->
+  <script>
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 5) {
+        $('.myNavBar').addClass('headerClass');
+      } else {
+        $('.myNavBar').removeClass('headerClass');
+      }
+    })
+  </script>
+
+
 </body>
 
 </html>

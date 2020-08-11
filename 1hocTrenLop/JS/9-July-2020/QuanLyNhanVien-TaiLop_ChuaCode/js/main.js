@@ -72,7 +72,7 @@ const addEmployee = function () {
 		}
 	}
 	// Sau khi kiểm tra tồn tại xong thì cho vào trong list
-	const newEmployee = new Employee(lastName, firstname, id, birthday, position)
+	const newEmployee = new Employee(lastName, firstName, id, birthday, position)
 
 	console.log(newEmployee)
 	// 3. Bỏ object nhân viên vào danh sách mảng
@@ -118,15 +118,13 @@ const renderEmployees = function(arr){
 			<td>${currentEmp.position}</td>
 			<td>${currentEmp.calcSalary()}</td>
 			<td>
-			<button class="btn btn-danger" onclick ="deleteEmpl('${
-				currentEmp.id
-			}')">Xóa</button>
+			<button class="btn btn-danger" onclick ="deleteEmpl('${currentEmp.id}')">Xóa</button>
 			<button class="btn btn-info" onclick = "getUpdateEmpl('${currentEmp.id}')">Cập Nhật</button>
 			</td>
 			</tr>`
 
 	}
-	console.log(htmlContent);
+	// console.log(htmlContent);
 	document.getElementById('tbodyEmployees').innerHTML = htmlContent;
 
 }

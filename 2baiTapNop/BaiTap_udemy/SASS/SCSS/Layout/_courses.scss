@@ -1,0 +1,98 @@
+.myCourse {
+	margin-top: $p-25;
+	.course_content {
+		width: 95%;
+		margin: auto;
+		.course_intro {
+			max-width: 40%;
+			h2 {
+				@include text ($textGrey, $h4 + 4, $fwBold);
+			}
+		}
+		// courses
+		.course_detail {
+			// box-shadow: inset 0 -1px 0 0 #dcdacb;
+			.nav {
+        border: none;
+        border-bottom:1px solid $lightGrey;
+				.nav-item {
+					.nav-link {
+						border: none;
+            @include text ($textLightGrey, $body, $fwBold);
+            border-bottom: 2px solid transparent;
+            padding:$p-5;
+            // margin:$p-10;
+					}
+					.nav-link.active {
+						border: none;
+            @include text ($textGrey, $body, $fwBold);
+            border-bottom:2px solid $textGrey;
+            margin-left:0;
+					}
+				}
+      }
+      // detail course card
+      .tab-content {
+        position: relative;
+        margin-top:$p-15;
+        .course_item{
+        .card{
+          border:none;
+          &:hover{
+            .card-img-top{
+              opacity: 0.8;
+            }
+          }
+          .card-body{
+            padding:$p-10 0;
+            .card-title{
+              @include text($textGrey, $body1, $fwBold);
+              margin:$p-2 0;
+              padding:$p-5 0;
+            }
+            .card-text{
+              @include text($textLightGrey, $body4, $fwLight);
+              margin:$p-3 0 0 0;
+            }
+            .rating{
+              display:flex;
+              align-items: center;
+              margin:$p-1 0;
+              .rated{
+                @include text($textOrange, $body2, $fwBold);
+              }
+              .rating_star{
+                @include text($textLightOrange, $body3, $fwBold);
+                margin:$p-2 $p-5;
+              }
+              .bought{
+                @include text($textLightGrey, $body4, $fwRegular);
+
+              }
+            }
+            .price{
+              margin:0 0 $p-4 0;
+              .new-price{
+                @include text($textGrey, $body1, $fwBold);
+
+              }
+              .old-price{
+                @include text($textLightGrey, $body1, $fwRegular);
+                text-decoration: line-through;
+              }
+            }
+            
+          }
+        }
+      }
+      // chỉnh sửa thư viện owl carousel trong file normalized.scss
+      
+
+      }
+
+      
+
+
+		}
+	}
+}

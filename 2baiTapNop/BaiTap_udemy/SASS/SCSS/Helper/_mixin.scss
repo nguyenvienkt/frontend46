@@ -1,0 +1,37 @@
+
+// --------MIXIN-------------- Cùng thuộc tính, khác tham số
+
+// text, button, table, input --> nên tạo mixin sử dụng
+@mixin text($color, $fs, $fw){
+  color:$color;
+  font-size:$fs;
+  font-weight:$fw;
+}
+
+@mixin button ($fw,$color,$bg,$bd,$bdRadius,$p-top-bottom,$p-right-left,$bg-hover,$color-hover,$bd-hover){
+  font-weight:$fw;
+  color:$color;
+  background-color:$bg;
+  border:$bd;
+  border-radius:$bdRadius;
+  padding:$p-top-bottom $p-right-left;
+  &:hover{
+    background-color: $bg-hover;
+    color:$color-hover !important;
+    border:$bd-hover;
+  }
+}
+
+// RESPONSIVE 
+@mixin respond-to($breakpoint){
+  // biến mảng gọi là map
+  @if map-has-key($map: $breakpoints,$key: $breakpoint){
+    $value: map-get($map: $breakpoints, $key: $breakpoint);
+    @media screen and (max-width: $value){
+      @content;
+    }
+  } 
+  @else {
+    @warn "breakpoint không tồn tại";
+  }
+}

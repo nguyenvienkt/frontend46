@@ -1,0 +1,41 @@
+// import files only
+
+// luôn import file variable trước để cho các file sau sử dụng
+@import '../SASS/helper/variable';
+
+// reset browser
+@import '../SASS/base/reset';
+
+// import helper
+@import '../SASS/helper/mixin';
+@import '../SASS/helper/extend';
+@import '../SASS/helper/function';
+
+// import component
+@import '../SASS/component/button';
+
+// import layout
+@import '../SASS/layout/header';
+
+
+
+.text-p{
+  font-size:$fs-base;
+}
+.text-p1{
+  font-size:1.2rem;
+  padding:2rem;
+}
+.text-p2{
+  font-size:1.5rem;
+  padding:$gap-base;
+  color:$color-hover-primary;
+  padding:0.5rem; // = 5px
+  padding:0.6rem; // =6px;
+}
+.text-p3{
+  font-size:5rem;
+  padding:1rem;
+}
+
+

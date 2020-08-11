@@ -1,0 +1,34 @@
+.btn--white{
+  @include button($fwBold,$secondary,transparent,1px solid $secondary,4px,8px, 20px,transparent,$textSecondary,1px solid $textSecondary);
+}
+
+.btn--green{
+  @include button($fwBold,$textWhite,$secondary,1px solid $secondary,4px,8px,20px,$textSecondary,$textWhite,1px solid $textSecondary)
+}
+
+.btn--yellow{
+  @include button($fwRegular,$textGrey,$orange,none,4px,4px,8px,$orange,$textGrey,none);
+  font-weight:$fwBold;
+  font-size:$body4;
+  outline:none;
+  margin-left:$p-3;
+  &:hover{
+    cursor:text; 
+  }
+  &:focus{
+    box-shadow:none;
+  }
+}
+
+.btn--outline {
+  @include button ($fwBold,$textWhite,transparent,1px solid $paper,4px,10px, 16px,transparent,$textWhite,1px solid $paper)
+}
+
+.btn--location {
+    @include button($fwRegular,$textGrey,transparent,1px solid $textGrey,4px,8px,20px,transparent,$textGrey,1px solid $textGrey);
+&:focus{
+    box-shadow:none;
+  }
+
+  
+}

@@ -1,0 +1,38 @@
+.whyUdemy {
+  border-top:1px solid $lightGrey;
+  margin-top:50px;
+  .intro_content{
+    width:95%;
+    margin:auto;
+    padding:$p-20 0;
+    .intro_item{
+      display:flex;
+      align-items: center;
+      .icon{
+        font-size:$h4;
+        background-color: $lightSecondary;
+        color:$secondary;
+        width:48px;
+        height:48px;
+        border-radius: 50%;
+        text-align: center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $p-20;
+      }
+      .icon_content{
+
+        p:first-child{
+          @include text ($textGrey,$body,$fwBold);
+          margin-bottom:$p-2;
+        }
+        p:nth-child(2){
+          @include text ($textGrey,$body2,$fwRegular);
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+  
+}

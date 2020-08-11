@@ -1,0 +1,20 @@
+.banner{
+  background-image: url('../../img/purple-intersect.svg');
+  background-color:$purple;
+  background-position:center center;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:60px 0;
+  
+  .banner-content{
+    text-align: center;
+    h2{
+      @include text ($textWhite,$h3 + 2,$fwBold);
+    }
+    p {
+      @include text ($textWhite,$body + 2,$fwRegular);
+    }
+  }
+}

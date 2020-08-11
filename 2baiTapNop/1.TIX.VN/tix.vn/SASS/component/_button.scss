@@ -1,0 +1,20 @@
+/*
+@mixin button ($color,$bg-color,$fs,$fw,$py,$px,$border,$border-radius) {
+  color: $color;
+  background-color:$bg-color ;
+  font-size:$fs ;
+  font-weight:$fw;
+  padding: $py $px;
+  border: $border;
+  border-radius:$border-radius;
+}
+
+using
+.button-custom {
+  @include button ($color,$bg-color,$fs,$fw,$py,$px,$border,$border-radius,$color-hover,$bg-hover,$border-hover)
+}
+*/
+
+.btn--main {
+  @include button (red,blue,15px,400,5px,10px,none,5px,blue,white,1px solid);
+}

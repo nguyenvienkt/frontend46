@@ -1,0 +1,63 @@
+.view{
+  margin:$p-20 + 20 0;
+  .view_content{
+    width:95%;
+    margin:auto;
+    h2{
+      @include text ($textGrey,$h4 + 4,$fwBold);
+    }
+    // css cho card copy from course.scss
+    .course_item {
+      .card{
+          border:none;
+          &:hover{
+            .card-img-top{
+              opacity: 0.8;
+            }
+          }
+          .card-body{
+            padding:$p-10 0;
+            .card-title{
+              @include text($textGrey, $body1, $fwBold);
+              margin:$p-2 0;
+              padding:$p-5 0;
+            }
+            .card-text{
+              @include text($textLightGrey, $body4, $fwLight);
+              margin:$p-3 0 0 0;
+            }
+            .rating{
+              display:flex;
+              align-items: center;
+              margin:$p-1 0;
+              .rated{
+                @include text($textOrange, $body2, $fwBold);
+              }
+              .rating_star{
+                @include text($textLightOrange, $body3, $fwBold);
+                margin:$p-2 $p-5;
+              }
+              .bought{
+                @include text($textLightGrey, $body4, $fwRegular);
+
+              }
+            }
+            .price{
+              margin:0 0 $p-4 0;
+              .new-price{
+                @include text($textGrey, $body1, $fwBold);
+
+              }
+              .old-price{
+                @include text($textLightGrey, $body1, $fwRegular);
+                text-decoration: line-through;
+              }
+            }
+            
+          }
+        }
+
+    }
+
+  }
+}

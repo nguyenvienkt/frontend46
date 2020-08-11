@@ -1,0 +1,51 @@
+/* Mỗi trang html sẽ có 1 file scss định dạng*/
+/* Cài extension Live sass compiler
+Khi sử dụng thì bấm ctr + shift + p (pallet) chọn Live sass: watch sass*/
+
+/* chỉ build trên file SASS*/
+/*
+Khái niệm:
+1. Theme
+2. Block scope - nested code
+3. parent selector bằng dấu &   
+4. Khái niệm mixin <tránh lặp lại code
+5. Architechture (Cấu trúc source) - code splitting - tách code
+-- theme, mixin, functions, header, footer, items (sản phẩm)
+*/
+
+@import '../SCSS/Helper/variables';
+// reset
+@import '../SCSS/Base/reset';
+
+// Variables phải import trước
+// mixin phải import dưới theme vì có thể trong mixin hay sử dụng biến từ theme
+//import function import dưới theme vì trong function có sử dụng biên của theme
+@import '../SCSS/Helper/mixin';
+@import '../SCSS/Helper/extends';
+@import '../SCSS/Helper/function';
+
+// nên tách header và footer ra components riêng ra
+@import '../SCSS/Component/button';
+
+// Layout
+@import '../SCSS/Layout/header';
+@import '../SCSS/Layout/cover';
+@import '../SCSS/Layout/intro';
+@import '../SCSS/Layout/courses';
+@import '../SCSS/Layout/why';
+// style other libraties(owl carousel...)
+@import '../SCSS/Base/normalized';
+@import '../SCSS/Layout/view';
+@import '../SCSS/Layout/banner';
+@import '../SCSS/Layout/categories';
+@import '../SCSS/Layout/instructor';
+@import '../SCSS/Layout/partner';
+@import '../SCSS/Layout/business';
+@import '../SCSS/Layout/story';
+@import '../SCSS/Layout/footer';
+
+
+
+
+
+
