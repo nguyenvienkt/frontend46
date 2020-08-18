@@ -36,3 +36,20 @@ Itemproduct (4 lần) không cần thay đổi nội dung
 ListLaptop
 ItemProduct (4 lần) không cần thay đổi nội dung
 
+
+1. React là one way hay two way? 
+--> React là one way chỉ khi thay đổi state thì giao diện mới đổi
+còn two way giao diện hai chiều nếu bất kỳ biến đổi thì giao diện sẽ đổi
+2. Hiểu gì về state và props và hiểu sao?
+Giống nhau là thuộc tính có sẵn của component
+Khác nhau công dụng
+state --> render lại giao diện
+props --> truyền dữ liệu
+Khác nhau thứ 2
+state có thể thay đổi bằng hàm setSate
+props bản thân nó ko sửa props đc mà thừa kế từ cha
+Khác nhau thứ 3
+state chỉ có trong component class (rcc). còn component function (rfc) thì không có state
+props có trong cả rcc và rfc
+
+2. Nguồn dữ liệu trong react nên tập trung 1 nơi, 1 chỗ ở component cha tổng, cha lớn nhất
