@@ -22,16 +22,17 @@
   }
 }
 
-// RESPONSIVE 
-@mixin respond-to($breakpoint){
-  // biến mảng gọi là map
-  @if map-has-key($map: $breakpoints,$key: $breakpoint){
-    $value: map-get($map: $breakpoints, $key: $breakpoint);
-    @media screen and (max-width: $value){
-      @content;
-    }
-  } 
-  @else {
-    @warn "breakpoint không tồn tại";
-  }
-}
+
+// // RESPONSIVE khỏi viết media query theo biến
+// @mixin respond-to($breakpoint){
+//   // biến mảng gọi là map
+//   @if map-has-key($map: $breakpoints,$key: $breakpoint){
+//     $value: map-get($map: $breakpoints, $key: $breakpoint);
+//     @media screen and (max-width: $value){
+//       @content;
+//     }
+//   } 
+//   @else {
+//     @warn "breakpoint không tồn tại";
+//   }
+// }

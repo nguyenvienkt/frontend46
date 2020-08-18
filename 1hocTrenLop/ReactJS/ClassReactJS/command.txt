@@ -1,0 +1,38 @@
+1. Mở git bash/cmd và ở trong folder sẽ chứa project.Tạo project react với lệnh
+create-react-app [ten_project]
+2. cd [ten_project] và gõ lệnh để chạy app
+npm start
+3. vào trong index.js xóa thẻ (mở, đóng) là <React.StrictMode> </React.StrictMode> chỉ để lại <App />
+--> ReactDOM.render(<App />, document.getElementById('root'));
+4. cài đặt bootstrap vào reactjs
+npm install jquery popper.js bootstrap --save
+5. Link bootstrap vào file index.js
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js';
+import 'popper.js/dist/umd/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
+// sử dụng boostrap vào file src/index.js vì sau này còn dùng webpack build thành bundle.
+
+// bài tập về nhà là Bài tập 3. hình chứa trong public/img
+Baitap3
+-index
+	-header
+	-carousel
+	-list-smartphone
+		-item-product
+		-item-product
+		-item-product
+		-item-product
+	-list-laptop
+		-item-product
+		-item-product
+		-item-product
+		-item-product
+	-promotion
+		
+Itemproduct (4 lần) không cần thay đổi nội dung
+ListLaptop
+ItemProduct (4 lần) không cần thay đổi nội dung
+

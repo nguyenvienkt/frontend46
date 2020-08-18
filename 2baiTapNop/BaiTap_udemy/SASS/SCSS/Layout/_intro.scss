@@ -1,5 +1,4 @@
-.myIntro,
-.whyUdemy {
+.myIntro {
   border-bottom:1px solid $lightGrey;
   .intro_content{
     width:95%;
@@ -33,5 +32,12 @@
         }
       }
     }
+  }
+}
+
+
+@media screen and (max-width:992px){
+  .myIntro {
+    display:none;
   }
 }

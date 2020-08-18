@@ -15,6 +15,93 @@ using
 }
 */
 
-.btn--main {
-  @include button (red,blue,15px,400,5px,10px,none,5px,blue,white,1px solid);
+.btn--log-in {
+	@include button(
+		$color-text-secondary,
+		transparent,
+		1.3rem,
+		$fw-base,
+		0,
+		0,
+		none,
+		5px,
+		$color-text-secondary,
+		transparent,
+		none
+	);
+	display: flex;
+	align-items: center;
+	.fa {
+		font-size: 3rem;
+		margin-right: 0.7rem;
+	}
+}
+.btn--location {
+	@include button(
+		$color-text-secondary,
+		transparent,
+		1.3rem,
+		$fw-base,
+		0,
+		0,
+		none,
+		5px,
+		$color-text-secondary,
+		transparent,
+		none
+	);
+	display: flex;
+	align-items: center;
+	.fa {
+		font-size: 2rem;
+		margin-right: 0.7rem;
+  }
+  &:focus {
+    outline:none;
+    box-shadow:none;
+  }
+}
+
+.btn--side-login {
+	@include button(
+		$color-text-primary,
+		transparent,
+		1.5rem,
+		$fw-base,
+		0,
+		0,
+		none,
+		5px,
+		$color-hover-primary,
+		transparent,
+		none
+	);
+	display: flex;
+	align-items: center;
+	.fa {
+		font-size: 3rem;
+		margin-right: 0.7rem;
+	}
+
+}
+
+.btn--side-location {
+	@include button(
+		$color-text-primary,
+		transparent,
+		1.5rem,
+		$fw-base,
+		0,
+		0,
+		none,
+		5px,
+		$color-hover-primary,
+		transparent,
+		none
+	);
+
+  &:focus {
+    outline:none;
+    box-shadow:none;
+  }
 }

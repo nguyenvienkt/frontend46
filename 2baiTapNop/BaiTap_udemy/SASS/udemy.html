@@ -21,54 +21,497 @@
   <!-- header  -->
   <header class="container-fluid myNavBar">
     <nav class="navbar navbar-expand-md navbar-light">
-
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand logo" href="#">
         <img src="./img/logo-coral.svg" alt="">
       </a>
-      <div class="categories">
-        <!-- <i class="fa fa-th"> Categories</i> -->
-        Categories
-      </div>
-      <div class="input_search">
-        <form action="">
-          <div class="input-group">
-            <div class="input-group-append">
-              <span class="input-group-text">
-                <i class="fa fa-search"></i>
-              </span>
-              <!-- <button class="btn btn-success" type="submit">Go</button> -->
-            </div>
-            <input type="text" class="form-control" placeholder="Search for anything">
-          </div>
-        </form>
-      </div>
-
-
-
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Udemy for Business</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Teach on Udemy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i></a>
-          </li>
-          <li class="nav-item">
-            <div class="d-flex">
-              <button class="btn btn--white mr-1">Log in</button>
-              <button class="btn btn--green">Sign up</button>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      <button class="navbar-toggler d-lg-none button-bar" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
         aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- dropdown old  -->
+       <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div> 
+      <!-- /dropdown old  -->
+      <!--
+      <ul id="menu">
+        <li class="parent"><a href="#">Categories</a>
+          <ul class="child">
+            <li class="parent"><a href="#">Development <span class="expand">»</span></a>
+              <ul class="child">
+                <li class="parent"><a href="#">All Development</a></li>
+                <li class="parent"><a href="#">Web Development <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Data science <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Data science</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">Deep Learning</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">Data Analysis</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">R</a></li>
+                    <li><a href="#">TensorFlow</a></li>
+                    <li><a href="#">Neural Network</a></li>
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Mobile Apps <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Mobile Apps</a></li>
+                    <li><a href="#">Android Development</a></li>
+                    <li><a href="#">iOS Development</a></li>
+                    <li><a href="#">Google Flutter</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">Swift</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">React Native</a></li>
+                    <li><a href="#">Dart Programming Languague</a></li>
+                    <li><a href="#">Mobile Development</a></li>
+                    <li><a href="#">Kotlin</a></li>
+                    <li><a href="#">Redux Framework</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Programming Languages <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Programming Languages</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">C#</a></li>
+                    <li><a href="#">C++</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">Spring Framework</a></li>
+                    <li><a href="#">Go Programming Languague</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Game Development <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Game Development</a></li>
+                    <li><a href="#">Unity</a></li>
+                    <li><a href="#">Game Development Fundamentals</a></li>
+                    <li><a href="#">Unreal Engine</a></li>
+                    <li><a href="#">C#</a></li>
+                    <li><a href="#">3D Game Development</a></li>
+                    <li><a href="#">C++</a></li>
+                    <li><a href="#">2D Game Development</a></li>
+                    <li><a href="#">Blender</a></li>
+                    <li><a href="#">3D Animation</a></li>
+      
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Databases <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Software Testing <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Software Engineering <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">Development Tools <span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <li class="parent"><a href="#">E-Commerce<span class="expand">»</span></a>
+                  <ul class="child">
+                    <li><a href="#">Popular topic</a></li>
+                    <li><a href="#">All Web Development</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Angular</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">WordPress</a></li>
+      
+                  </ul>
+                </li>
+                <ul class="child">
+                  <li><a href="#">Popular topic</a></li>
+                  <li><a href="#">All Web Development</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">React</a></li>
+                  <li><a href="#">CSS</a></li>
+                  <li><a href="#">Angular</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">NodeJS</a></li>
+                  <li><a href="#">Python</a></li>
+                  <li><a href="#">WordPress</a></li>
+      
+                </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Business <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Finance & Accounting <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">IT & Software <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Office Productivity <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Personal Development <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Design <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Marketing <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Lifestyle <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Photography <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Heath & Fitness <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Music <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+        <li class="parent"><a href="#">Teaching & Academics <span class="expand">»</span></a>
+          <ul class="child">
+            <li class="parent"><a href="#">All Business</a></li>
+            <li class="parent"><a href="#">Finance <span class="expand">»</span></a>
+              <ul class="child">
+                <li><a href="#">Popular topic</a></li>
+                <li><a href="#">All Finance</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Angular</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">NodeJS</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">WordPress</a></li>
+      
+              </ul>
+            </li>
+      
+          </ul>
+        </li>
+      
+      </ul>
+      </li>
+      </ul>
+    -->
     </nav>
+    <div class="mobile-menu d-md-none" >
+      <a class="mobile-logo" href="#">
+        <img src="./img/logo-coral.svg" alt="" width="100px">
+      </a>
+      <div class="mobile-icon">
+        <i class="fa fa-search"></i>
+        <i class="fa fa-shopping-cart"></i>
+      </div>
+    </div>
+    <div class="input_search">
+      <form action="">
+        <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Search for anything">
+        </div>
+      </form>
+    </div>
+  
+    <a class="nav-link-right link-right-1" href="#">Udemy for Business</a>
+    <a class="nav-link-right link-right-2" href="#">Teach on Udemy</a>
+    <a class="nav-link-right link-right-3" href="#"><i class="fa fa-shopping-cart"></i></a>
+    <button class="btn btn--white link-right-4 mx-2">Log in</button>
+    <button class="btn btn--green link-right-5 mr-2">Sign up</button>
+  
+
+  
   </header>
   <!-- /header  -->
 
@@ -91,7 +534,27 @@
         </form>
       </div>
     </div>
+
   </section>
+  <!-- cover mobile for responsive  -->
+  <div class="cover_content-mobile d-sm-none" id="cover_content-mobile">
+    <h1>Learn big. Spend less.</h1>
+    <p>Explore the options and expand your world. Courses from $12.99 through Aug 12.</p>
+    <div class="input_cover">
+      <form action="">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="What do you want to learn">
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+  
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- cover mobile for responsive -->
   <!-- /cover  -->
   <!-- intro  -->
   <section class="myIntro">
@@ -193,6 +656,18 @@
                     <span class="old-price">$89.99</span>
                   </div>
                   <a href="#" class="btn btn--yellow">Bestseller</a>
+                </div>
+                <div class="card-quick-view">
+                  <h2>Leadership: Practical Leadership Skills</h2>
+                  <a href="#" class="btn btn--yellow">Bestseller </a><span> Updated <span>March 2020</span> </span>
+                  <p class="quick-view-text-1">8 total hours . All levels . Subtitles</p>
+                  <p class="quick-view-text-2">Everything You Need to Know About Business from Start-up to IPO</p>
+                  <i class="fa fa-check">Over 350,000 students in 195 countries!</i>
+                  <i class="fa fa-check">Superb reviews!</i>
+                  <i class="fa fa-check">Free $99 384 page book version of this course!</i>
+                  <button class="btn btn--red">Add to cart</button> <span class="wish-list">
+                    <i class="fa fa-heart"></i>
+                  </span>
                 </div>
               </div>
               <div class="card">
@@ -338,36 +813,37 @@
 
   <!-- why udemy  -->
   <div class="whyUdemy">
-    <div class="intro_content">
+    <div class="why_content">
+      <p class="d-md-none text-center why-text">Why learn on Udemy</p>
       <div class="row">
         <div class="col-md-4">
-          <div class="intro_item">
+          <div class="why_item">
             <div class="icon">
               <i class="fa fa-play"></i>
             </div>
-            <div class="icon_content">
+            <div class="why_content">
               <p>Go at your own pace</p>
               <p>Enjoy lifetime access to courses on Udemy’s website and app</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="intro_item">
+          <div class="why_item">
             <div class="icon">
               <i class="fa fa-certificate"></i>
             </div>
-            <div class="icon_content">
+            <div class="why_content">
               <p>Learn from industry experts</p>
               <p>Select from top instructors around the world</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="intro_item">
+          <div class="why_item">
             <div class="icon">
               <i class="fa fa-spinner"></i>
             </div>
-            <div class="icon_content">
+            <div class="why_content">
               <p>Find video courses on almost any topic</p>
               <p>Build your library for your career and personal growth</p>
             </div>
@@ -657,7 +1133,8 @@
         <div class="col-md-6 d-flex">
           <div class="story-detail">
             <h2>Transform your life through education</h2>
-            <p>Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you be able to do?</p>
+            <p>Mohamad Alaloush launched a new career in software development by taking courses on Udemy. What will you
+              be able to do?</p>
           </div>
         </div>
       </div>
@@ -665,84 +1142,85 @@
   </div>
   <!-- /story -->
 
-<!-- footer  -->
-<div class="footer">
-  <div class="footer-content">
-    <ul>
-      <li>
-        <a href="">Udemy for Business</a>
-      </li>
-      <li>
-        <a href="">Teach on Udemy</a>
-      </li>
-      <li>
-        <a href="">Get the app</a>
-      </li>
-      <li>
-        <a href="">About us</a>
-      </li>
-      <li>
-        <a href="">Contact us</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <a href="">Careers</a>
-      </li>
-      <li>
-        <a href="">Blogs</a>
-      </li>
-      <li>
-        <a href="">Help and support</a>
-      </li>
-      <li>
-        <a href="">Affiliate</a>
-      </li>
-      
-    </ul>
-    <ul>
-      <li>
-        <a href="">Terms</a>
-      </li>
-      <li>
-        <a href="">Privacy policy and cookie policy</a>
-      </li>
-      <li>
-        <a href="">Sitemap</a>
-      </li>
-      <li>
-        <a href="">Feature courses</a>
-      </li>
-    </ul>
-    <div class="location">
-      <div class="input-group mt-3 mb-3">
-        <div class="input-group-prepend">
-          <button type="button" class="btn btn--location dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-globe"></i> English
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Vietnamese</a>
-            <a class="dropdown-item" href="#">Laos</a>
-            <a class="dropdown-item" href="#">Cambodia</a>
+  <!-- footer  -->
+  <div class="footer">
+    <div class="footer-content">
+      <div class="location">
+        <div class="input-group">
+          <div class="">
+            <button type="button" class="btn btn--location dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-globe mr-2"></i> English
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Vietnamese</a>
+              <a class="dropdown-item" href="#">Laos</a>
+              <a class="dropdown-item" href="#">Cambodia</a>
+            </div>
           </div>
+          <!-- <input type="text" class="form-control" placeholder="Username"> -->
         </div>
-        <!-- <input type="text" class="form-control" placeholder="Username"> -->
       </div>
-    </div>
-  </div>
-  <div class="logo-and-copyright">
-    <div class="content">
-      <a href="">
-        <img src="./img/logo-coral.svg" width="110px" alt="">
-      </a>
-      <div class="copyright">
-        © 2020 Udemy, Inc.
+      <ul>
+        <li>
+          <a href="">Udemy for Business</a>
+        </li>
+        <li>
+          <a href="">Teach on Udemy</a>
+        </li>
+        <li>
+          <a href="">Get the app</a>
+        </li>
+        <li>
+          <a href="">About us</a>
+        </li>
+        <li>
+          <a href="">Contact us</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="">Careers</a>
+        </li>
+        <li>
+          <a href="">Blogs</a>
+        </li>
+        <li>
+          <a href="">Help and support</a>
+        </li>
+        <li>
+          <a href="">Affiliate</a>
+        </li>
 
+      </ul>
+      <ul>
+        <li>
+          <a href="">Terms</a>
+        </li>
+        <li>
+          <a href="">Privacy policy and cookie policy</a>
+        </li>
+        <li>
+          <a href="">Sitemap</a>
+        </li>
+        <li>
+          <a href="">Feature courses</a>
+        </li>
+      </ul>
+      
+    </div>
+    <div class="logo-and-copyright">
+      <div class="content">
+        <a href="">
+          <img src="./img/logo-coral.svg" width="110px" alt="">
+        </a>
+        <div class="copyright">
+          © 2020 Udemy, Inc.
+
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- /footer  -->
+  <!-- /footer  -->
 
 
 
@@ -772,11 +1250,17 @@
         0: {
           items: 1
         },
-        600: {
+        576: {
+          items: 2
+        },
+        768: {
           items: 3
         },
-        1000: {
+        992: {
           items: 4
+        },
+        1200: {
+          items: 5
         }
       }
     })
@@ -790,10 +1274,16 @@
         0: {
           items: 1
         },
-        600: {
+        576: {
+          items: 2
+        },
+        768: {
           items: 3
         },
-        1000: {
+        992: {
+          items: 4
+        },
+        1200: {
           items: 5
         }
       }

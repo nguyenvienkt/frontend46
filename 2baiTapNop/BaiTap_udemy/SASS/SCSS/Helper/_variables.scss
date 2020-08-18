@@ -29,6 +29,9 @@ $grey:#989596;
 $lightGrey:#dcdacb;
 $orange:#ffe799;
 $purple:#6e1a52;
+$red:#e61b1b; 
+$red-hover:#a00202;
+
 //-----COLORS TEXT------
 $textPrimary: #29303b;
 $textSecondary: #094c59/*#007791*/;
@@ -76,11 +79,13 @@ $p-10:10px;
 $p-15:15px;
 $p-20:20px;
 $p-25:25px;
-// break points responsive
-$breakpoints:(
-  'extra-large':1080px, /*1200px*/
-  'large':920px,/*992px*/
-  'medium':768px, /*768px*/
-  'small':767px, /*576px*/
-  'extra-small':600px, /*576px*/
-)
+
+
+// break points responsive vì dùng của bootstrap nên khỏi làm biến. viết thẳng luôn
+// $breakpoints:(
+//   'extra-large':1200px, /*1200px*/
+//   'large':992px,/*992px*/
+//   'medium':768px, /*768px*/
+//   'small':576px, /*576px*/
+//   // 'extra-small':500px, 
+// )

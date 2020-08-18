@@ -1,36 +1,2348 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Tix.vn clone</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- main css  -->
-    <link rel="stylesheet" href="./css/main.css">
-  </head>
-  <body>
-    <div class="content">
-      <h1 class="text-h1">Hello</h1>
-      <p class="text-p">This is the text of paragraph</p>
-      <p class="text-p1">This is the text of paragraph</p>
-      <p class="text-p2">This is the text of paragraph</p>
-      <p class="text-p3">This is the text of paragraph</p>
-      <p>This is the text of paragraph - 10px - default</p>
-      <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-success">1</div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-info">2</div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-danger">3</div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-dark">4</div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-primary">5</div>
+<head>
+  <title>Tix.vn clone</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- main css  -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <!-- header by bootstrap  -->
+  <!--
+    <header class="header">
+      <nav class="navbar navbar-expand-md topNavBar">
+          <a class="navbar-brand" href="#">
+            <img class="toplogo"src="./img/web-logo.png" alt="">
+          </a>
+          <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation">
+            <img src="./img/mobile-menu-options.png" alt="mobilemenu" width="25px">
+            </button>
+          <div class="collapse navbar-collapse main-top-menu" id="collapsibleNavId">
+            <div class="middle-menu">
+            
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Lịch Chiếu</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Cụm rạp</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Tin Tức</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Ứng Dụng</a>
+                  </li>
+                  
+              </ul>
+              </div>
+          
+          <div class="right-menu">
+            <button class="btn--log-in"><i class="fa fa-user-circle"></i> Đăng Nhập</button>
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn--location dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-map-marker"></i> Hồ Chí Minh
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+          
+              </div>
+            </form>
+          </div>
+          </div>
+      </nav>
+    </header>
+  -->
+  <!-- /header by bootstrap -->
+  <header class="header">
+    <div class="menu-btn">
+      <img src="./img/mobile-menu-options.png" width="25px" alt="mobilemenu">
+    </div>
+    <div class="myTopNav container-fluid">
+      <!-- Nav -->
+      <nav class="main-nav">
+        <img src="/img/web-logo.png" alt="tix.vn" class="logo">
+        <ul class="main-menu">
+          <button class="d-md-none btn--side-login"><i class="fa fa-user-circle"></i> Đăng Nhập</button>
+          <li><a href="#lichchieu">Lịch Chiếu</a></li>
+          <li><a href="#cumrap">Cụm Rạp</a></li>
+          <li><a href="#tintuc">Tin Tức</a></li>
+          <li><a href="#ungdung">Ứng Dụng</a></li>
+          <li class="d-md-none btn--location-mobile">
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn--location dropdown-toggle" data-toggle="dropdown">
+                    Hồ Chí Minh
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <ul class="right-menu">
+          <li>
+            <button class="btn--log-in"><i class="fa fa-user-circle"></i> Đăng Nhập</button>
+          </li>
+          <li>
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn--location dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-map-marker"></i> Hồ Chí Minh
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <!-- carousel  -->
+  <div id="carouselId" class="carousel slide tixCarousel" data-ride="carousel" data-interval="60000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselId" data-slide-to="1"></li>
+      <li data-target="#carouselId" data-slide-to="2"></li>
+      <li data-target="#carouselId" data-slide-to="3"></li>
+      <li data-target="#carouselId" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="./img/carousel-1.jpg" alt="">
+        <a href="">
+          <div class="carousel-play">
+            <img src="./img/play-video.png" alt="">
+          </div>
+          <div class="bg-overlay"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/carousel-2.png" alt="">
+        <a href="">
+          <div class="carousel-play">
+            <img src="./img/play-video.png" alt="">
+          </div>
+          <div class="bg-overlay"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/carousel-3.jpg" alt="">
+        <a href="">
+          <div class="carousel-play">
+            <img src="./img/play-video.png" alt="">
+          </div>
+          <div class="bg-overlay"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/carousel-4.jpg" alt="">
+        <a href="">
+          <div class="carousel-play">
+            <img src="./img/play-video.png" alt="">
+          </div>
+          <div class="bg-overlay"></div>
+        </a>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/carousel-5.jpg" alt="">
+        <a href="">
+          <div class="carousel-play">
+            <img src="./img/play-video.png" alt="">
+          </div>
+          <div class="bg-overlay"></div>
+        </a>
       </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+      <span class=" chevron-prev" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+      <span class=" chevron-next" aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- /carousel  -->
+
+  <!-- Search box  -->
+  <div class="search-box">
+    <div class="container">
+      <div class="row">
+        <div class="list-phim col-3">
+          <div class="dropdown show">
+            <a class="btn-search-box dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Phim
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Điệp Viên Siêu Lầy - My Spy - (13)</a>
+              <a class="dropdown-item" href="#">Cá Sấu Tử Thần - Black Water: Abyss - (C18)</a>
+              <a class="dropdown-item" href="#">Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-rap col-3">
+          <div class="dropdown show">
+            <a class="btn-search-box dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Rạp
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Vui lòng chọn phim</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-ngay-xem col-2">
+          <div class="dropdown show">
+            <a class="btn-search-box dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Ngày xem
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Vui lòng chọn phim và rạp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-suat-chieu col-2">
+          <div class="dropdown show">
+            <a class="btn-search-box dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Suất chiếu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Vui lòng chọn phim, rạp và ngày xem</a>
+            </div>
+          </div>
+        </div>
+        <div class="mua-ve-ngay col-2">
+          <button class="btn--mua-ve">Mua Vé Ngay</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /Search box  -->
+
+  <!-- Films showcase -->
+  <div class="films-showcase" id="lichchieu">
+    <div class="container-phim">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+            aria-controls="nav-home" aria-selected="true">Đang Chiếu</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+            aria-controls="nav-profile" aria-selected="false">Sắp Chiếu</a>
+        </div>
+      </nav>
+      <div class="tab-content tix-tab-phim" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          Tab đang chiếu
+          <div id="carouselPhim" class="carousel slide" data-ride="carousel" data-interval="60000">
+
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="phim-page-1">
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phim-page-1">
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselPhim" role="button" data-slide="prev">
+              <span class=" chevron-prev" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselPhim" role="button" data-slide="next">
+              <span class=" chevron-next" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          Tab sắp chiếu phim
+          <div id="carouselPhim2" class="carousel slide" data-ride="carousel" data-interval="60000">
+
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <div class="phim-page-1">
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phim-page-1">
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+                  <div class="list-phim-content">
+                    <div class="phim-item">
+                      <div class="rating">
+                        <p>8.2</p>
+                        <span>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </span>
+                      </div>
+                      <div class="phim-photo">
+                        <a href="">
+
+                          <img src="./img/phim-1.png" alt="">
+                          <div class="overlay"></div>
+                          <div class="play-btn">
+                            <img src="./img/play-video.png" alt="">
+                          </div>
+                        </a>
+                      </div>
+                      <div class="phim-title">
+                        <span class="phim-age">C13</span>
+                        <p class="title-label">Điệp Viên Siêu Lầy - My Spy (13)</p>
+                        <p class="title-time">100 phút</p>
+                      </div>
+                      <button class="mua-ve">MUA VÉ</button>
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselPhim2" role="button" data-slide="prev">
+              <span class=" chevron-prev" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselPhim2" role="button" data-slide="next">
+              <span class=" chevron-next" aria-hidden="true"></span>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /Films showcase -->
+
+
+
+  <!-- list cinema  -->
+  <div class="list-cinema" id="cumrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-1 tab">
+          <button class="tablinks" onclick="openCity(event, 'cgv')" id="defaultOpen">
+            <img src="./img/cgv.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'bhd')">
+            <img src="./img/bhd.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'galaxy')">
+            <img src="./img/galaxycine.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'cns')">
+            <img src="./img/cinestar.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'ddc')">
+            <img src="./img/dongdacinema.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'mega')">
+            <img src="./img/megags.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'dcine')">
+            <img src="./img/dcine.png" alt="">
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'lotte')">
+            <img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
+          </button>
+        </div>
+
+        <div id="cgv" class="tabcontent col-11">
+          <div class="container-fluid">
+            <div class="row tabcontent-detail">
+              <div class="col-4 tab-detail-left">
+                <ul class="nav nav-tabs flex-column" id="cgv-nav" role="tablist" aria-orientation="vertical">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#cgv-1" aria-selected="true">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cgv-2">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cgv-3">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cgv-4">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cgv-5">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cgv-6">
+                      <div class="left-cinema">
+                        <img src="./img/cgv-cinema-list.jpg" alt="">
+                        <div class="cinema-detail">
+                          <span class="detail-brand">CGV</span>
+                          <span class="brand-name">- Saigonres Nguyễn Xí</span>
+                          <div class="brand-add">Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P 26, Q Bình Thạnh</div>
+                          <p href="">[chi tiết]</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-8 tab-detail-right">
+                <div class="tab-content" id="cgv-content">
+                  <div class="tab-pane fade show active" id="cgv-1">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/ban-dao-peninsula-15935709741597_60x60.png" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/cau-be-nguoi-go-pinocchio-pinocchio-p-15941070116735_60x60.png" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age-red">C13</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/noi-chien-sieu-anh-hung-captain-america-civil-war-nc16-15966863701806_60x60.png"
+                          alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cgv-2">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cgv-3">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cgv-4">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cgv-5">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cgv-6">
+                    <div class="form-group">
+                      <div class="right-phim">
+                        <img src="./img/right-phim-1.jpg" alt="">
+                        <div class="right-phim-detail">
+                          <span class="right-phim-age">P</span>
+                          <span class="right-phim-title">Big Hero 6</span>
+                          <p class="right-phim-small">102 phút - TIX 8.2 - IMDb 7.8</p>
+                        </div>
+                      </div>
+                      <div class="right-phim-book">
+                        <p class="right-phim-format">2D Lồng Tiếng</p>
+                        <button class="right-book-button">
+                          <span class="right-start-time">16:00 </span>
+                          <span class="right-end-time">~ 17:42</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="bhd" class="tabcontent col-11">
+          <div class="container">
+            <div class="row tabcontent-detail">
+              <div class="col-4 tab-detail-left">
+                <div class="nav flex-column nav-pills" id="bhd-nav" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" data-toggle="pill" href="#bhd-1" aria-selected="true">bhd-Rap-1</a>
+                  <a class="nav-link" data-toggle="pill" href="#bhd-2">bhd-Rap-2</a>
+                  <a class="nav-link" data-toggle="pill" href="#bhd-3">bhd-Rap-3</a>
+                  <a class="nav-link" data-toggle="pill" href="#bhd-4">bhd-Rap-4</a>
+                </div>
+              </div>
+              <div class="col-8 tab-detail-right">
+                <div class="tab-content" id="bhd-content">
+                  <div class="tab-pane fade show active" id="bhd-1">
+                    <div class="form-group">
+                      <p>bhd Rạp 1 phim 1</p>
+                      <p>bhd Rạp 1 phim 2</p>
+                      <p>bhd Rạp 1 phim 3</p>
+                      <p>bhd Rạp 1 phim 4</p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="bhd-2">
+                    <p>bhd Rạp 2 phim 1</p>
+                    <p>bhd Rạp 2 phim 2</p>
+                    <p>bhd Rạp 2 phim 3</p>
+                    <p>bhd Rạp 2 phim 4</p>
+                  </div>
+                  <div class="tab-pane fade" id="bhd-3">
+                    <p>bhd Rạp 3 phim 1</p>
+                    <p>bhd Rạp 3 phim 2</p>
+                    <p>bhd Rạp 3 phim 3</p>
+                    <p>bhd Rạp 3 phim 4</p>
+                  </div>
+                  <div class="tab-pane fade" id="bhd-4">
+                    <p>bhd Rạp 4 phim 1</p>
+                    <p>bhd Rạp 4 phim 2</p>
+                    <p>bhd Rạp 4 phim 3</p>
+                    <p>bhd Rạp 4 phim 4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="galaxy" class="tabcontent col-11">
+          <div class="container">
+            <div class="row tabcontent-detail">
+              <div class="col-4 tab-detail-left">
+                <div class="nav flex-column nav-pills" id="galaxy-nav" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" data-toggle="pill" href="#galaxy-1" aria-selected="true">galaxy-Rap-1</a>
+                  <a class="nav-link" data-toggle="pill" href="#galaxy-2">galaxy-Rap-2</a>
+                  <a class="nav-link" data-toggle="pill" href="#galaxy-3">galaxy-Rap-3</a>
+                  <a class="nav-link" data-toggle="pill" href="#galaxy-4">galaxy-Rap-4</a>
+                </div>
+              </div>
+              <div class="col-8 tab-detail-right">
+                <div class="tab-content" id="galaxy-content">
+                  <div class="tab-pane fade show active" id="galaxy-1">
+                    <div class="form-group">
+                      <p>galaxy Rạp 1 phim 1</p>
+                      <p>galaxy Rạp 1 phim 2</p>
+                      <p>galaxy Rạp 1 phim 3</p>
+                      <p>galaxy Rạp 1 phim 4</p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="galaxy-2">
+                    <p>galaxy Rạp 2 phim 1</p>
+                    <p>galaxy Rạp 2 phim 2</p>
+                    <p>galaxy Rạp 2 phim 3</p>
+                    <p>galaxy Rạp 2 phim 4</p>
+                  </div>
+                  <div class="tab-pane fade" id="galaxy-3">
+                    <p>galaxy Rạp 3 phim 1</p>
+                    <p>galaxy Rạp 3 phim 2</p>
+                    <p>galaxy Rạp 3 phim 3</p>
+                    <p>galaxy Rạp 3 phim 4</p>
+                  </div>
+                  <div class="tab-pane fade" id="galaxy-4">
+                    <p>galaxy Rạp 4 phim 1</p>
+                    <p>galaxy Rạp 4 phim 2</p>
+                    <p>galaxy Rạp 4 phim 3</p>
+                    <p>galaxy Rạp 4 phim 4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="cns" class="tabcontent col-11">
+          <p>CNS tương tự</p>
+        </div>
+        <div id="ddc" class="tabcontent col-11">
+          <p>DDC tương tự</p>
+        </div>
+        <div id="mega" class="tabcontent col-11">
+          <p>MEGA tương tự</p>
+        </div>
+        <div id="dcine" class="tabcontent col-11">
+          <p>DCINE tương tự</p>
+        </div>
+        <div id="lotte" class="tabcontent col-11">
+          <p>LOTTE tương tự</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- /list cinema  -->
+  <!-- news - tin tức  -->
+  <div class="news" id="tintuc">
+    <div class="container-fluid">
+      <nav>
+        <div class="nav nav-tabs" id="news-tab">
+          <a class="nav-item nav-link active" data-toggle="tab" href="#dienanh" aria-selected="true">Điện Ảnh 24h</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#review">Review</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#khuyenmai">Khuyến Mãi</a>
+        </div>
+      </nav>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="dienanh">
+          <div class="containter">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/tin-tuc-1.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/tin-tuc-2.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/tin-tuc-3.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/tin-tuc-4.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-5.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-6.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-7.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-8.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="viewmore text-center">
+              <button>XEM THÊM</button>
+            </div>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="review">
+          <div class="containter">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/review-1.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/review-2.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/review-3.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/review-4.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-5.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-6.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-7.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-8.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="viewmore text-center">
+              <button>XEM THÊM</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="khuyenmai">
+          <div class="containter">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/km-1.jpg" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/km-2.jpg" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/km-3.jpg" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-big">
+                  <a href="">
+                    <img src="./img/km-4.png" alt="">
+                  </a>
+                  <a href="" class="news-title">Dàn mỹ nhân trong thế giới điện ảnh của quái kiệt Christopher
+                    Nolan</a>
+                  <p class="news-excerpt">Làng phim đương đại những năm qua chứng kiến sự lên ngôi của cái tên
+                    Christopher
+                    Nolan, được biết tới như
+                    một trong những đạo diễn thiên tài</p>
+                  <div class="news-social">
+                    <a href="">
+                      <i class="fa fa-thumbs-up"><span class="badge">1</span></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment"><span class="badge">2</span></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-5.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-6.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-7.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+                <div class="news-small">
+                  <a href="">
+                    <img src="./img/tin-tuc-8.png" alt="">
+                  </a>
+                  <a class="news-small-title">Kaity Nguyễn trở thành mỹ nhân mới của vũ trụ Gái Già Lắm Chiêu</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="viewmore text-center">
+              <button>XEM THÊM</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /news - tin tức  -->
+
+  <!-- ứng dụng -->
+  <div id="ungdung" class="application">
+    <div class="app-content">
+      <div class="container-app">
+        <div class="row">
+          <div class="col-lg-6 app-content-left">
+            <p class="app-left-title">Ứng dụng tiện lợi dành cho</p>
+            <p class="app-left-title">người yêu điện ảnh</p>
+            <p class="app-left-sweet">Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.</p>
+            <button class="down-app">
+              App miễn phí - Tải về ngay!
+            </button>
+            <p class="app-left-version">TIX có hai phiên bản  <a href="">iOS</a> & <a href="">Android</a></p>
+          </div>
+          <div class="col-lg-6 app-content-right">
+            <div class="app-right-slider">
+              <div id="appCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="" src="./img/app-1.jpg" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="" src="./img/app-2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="" src="./img/app-3.jpg" alt="Third slide">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /ứng dụng -->
+
+  <!-- partners -->
+  <div class="partner">
+    <div class="partner-wrapper">
+      <div class="row">
+        <div class="col-sm-4">
+          <p class="partner-title hideMobile">TIX</p>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 hideMobile">
+              <a href="">FQA</a><br>
+              <a href="">Brand Guidelines</a>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center mb-3">
+              <a href="">Thỏa thuận sử dụng</a>
+              <a href="">Chính sách bảo mật</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 hideMobile">
+          <p class="partner-title">ĐỐI TÁC</p>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+        </div>
+        <div class="col-sm-4 ">
+          <div class="row">
+            <div class="col-sm-6 link-store hideMobile">
+              <p class="partner-title">MOBILE APP</p>
+              <a href=""><img src="./img/apple-logo.png" alt=""></a>
+              <a href=""><img src="./img/android-logo.png" alt=""></a>
+            </div>
+            <div class="col-md-6 col-sm-12 link-social mb-3">
+              <p class="partner-title hideMobile">SOCIAL</p>
+              <a href=""><img src="./img/facebook-logo.png" alt=""></a>
+              <a href=""><img src="./img/logo-zalo.png" alt=""></a>
+            </div>
+          </div>          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- /partners -->
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="">
+      <div class="container-footer">
+        <div class=" footer-left">
+          <img src="./img/zion-logo.jpg" alt="">
+        </div>
+        <div class=" footer-middle">
+          <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
+          <span>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</span>
+          <span>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</span>
+          <span>đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</span>
+          <span>Số Điện Thoại (Hotline): 1900 545 436</span>
+          <span>Email: <a href="mailto:support@tix.vn">support@tix.vn</a></span>
+        </div>
+        <div class=" footer-right">
+          <img src="./img/bo-cong-thuong.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer  -->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+  </script>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+</body>
+
 </html>

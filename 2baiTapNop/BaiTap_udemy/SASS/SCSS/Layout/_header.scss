@@ -1,39 +1,54 @@
 // Header. Lưu ý ko sửa trên class của bootstrap mà phải thêm 1 class của mình vào sau trên div bọc ngoài
 
 .myNavBar{
-  position:fixed;
-  width:100%;
-  z-index: 5;
-  background-color: $paper;
-  border-bottom:1px solid $light;
+  
+  // position:fixed;
+  // width:100%;
+  // z-index: 5;
+  // background-color: $paper;
+  // border-bottom:1px solid $light;
   // thanh chắn ngang
   &.headerClass{
-    border-bottom: 5px solid $light;
-    .nav-bar{
-      padding:0.1rem 1rem;
-    }
+    // border-bottom: 1px solid $light;
+    // .nav-bar{
+    //   padding:0.1rem 1rem;
+    // }
   }
-  // box-shadow: 5px 10px red;
-    // z-index: 1010;
+
+  .navbar{
+      padding:0.5rem;
+      
+    }
   .navbar-brand{
-    // flex-grow:1;
     img {
       width: 110px;
     }
   }
-  .categories{
-    // flex-grow:1;
-    @include text ($textGrey, $body2, $fwRegular);
-    align-self: center;
-    cursor: pointer;
-    
+
+  .navbar-nav {
+    .nav-link{
+      @include text ($textGrey,$body2,$fwRegular);
+    }
   }
-  :hover{
-        color:$secondary;
-      }
 
   .input_search{
     flex-grow: 1;
+    max-width: 33rem;
+    margin: 0 1rem 0 -2rem;
+    .input-group{
+    .input-group-append {
+      .input-group-text{
+        background-color: transparent;
+        border:none;
+        font-size:$h4;
+        color:$textLightGrey;
+        font-weight:$fwLight;
+        z-index: 10;
+        transform: translateX(115%);
+        cursor: pointer;
+      }
+    }
+  }
 
     .form-control {
       background-color: $light;
@@ -44,8 +59,8 @@
         box-shadow: none;
         background-color: $paper;
       }
-      ::placeholder{
-        font-size:$body2;
+      &::placeholder{
+        @include text ($textGrey,$body2,$fwRegular);
       }
 
       &:hover{
@@ -54,65 +69,181 @@
     }
   }
 
-  .input-group-text{
-    background-color: transparent;
-    border:none;
-    font-size:$h4;
-    color:$textLightGrey;
-    font-weight:$fwLight;
-    z-index: 10;
-    transform: translateX(115%);
-    cursor: pointer;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+
+  .nav-link-right{
+    margin:0 5px;
+      @include text ($textGrey,$body2,$fwRegular);
+      i{
+        @include text ($textLightGrey,$body,$fwRegular);
+      }
+    }:hover{
+      color:$secondary;
+      text-decoration: none;
+    }
+  .nav-link-left{
+      @include text ($textGrey,$body2,$fwRegular);
+      margin-right:-3rem;
+    }:hover{
+      color:$secondary;
+      text-decoration: none;
+    }
+
+  
+
+
+
+
+
+
+  // responsive 
+  @media screen and (max-width:1200px){
+    
+    .link-right-1 {
+      display:none;
+    }
+
+    
+  }
+  @media screen and (max-width:992px){
+    .link-right-2 {
+      display:none;
+    }
+    .btn--white,
+    .btn--green {
+      padding:8px 10px;
+      margin:0;
+    }
+    .input_search {
+      margin: 0 0.5rem 0 -2rem;
+    }
+    #navbarDropdown{
+      padding-right:0;
+      padding-left:0;
+    }
   }
 
+  @media screen and (max-width:768px){
+    .link-right-3,
+    .link-right-4,
+    .link-right-5,
+    .input_search {
+      display:none;
+    }
 
-  .navbar-nav{
-    justify-content: space-between;
-    width: 100%;
-    .nav-item{
-      .nav-link{
-        @include text ($textGrey,$body2,$fwRegular);
-        i{
-          font-size:$h4;
-          font-weight: $fwMedium;
+    .navbar-toggler {
+      border:none;
+      margin-left:-1.5rem;
+      color:$textLightGrey;
+    }
+    .navbar-brand {
+      display:none;
+    }
+    .mobile-menu {
+      position: absolute;
+      right: 5px;
+      top: 14px;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      // flex-grow: 1;
+      img {
+        width:90px;
+      }
+      .mobile-icon {
+        color:$textLightGrey;      
+        position: absolute;
+        top:5px;
+        right:10px;
+        display:flex;
+        .fa{
+          margin:0 10px;
         }
-      }:hover{
-        color:$secondary;
       }
     }
+    
+    // #menu{
+    //   display:none;
+    // }
+
+
+
+
   }
 
 
-  // responsive này khai báo breakpoint trong biến và hàm viết trong mixin
-  @include respond-to ('extra-large'){
-    .navbar-nav{
-      .nav-item:first-child{
-      display:none;
-    }
-    }
-  }
-  @include respond-to ('large'){
-    .navbar-nav{
-      .nav-item:nth-child(2){
-      display:none;
-    }
-    }
-  }
 
-  @include respond-to ('medium'){
-    .navbar-nav{
-      .nav-item:nth-child(3){
-      display:none;
-    }
-      
-    }
 
-    .navbar {
-        .categories, .input_search {
-          display:none;
-        }
-      }
 
-  }
+
+// CSS for dropdown menu
+/*
+.parent {
+  display: block;
+  position: relative;
+  float: left;
+  line-height: 30px;
+  background-color: $paper;
+  // border-right:#CCC 1px solid;
+  min-width:200px;
+  z-index:99;
+}
+.parent a{
+  margin: 10px;
+  color: $textGrey;
+  text-decoration: none;
+  
+}
+.parent:hover > ul {
+  display:block;
+  position:absolute;
+  
+}
+.child {
+  display: none;
+  min-height:200px;
+}
+.child li {
+  background-color: $paper;
+  line-height: 40px;
+  // border-bottom:#CCC 1px solid;
+  // border-right:#CCC 1px solid;
+  width:100%;
+}
+.child li a{
+  color: $textGrey;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0px; 
+  min-width:10em;
+}
+ul ul ul{
+  left: 100%;
+  top: 0;
+  margin-left:1px;
+  min-width:200px;
+}
+li:hover {
+  background-color: $paper;
+}
+.parent li:hover {
+  background-color: $paper;
+}
+.expand{
+  font-size:12px;
+  float:right;
+  margin-right:5px;
+}
+
+*/
+
+
+
+
 
 }

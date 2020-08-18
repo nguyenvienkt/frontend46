@@ -16,26 +16,12 @@
 
 // import layout
 @import '../SASS/layout/header';
-
-
-
-.text-p{
-  font-size:$fs-base;
-}
-.text-p1{
-  font-size:1.2rem;
-  padding:2rem;
-}
-.text-p2{
-  font-size:1.5rem;
-  padding:$gap-base;
-  color:$color-hover-primary;
-  padding:0.5rem; // = 5px
-  padding:0.6rem; // =6px;
-}
-.text-p3{
-  font-size:5rem;
-  padding:1rem;
-}
-
+@import '../SASS/layout/carousel';
+@import '../SASS/layout/searchbox';
+@import '../SASS/layout/filmshowcase';
+@import '../SASS/layout/listcinema';
+@import '../SASS/layout/news';
+@import '../SASS/layout/application';
+@import '../SASS/layout/partner';
+@import '../SASS/layout/footer';
 

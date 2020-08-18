@@ -2,10 +2,10 @@
   border-bottom:1px solid $lightGrey;
   border-top:1px solid $lightGrey;
   padding:60px 0;
-  margin:100px 0 0 0;
+  margin:60px 0 0 0;
   .story-content{
     display:flex;
-    width:80%;
+    width:90%;
     margin:auto;
     align-items:center;
     img{
@@ -26,6 +26,10 @@
       p{
         @include text ($textLightGrey,$body + 2,$fwRegular);
         margin:$p-5 0 $p-10 0;
+      }
+
+      @media screen and (max-width:768px){
+        padding:2rem 0;
       }
     }
 

@@ -184,6 +184,9 @@ html{
 	padding: 0 10px; /* Nhớ dùng box-sizing cho khỏi bị rớt xuống*/
 }
 
+/* team  */
+
+
 .team {
 	background-color: #4e2a83;
 	padding: 40px 10%;
@@ -395,7 +398,8 @@ Lưu ý phải chỉnh div cha là position: relative, div con position absolu
 
 /* Hiệu ứng transition */
 .team__item--1 .team__item__info {
-	transform:translate(-100%,0); /* là kích thước của div con chính nó*/
+	/* là kích thước của div con chính nó */
+	transform:translate(-100%,0); 
 }
 
 .team__item--1:hover .team__item__info{

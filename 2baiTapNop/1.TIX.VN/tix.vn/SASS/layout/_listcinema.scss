@@ -1,0 +1,202 @@
+.list-cinema {
+	padding-top: 120px;
+	background: url('../../img/back-news.png');
+	background-repeat: repeat;
+	background-size: auto;
+	background-size: 100%;
+  background-repeat: no-repeat;
+  max-width: 940px;
+  margin:auto;
+
+
+ 
+  /* Style the tab */
+.tab {
+  padding:0;
+  border: 1px solid #ebebec;
+  border-right:none;
+  background-color: none;
+  // width: 20%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .tablinks{
+    background-color: none;
+    border-bottom: 1px solid #fff;
+    border-color: rgba(238,238,238,.88);
+    opacity:0.5;
+    
+    &:hover{
+      opacity:1;
+    }
+  }
+  .active{
+      opacity:1;
+    }
+  button{
+    border:none;
+    background-color: #fff;
+    padding:10px 0;
+    img{
+      display:block;
+      width:50px;
+      height:50px;
+      
+    }
+    &:first-child{
+      padding:0;
+    }
+  }
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+  padding: 0;
+  border: 1px solid #ebebec;
+  border-right:none;
+  // width: 80%;
+  min-height: 600px;
+
+  .tabcontent-detail{
+    // min-height:600px;
+    .tab-detail-left{
+      max-height:600px;
+      overflow-y: scroll;
+      .nav-link{
+        border:none;
+        border-bottom: 1px solid #fff;
+        border-color: rgba(238,238,238,.88);
+        padding: 15px;
+        opacity:0.5;
+        &:hover{
+          opacity:1
+        }
+      }
+      .active{
+        opacity: 1;
+      }
+      border-right:1px solid #ebebec;
+      padding:0;
+
+      .left-cinema{
+        display:flex;
+        img{
+          display:block;
+          width:50px;
+          height:50px;
+        }
+        .cinema-detail{
+          padding-left:7px;
+          .detail-brand{
+            @include text($color-hover-primary,$fs-base,$fw-medium);
+          }
+          .brand-name{
+            @include text($color-text-primary,$fs-base,$fw-medium);
+          }
+          .brand-add{
+            @include text($color-text-third,1.4rem,$fw-light);
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+          }
+          p{
+            @include text($color-hover-primary,1.3rem,$fw-base);
+          }
+        }
+
+      }
+
+
+    }
+
+    .tab-detail-right{
+      padding:0;
+      max-height:600px;
+      overflow-y: scroll;
+      max-width: 66%;
+      .form-group {
+        padding:15px;
+        .right-phim{
+          display:flex;
+          align-items:center;
+          img{
+            width:50px;
+            height:50px;
+            display: block;
+          }
+          .right-phim-detail{
+            margin-left:10px;
+            .right-phim-age{
+              @include text (#fff,$fs-base,$fw-medium);
+              padding:2px 8px;
+              background:$color-bg-third;
+              border-radius:4px;
+              display:inline-block;
+            }
+            .right-phim-age-red{
+              padding:2px 8px;
+              background:$color-hover-primary;
+              border-radius:4px;
+              display:inline-block;
+              @include text (#fff,$fs-base,$fw-medium);
+            }
+            .right-phim-title{
+              @include text ($color-text-primary,$fs-base,$fw-bold);
+              
+            }
+            .right-phim-small {
+              @include text ($color-text-secondary,1.4rem,$fw-base);
+              margin:0;
+            }
+          }
+        }
+
+        .right-phim-book{
+          padding-bottom:15px;
+          border-bottom: 1px solid #ccc;
+          border-color: rgba(238,238,238,.88);
+          .right-phim-format{
+            @include text ($color-text-primary,1.7rem,$fw-bold);
+            margin-top:1rem;
+          }
+          .right-book-button {
+            border: 1px solid $color-border-secondary;
+            color: $color-text-secondary;
+            padding:5px 10px;
+            border-radius:0.5rem;
+            font-weight: $fw-medium;
+            .right-start-time{
+              color:$color-bg-third;
+            }
+            .right-start-time-red{
+              color:$color-hover-primary;
+            }
+          }
+        }
+      }
+
+
+
+
+
+    }
+
+  }
+
+  
+}
+
+
+}
+
+@media screen and (max-width:768px){
+  .list-cinema{
+    display:none;
+  }
+}

@@ -25,10 +25,14 @@
 }
 
 .btn--location {
-    @include button($fwRegular,$textGrey,transparent,1px solid $textGrey,4px,8px,20px,transparent,$textGrey,1px solid $textGrey);
+    @include button($fwRegular,$textGrey,transparent,1px solid $grey,4px,8px,20px,transparent,$textGrey,1px solid $grey);
 &:focus{
     box-shadow:none;
   }
 
   
+}
+
+.btn--red {
+  @include button ($fwRegular,$textWhite,$red,none,4px,10px, 16px,$red-hover,$textWhite,none);
 }

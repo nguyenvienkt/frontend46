@@ -17,7 +17,7 @@ $color-text-fifth:#108f3e;
 /* color background*/
 $color-bg-primary: #fb4226;
 $color-bg-secondary: #222 ;
-// $color-bg-third:;
+$color-bg-third:#00aa4d;
 
 /* color border */
 $color-border-primary: #949494;
@@ -41,7 +41,7 @@ $color-hover-third:#4a4a4a;
 $fw-light:300;
 $fw-base:400; /*Regular*/
 $fw-medium: 500;
-$fw-semi-bold:600;
+// $fw-semi-bold:600;
 $fw-bold:700;
 
 /* font-size (standard for almost project) */
@@ -93,7 +93,7 @@ $gap-base:1rem; /* Must set html{font-size 62.5%} => 1rem = 10px = 62.5%*16px */
 
 /* padding, margin for section */
 // $gap-section-sm:40px; /* padding, margin between sections*/
-$gap-section-base:50px; /* padding, margin between sections*/
+$gap-section-base:5rem; /* padding, margin between sections*/
 // $gap-section-xl:60px; /* padding, margin between sections*/
 // $gap-section-xxl:70px; /* padding, margin between sections*/
 

@@ -1,7 +1,7 @@
 .business{
   margin:60px 0;
   .business-content{
-    width:80%;
+    // width:80%;
     margin:auto;
     display:flex;
     justify-content: center;
@@ -30,9 +30,35 @@
 
   }
    .business-data{
-    
     background-color: #003640;/*$light;*/
     height:21rem;
     // transform:translateY(10px);
   }
+
+
+  @media screen and (max-width: 992px) {
+		.business-content {
+			img {
+				display: none;
+      }
+      
+      .business-detail{
+        align-items: center;
+        max-width:100%;
+        margin:1rem;
+        padding:2rem;
+      }
+
+    }
+    
+    .business-data{
+    // background-color: #003640;/*$light;*/
+    height:12rem;
+    // transform:translateY(10px);
+  }
+
+  }
+
+
+
 }

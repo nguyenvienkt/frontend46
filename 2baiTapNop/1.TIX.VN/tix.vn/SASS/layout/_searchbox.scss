@@ -1,0 +1,88 @@
+.search-box{
+    display: flex;
+    align-items: center;
+    max-width: 940px;
+    margin: auto;
+    height: 80px;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    z-index: 2;
+
+    .list-phim, .list-rap, .list-ngay-xem, .list-suat-chieu{
+      .dropdown {
+        border-right: 1px solid rgba(238,238,238,.88);
+        padding:1.2rem 0;
+
+        .dropdown-toggle{
+          @include text ($color-text-primary,$fs-base,$fw-medium);
+        }::after{
+          // font-family: FontAwesome; 
+          // content: "\f099";
+          margin-left:14rem;
+          border:none;
+          border-bottom: 0.2rem solid #a4a4a4;
+          border-right: 0.2rem solid #a4a4a4;
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          transform: rotate(45deg);
+        }
+        
+        .dropdown-menu {
+          margin:1rem 0 0 -1.5rem;
+          .dropdown-item{
+            @include text ($color-text-primary,$fs-base,$fw-base);
+            &:hover {
+              background-color: #60c5ef;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .list-ngay-xem{
+      .dropdown {
+        
+        .dropdown-toggle{
+          
+        }::after{
+          margin-left:3rem;
+        }
+      }
+    }
+    .list-suat-chieu{
+      .dropdown {
+        
+        .dropdown-toggle{
+          
+        }::after{
+          margin-left:3rem;
+        }
+      }
+    }
+
+    .mua-ve-ngay{
+      display:flex;
+      align-items: center;
+      .btn--mua-ve {
+        @include button ($color-text-fouth,$color-bg-secondary,$fs-base,$fw-base,0.7rem, 1.1rem,none, 0.5rem,$color-text-fouth, $color-bg-secondary,none);
+        text-transform: uppercase;
+      }
+    }
+
+  @media screen and (max-width:992px){
+    display:none;
+  }
+
+
+
+    
+}

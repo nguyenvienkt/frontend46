@@ -1,0 +1,105 @@
+.application {
+	margin-top: 4rem ;
+	background: url(../../img/app-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  height: 635px;
+  
+  
+	.app-content {
+    .container-app{
+      max-width: 940px;
+      margin:auto;
+    }
+		padding: 80px 0;
+
+		.app-content-left {
+			display: flex;
+			justify-content: center;
+			// align-items: center;
+			flex-direction: column;
+			color: #fff;
+			.app-left-title {
+				@include text(#fff, 3.5rem, $fw-medium);
+			}
+			.app-left-sweet {
+        @include text(#fff, 1.7rem, $fw-base);
+			}
+			.down-app {
+				@include button(
+					#fff,
+					$color-bg-primary,
+					$fs-base,
+					$fw-medium,
+					1rem,
+					2rem,
+					none,
+					5px,
+					null,
+					null,
+					null
+				);
+				width: 80%;
+				margin: 1rem 0;
+			}
+			.app-left-version {
+				a {
+					color: #fff;
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.app-content-right {
+			.app-right-slider {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img {
+          display: block;
+          border-radius: 2rem;
+          border:2px solid $color-border-primary;
+					width: auto;
+					height: 425px;
+				}
+			}
+		}
+	}
+}
+
+
+// RESPONSIVE
+@media screen and (max-width:992px){
+  .application{
+    height: 1200px;
+    .app-content{
+      .app-content-left{
+        align-items: center;
+        .app-left-title {
+				@include text(#fff, 2.5rem, $fw-medium);
+      }
+        .app-left-sweet {
+        padding:0 2rem;
+        }
+        .down-app{
+          width:50%;
+        }
+      }
+
+
+      .app-content-right {
+			.app-right-slider {
+				
+				img {
+          display: block;
+          border-radius: 2rem;
+          border:2px solid $color-border-primary;
+					width: 373px;
+					height: auto;
+				}
+			}
+		}
+    }
+  }
+}

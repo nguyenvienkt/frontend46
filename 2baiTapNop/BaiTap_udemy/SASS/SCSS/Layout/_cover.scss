@@ -1,50 +1,117 @@
-.myCover{
-  background-image: url('../../img/cover.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:450px;
-  position: relative;
-  .cover_content{
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.08);
-    position: absolute;
-    left: 4.8rem;
-    top: 6.4rem;
-    max-width: 30rem;
-    background:$paper;
-    padding:$h4 + 4;
-    h1{
-      @include text ($textGrey,$h1,$fwBold)
-    }
-    p{
-      @include text ($textGrey,$body + 2,$fwRegular)
-    }
+.myCover {
+	background-image: url('../../img/cover.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+	position: relative;
+	.cover_content {
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+		position: absolute;
+		left: 3rem;
+		top: 6.4rem;
+		max-width: 30rem;
+		background: $paper;
+		padding: $h4 + 4;
+		h1 {
+			@include text($textGrey, $h1, $fwBold);
+		}
+		p {
+			@include text($textGrey, $body + 2, $fwRegular);
+		}
 
-    .input_cover{
-      .form-control{
-        padding:$p-15 + 8;
-        border-radius:$p-5;
-        border: 1px solid $grey;
-        &:focus{
-          box-shadow: none;
-          border: 1px solid $grey;
-        }
-        &:hover{
-          border: 1px solid $darkGrey;
-        }
-        &::placeholder{
-          @include text($textLightGrey,$body,$fwRegular)
-        }
-      }
-      .input-group-text{
-        background-color:transparent;
-        cursor: pointer;
-        border: none;
-        transform: translateX(-110%);
-        z-index:5;
-      }
-    }
+		.input_cover {
+			.form-control {
+				padding: $p-15 + 8;
+				border-radius: $p-5;
+				border: 1px solid $grey;
+				&:focus {
+					box-shadow: none;
+					border: 1px solid $grey;
+				}
+				&:hover {
+					border: 1px solid $darkGrey;
+				}
+				&::placeholder {
+					@include text($textLightGrey, $body, $fwRegular);
+				}
+			}
+			.input-group-text {
+				background-color: transparent;
+				cursor: pointer;
+				border: none;
+				transform: translateX(-110%);
+				z-index: 5;
+			}
+		}
+	}
 
-
+	@media screen and (max-width: 992px) {
+		height: 250px;
+		.cover_content {
+      max-width: 26rem;
+			left: 1rem;
+			top: 1rem;
+			h1 {
+				@include text($textGrey, $h3, $fwBold);
+			}
+			p {
+				@include text($textGrey, $body, $fwRegular);
+			}
+		}
   }
+
+  @media screen and (max-width:768px){
+    
+  }
+  
+  @media screen and (max-width:576px){
+    .cover_content {
+      display:none;
+      // will be display in intro section
+		}
+  }
+
+
+
+
+
+
+
+}
+
+.cover_content-mobile {
+
+		padding: $h4;
+		h1 {
+			@include text($textGrey, 2rem, $fwBold);
+		}
+		p {
+			@include text($textGrey, $body, $fwRegular);
+    }
+    .input_cover {
+			.form-control {
+				padding: $p-15 + 8;
+				border-radius: $p-5;
+				border: 1px solid $grey;
+				&:focus {
+					box-shadow: none;
+					border: 1px solid $grey;
+				}
+				&:hover {
+					border: 1px solid $darkGrey;
+				}
+				&::placeholder {
+					@include text($textLightGrey, $body, $fwRegular);
+				}
+			}
+			.input-group-text {
+				background-color: transparent;
+				cursor: pointer;
+				border: none;
+				transform: translateX(-110%);
+				z-index: 5;
+			}
+		}
+
 }

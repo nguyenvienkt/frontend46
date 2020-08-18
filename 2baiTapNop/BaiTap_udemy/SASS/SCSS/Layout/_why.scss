@@ -1,27 +1,33 @@
 .whyUdemy {
   border-top:1px solid $lightGrey;
+  border-bottom:1px solid $lightGrey;
   margin-top:50px;
-  .intro_content{
+  .why_content{
     width:95%;
     margin:auto;
     padding:$p-20 0;
-    .intro_item{
+    .why-text {
+      @include text($textGrey, 1.5rem, $fwBold);
+    }
+    .why_item{
       display:flex;
+      flex-direction: row;
       align-items: center;
       .icon{
         font-size:$h4;
         background-color: $lightSecondary;
         color:$secondary;
-        width:48px;
-        height:48px;
+        width:3.5rem;
+        height:3.5rem;
+        line-height: 3.5rem;
         border-radius: 50%;
         text-align: center;
-        display:flex;
-        align-items: center;
-        justify-content: center;
+        // display:flex;
+        // align-items: center;
+        // justify-content: center;
         margin-right: $p-20;
       }
-      .icon_content{
+      .why_content{
 
         p:first-child{
           @include text ($textGrey,$body,$fwBold);
@@ -34,5 +40,13 @@
       }
     }
   }
+
+  @media screen and (max-width:768px){
+    .why_item {
+      padding:0.5rem 1rem;
+    }
+  }
+
+
   
 }
