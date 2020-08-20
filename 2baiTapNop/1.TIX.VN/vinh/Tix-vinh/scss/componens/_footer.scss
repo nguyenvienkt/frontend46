@@ -1,0 +1,246 @@
+.container {
+  width: 1000px;
+}
+
+.footer {
+  background-color: #222;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__top {
+    display: flex;
+    &__item {
+      width: 33.33%;
+      p {
+        @include Text($textWhite, $body2, $fwMedium);
+        margin: 0;
+        padding: 0;
+        margin-bottom: 5px;
+      }
+
+      .content {
+        display: flex;
+
+        &__item {
+          width: 100%;
+        }
+        a {
+          display: block;
+          text-decoration: none;
+          @include Text($textSecondary, $body2, $fwBold);
+          line-height: 20px;
+          transition: all 0.3s;
+        }
+        a:hover {
+          color: $textWhite;
+        }
+      }
+
+      .logo {
+        margin: auto;
+
+        img {
+          height: 30px;
+          width: 30px;
+          margin: 5px;
+          background: $white;
+          border-radius: 50%;
+        }
+
+        img:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .contact {
+        display: flex;
+
+        &__item {
+          margin: 0 auto;
+        }
+
+        img {
+          height: 30px;
+          width: auto;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .hr {
+    border-top: 1px solid #4a4a4a;
+  }
+
+  &__bottom {
+    display: flex;
+    width: 56%;
+  }
+
+  .item--1 {
+    line-height: 20px;
+    p {
+      @include Text($textWhite, $body2, $fwRegular);
+      margin: 0;
+      padding: 0;
+    }
+    span {
+      @include Text($textSecondary, $body2, $fwRegular);
+    }
+  }
+
+  .item--2 {
+    margin-left: auto;
+  }
+
+  #img1 {
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  #img2 {
+    width: 140px;
+  }
+
+  a {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .container {
+    width: 980px !important;
+  }
+
+  .hr {
+    width: 900px;
+  }
+
+  .footer {
+    &__top {
+      .item--1 {
+        display: none !important;
+      }
+      .item--2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        a {
+          margin-right: 13px;
+        }
+      }
+    }
+    &__bottom {
+      .item--1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  @media (min-width: 768px) {
+    
+    .container {
+      max-width: 768px !important;
+      padding: 0;
+    }
+
+    .hr {
+      width: 780px !important;
+    }
+
+    .footer {
+      &__top {
+        .item--1 {
+          display: none !important;
+        }
+        .item--2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 10px 0;
+          a {
+            margin-right: 13px;
+            line-height: 30px;
+          }
+        }
+        .contact__item{
+          margin-top: 10px;
+        }
+      }
+      &__bottom {
+        .item--1 {
+          text-align: center;
+          margin-top: 3px;
+        }
+        #img1{
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  @media (min-width: 576px) {
+    
+    .container {
+      max-width: 576px !important;
+      padding: 0;
+    }
+
+    .hr {
+      width: 780px !important;
+    }
+
+    .footer {
+      &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__item{
+          width: 100%;
+        }
+        .item--1 {
+          display: none !important;
+        }
+        .item--2 {
+          margin: 10px 0;
+          justify-content: center;
+          display: flex;
+          flex-direction: row;
+          a {
+            margin-right: 13px;
+          }
+        }
+      }
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        .item--1 {
+          text-align: center;
+          margin-top: 3px;
+        }
+        #img1{
+          margin-top: 3px;
+          margin-bottom: 10px;
+        }
+        .item--2 {
+          margin: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

@@ -105,3 +105,12 @@ using
     box-shadow:none;
   }
 }
+
+.btn--mua-ve {
+	@include button (#fff,$color-bg-primary,$fs-base,$fw-base,0.5rem, 1rem, none,4px,null,null,null);
+	width:50%;
+}
+
+.btn--chon-gio{
+	
+}

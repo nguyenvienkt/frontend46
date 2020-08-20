@@ -1,0 +1,13 @@
+//MIXIN: text,button,input...
+@mixin Text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin Button($bg, $br, $brRadius, $padding) {
+  background-color: $bg;
+  border: $br;
+  border-radius: $brRadius;
+  padding: $padding;
+}

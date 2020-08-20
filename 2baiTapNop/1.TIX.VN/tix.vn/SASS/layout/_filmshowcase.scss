@@ -45,6 +45,19 @@
 			.phim-item {
 				position: relative;
 
+				.phim-item-flag {
+					position: absolute;
+					top: -20px;
+					left: -10px;
+					width: 80%;
+					z-index: 3;
+					// pointer-events: none;
+					// overflow: hidden;
+					transform: translate(-5%, -12%);
+					img{
+						width: 150px;
+					}
+				}
 				.rating {
 					font-size: 16px;
 					background-color: rgba(12, 27, 54, 0.8);
@@ -76,16 +89,23 @@
 						border-radius: 0.5rem;
 						margin-right: 0.5rem;
 						padding: 0.2rem 0.5rem;
-						display:inline;
+						display: inline;
+					}
+					.phim-age-blue {
+						background-color: $color-bg-third;
+						color: #fff;
+						border-radius: 0.5rem;
+						margin-right: 0.5rem;
+						padding: 0.2rem 0.5rem;
+						display: inline;
 					}
 					.title-label {
-						display:inline;
+						display: inline;
 						@include text($color-text-primary, 1.6rem, $fw-medium);
 					}
-					.title-time{
-						margin-top:1rem;
+					.title-time {
+						margin-top: 1rem;
 						@include text($color-text-secondary, 1.4rem, $fw-medium);
-						
 					}
 				}
 				.phim-photo {
@@ -109,6 +129,7 @@
 						border-radius: 4px;
 						opacity: 0;
 						transition: all 0.2s;
+						
 					}
 
 					.play-btn {
@@ -118,8 +139,23 @@
 						transform: translate(-50%, -50%);
 						opacity: 0;
 						transition: all 0.2s;
+						
 					}
+
+					.chieu-som{
+					color:#fff;
+					font-size:1.3rem;
+					background:$color-bg-primary;
+					border-radius: 5px;
+					position:absolute;
+					bottom:10px;
+					right:10px;
+					// z-index:1;
+					padding:3px 8px;
 				}
+				}
+
+				
 				.mua-ve {
 					margin: 1.5rem 0;
 					display: none;
@@ -148,6 +184,9 @@
 				}
 
 				&:hover .phim-title {
+					display: none;
+				}
+				&:hover .chieu-som {
 					display: none;
 				}
 
@@ -211,10 +250,9 @@
 			// max-width:800px;
 			// margin:auto;
 			.tab-content {
-
 				.carousel-item {
 					.phim-page-1 {
-						display:flex;
+						display: flex;
 						justify-content: center;
 						align-items: center;
 						.list-phim-content {
@@ -224,29 +262,29 @@
 									p {
 										display: none;
 									}
-									
-									.phim-age{
+
+									.phim-age {
 										position: absolute;
-										bottom:0;
-										left:0;
+										bottom: 0;
+										left: 0;
 									}
 								}
 
-								.phim-photo{
-										.overlay{
-											display: none;
-										}
-										.play-btn{
-											display:none;
-										}
+								.phim-photo {
+									.overlay {
+										display: none;
 									}
-								.mua-ve{
-									display:none;
+									.play-btn {
+										display: none;
+									}
+								}
+								.mua-ve {
+									display: none;
 								}
 
 								&:hover .phim-title {
-									.phim-age{
-										display:block;
+									.phim-age {
+										display: block;
 									}
 								}
 							}
@@ -254,8 +292,9 @@
 					}
 				}
 
-				.chevron-prev, .chevron-next {
-					display:none;
+				.chevron-prev,
+				.chevron-next {
+					display: none;
 				}
 			}
 		}

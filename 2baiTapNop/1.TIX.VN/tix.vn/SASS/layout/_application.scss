@@ -1,17 +1,16 @@
 .application {
-	margin-top: 4rem ;
+	margin-top: 4rem;
 	background: url(../../img/app-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-  height: 635px;
-  
-  
+	height: 635px;
+
 	.app-content {
-    .container-app{
-      max-width: 940px;
-      margin:auto;
-    }
+		.container-app {
+			max-width: 940px;
+			margin: auto;
+		}
 		padding: 80px 0;
 
 		.app-content-left {
@@ -24,7 +23,7 @@
 				@include text(#fff, 3.5rem, $fw-medium);
 			}
 			.app-left-sweet {
-        @include text(#fff, 1.7rem, $fw-base);
+				@include text(#fff, 1.7rem, $fw-base);
 			}
 			.down-app {
 				@include button(
@@ -52,54 +51,61 @@
 		}
 
 		.app-content-right {
+			.app-frame-mobile {
+				padding: 0 28%;
+				display: block;
+				width: 100%;
+				height: auto;
+				position:absolute;
+			}
 			.app-right-slider {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				img {
-          display: block;
-          border-radius: 2rem;
-          border:2px solid $color-border-primary;
+					display: block;
+					border-radius: 2rem;
+					// border: 2px solid $color-border-primary;
 					width: auto;
-					height: 425px;
+					height: 435px;
+					margin-left:30px;
+					margin-top:7px;	
 				}
 			}
 		}
 	}
 }
 
-
 // RESPONSIVE
-@media screen and (max-width:992px){
-  .application{
-    height: 1200px;
-    .app-content{
-      .app-content-left{
-        align-items: center;
-        .app-left-title {
-				@include text(#fff, 2.5rem, $fw-medium);
-      }
-        .app-left-sweet {
-        padding:0 2rem;
-        }
-        .down-app{
-          width:50%;
-        }
-      }
+@media screen and (max-width: 992px) {
+	.application {
+		height: 1200px;
+		.app-content {
+			.app-content-left {
+				align-items: center;
+				.app-left-title {
+					@include text(#fff, 2.5rem, $fw-medium);
+				}
+				.app-left-sweet {
+					padding: 0 2rem;
+				}
+				.down-app {
+					width: 50%;
+				}
+			}
 
-
-      .app-content-right {
-			.app-right-slider {
-				
-				img {
-          display: block;
-          border-radius: 2rem;
-          border:2px solid $color-border-primary;
-					width: 373px;
-					height: auto;
+			.app-content-right {
+				.app-right-slider {
+					img {
+						display: block;
+						border-radius: 2rem;
+						// border: 2px solid $color-border-primary;
+						width: 394px;
+						height: auto;
+						margin-top:26px;
+					}
 				}
 			}
 		}
-    }
-  }
+	}
 }

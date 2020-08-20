@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" href="./css/datve.css" />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__content">
+        <img src="./img/datve/cancel-arrow.png" alt="cancel">
+        <p id="p1">01 <span>CHỌN GHẾ & THANH TOÁN</span></p>
+        <p id="p2">02 <span>KẾT QUẢ ĐẶT VÉ</span></p>
+        <p id="p3">03. <span>THANH TOÁN</span></p>
+        <p id="username">USER NAME</p>
+      </div>
+    </header>
+
+    <div class="bkticketleft">
+      <div class="bkticketleft__overlay"></div>
+    </div>
+
+    <div class="seat">
+      <div class="seat__container">
+        <div class="seat__top">
+          <div class="seat__top__left">
+            <img
+              id="seat__left__img"
+              src="./img/datve/ee621ee05dcd4565caead4f29421b41e.png"
+              alt="logo"
+            />
+            <div class="seat__left__address">
+              <p>CGV <span> - Liberty Citypoint</span></p>
+              <p>Hôm nay - 20:30 - Cinema 4</p>
+            </div>
+          </div>
+          <div class="seat__top__right">
+            <p>thời gian giữ ghế</p>
+            <p>5:00</p>
+          </div>
+        </div>
+        <div class="seat__map">
+          <img src="./img/datve/screen.png" alt="screen" />
+          <div class="seat__map__list">
+            <span>Suất chiếu không hỗ trợ đặt vé</span>
+          </div>
+          <div class="seat__map__note">
+            <div class="seat__map__item item--1">
+              <i class="material-icons">event_seat</i> <br />
+              <span>Ghế đang chọn</span>
+            </div>
+            <div class="seat__map__item item--2">
+              <i class="material-icons">event_seat</i> <br />
+              <span>Ghế đã có người chọn</span>
+              <img src="./img/datve/notchoose.png" alt="notchoose" />
+            </div>
+            <div class="seat__map__item item--3">
+              <i class="material-icons">event_seat</i> <br />
+              <span>ghế không thể chọn</span>
+            </div>
+          </div>
+          <div class="seat__map__view">
+            <div class="seat__view__item">
+              <span class="linecenter"></span>
+              <span>Ghế trung tâm</span>
+            </div>
+            <div class="seat__view__item">
+              <span class="linebf"></span>
+              <span>Ghế đẹp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bkticketright">
+      <div class="bkticketright__content">
+        <div id="total">0 đ</div>
+        <div class="bkticketright__content__detail">
+          <span>C18 </span>
+          <span>Cá Sấu Tử Thần</span>
+          <p>CGV - Crescent Mall</p>
+          <p>Hôm nay 12/08/2020 - 16:20 - Cinema 7</p>
+        </div>
+        <div class="bkticketright__content__seat">
+          <span>Ghế</span>
+          <span>0 đ</span>
+        </div>
+        <div class="bkticketright__content__combo">
+          <div class="bkticketright__content__combo__left">
+            <img src="./img/datve/popcorn.png" alt="popcorn" />
+            <span>Chọn Combo</span>
+          </div>
+          <div class="bkticketright__content__combo__right">
+            <span>0 đ</span>
+          </div>
+        </div>
+        <div id="email">E-Mail</div>
+        <div id="phone">Phone</div>
+        <div class="bkticketright__content__voucher">
+          <div class="bkticketright__content__voucher__left">
+            <p>Mã giảm giá</p>
+            <span>Nhập tại đây...</span>
+          </div>
+          <div class="bkticketright__content__voucher__right">
+            <span>Áp dụng</span>
+          </div>
+        </div>
+        <div class="bkticketright__content__payment">
+          <p>Hình thức thanh toán</p>
+          <span
+            >Vui lòng chọn ghế để hiển thị phương thức thanh toán phù hợp.</span
+          >
+        </div>
+        <div class="bkticketright__content__notice">
+          <img src="./img/datve/exclamation.png" alt="" />
+          <span>Vé đã mua không thể đổi hoặc hoàn tiền</span>
+          <p
+            >Mã vé sẽ được gửi qua tin nhắn 
+            <span id="span1">ZMS</span> 
+            (tin nhắn Zalo) và
+            <span id="span2">Email</span> 
+            đã nhập.
+        </p>
+        </div>
+      </div>
+      <div class="bkticketright__book">
+        <span>Đặt Vé</span>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </body>
+</html>

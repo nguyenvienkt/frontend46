@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Tix.vn clone</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- main css  -->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header">
+    <div class="menu-btn">
+      <img src="./img/mobile-menu-options.png" width="25px" alt="mobilemenu">
+    </div>
+    <div class="myTopNav container-fluid">
+      <!-- Nav -->
+      <nav class="main-nav">
+        <img src="/img/web-logo.png" alt="tix.vn" class="logo">
+        <ul class="main-menu">
+          <button class="d-md-none btn--side-login"><i class="fa fa-user-circle"></i> Đăng Nhập</button>
+          <li><a href="#lichchieu">Lịch Chiếu</a></li>
+          <li><a href="#cumrap">Cụm Rạp</a></li>
+          <li><a href="#tintuc">Tin Tức</a></li>
+          <li><a href="#ungdung">Ứng Dụng</a></li>
+          <li class="d-md-none btn--location-mobile">
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn--location dropdown-toggle" data-toggle="dropdown">
+                    Hồ Chí Minh
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <ul class="right-menu">
+          <li>
+            <a href="./login.html">
+              <button class="btn--log-in">
+
+                <i class="fa fa-user-circle"></i> Đăng Nhập
+
+              </button> </a>
+          </li>
+          <li>
+            <form>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn--location dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-map-marker"></i> Hồ Chí Minh
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Hà Nội</a>
+                    <a class="dropdown-item" href="#">Hải Phòng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                    <a class="dropdown-item" href="#">Đà Nẵng</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  <!-- /header  -->
+
+  <!-- detail movie  -->
+  <div class="detail-top">
+    <div class="style-blur"><img src="./img/bg-blur-detail-movie.jpg" alt=""></div>
+    <div class="style-gradient"></div>
+    <div class="top-info">
+      <!-- <div class=""> -->
+
+      <div class="col-sm-3 col-xs-4 info-left">
+        <div class="info-left-main">
+          <img src="./img/detail-movie-info-left.png" alt="">
+          <a href="">
+            <img src="./img/play-video.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-5 info-middle">
+        <div class="info-middle-date">
+          <p>07.08.2020</p>
+        </div>
+        <div class="info-middle-title">
+          <span class="info-title-age">C16</span>
+          <p>Nội Chiến Siêu Anh Hùng - Captain America: Civil War</p>
+        </div>
+        <div class="info-middle-time">
+          <p>147 phút - 7.8 IMDb - IMAX/3D/2D</p>
+        </div>
+        <button class="btn--mua-ve">MUA VÉ</button>
+      </div>
+      <div class="col-sm-2 info-right">
+        <div class="right-circle-rate">
+          <div class="circle-rate-border"></div>
+          <span>9.2</span>
+          <div class="circle-fill">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
+        <div class="right-star-rate">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <span>1/2</span>
+        </div>
+        <div class="right-user-rate">
+          <p><span>408</span> người đánh giá </p>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+
+  <div class="detail-main">
+
+    <div class="container-content">
+      <nav>
+        <div class="nav nav-tabs nav-tabs-top" id="nav-detail-movie">
+          <a class="nav-item nav-link active" href="#lichchieu" data-toggle="tab" aria-selected="true"> Lịch Chiếu</a>
+          <a class="nav-item nav-link" href="#thongtin" data-toggle="tab">Thông tin</a>
+          <a class="nav-item nav-link" href="#danhgia" data-toggle="tab"> Đánh giá</a>
+        </div>
+      </nav>
+      <div class="tab-content tab-content-main">
+        <div class="tab-pane fade show active" id="lichchieu">
+          <!-- lịch chiếu table trong tab  -->
+          <div class="container-lichchieu">
+            <div class="row">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs flex-column col-md-4 nav-tabs-vertial" role="tablist">
+                <li class="nav-item">
+                  <div class="nav-link active" data-toggle="tab" href="#leftcgv">
+                    <img class="detail-logo" src="./img/cgv.png" alt="">
+                    <div class="sum-cinema">
+                      <p>CGV</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftbhd">
+                    <img class="detail-logo" src="./img/bhd.png" alt="">
+                    <div class="sum-cinema">
+                      <p>BHD</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftgalaxy">
+                    <img class="detail-logo" src="./img/galaxycine.png" alt="">
+                    <div class="sum-cinema">
+                      <p>GALAXY</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftcinestar">
+                    <img class="detail-logo" src="./img/cinestar.png" alt="">
+                    <div class="sum-cinema">
+                      <p>CineStar</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftdongda">
+                    <img class="detail-logo" src="./img/dongdacinema.png" alt="">
+                    <div class="sum-cinema">
+                      <p>ĐỐNG ĐA</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftmega">
+                    <img class="detail-logo" src="./img/megags.png" alt="">
+                    <div class="sum-cinema">
+                      <p>MEGA</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftdcine">
+                    <img class="detail-logo" src="./img/dcine.png" alt="">
+                    <div class="sum-cinema">
+                      <p>DCINE</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div class="nav-link" data-toggle="tab" href="#leftlotte">
+                    <img class="detail-logo" src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt="">
+                    <div class="sum-cinema">
+                      <p>LOTTE</p>
+                      <a href="#" data-html="true" data-toggle="tooltip" data-placement="right"
+                        title="<ul><li>Áp dụng khi thanh toán bằng ZaloPay</li><li>Áp dụng cho tất cả các khách hàng</li></ul>">
+                        <img class="tooltip-promotion" src="./img/tool-tip.png" alt="promotion">
+                      </a>
+                      <span>x3 vé CGV 79k/vé</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content tab-content-vertial col-md-8">
+                <div id="leftcgv" class=" tab-pane active">
+                  <!-- horizontal tab-->
+                  <div class="container-">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-tabs-horizontal" role="tablist">
+                      <li class="nav-item">
+                        <div class="nav-link active" data-toggle="tab" href="#top11">
+                          <p>Thứ 4</p>
+                          <p>19</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top12">
+                          <p>Thứ 5</p>
+                          <p>20</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top13">
+                          <p>Thứ 6</p>
+                          <p>21</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top14">
+                          <p>Thứ 7</p>
+                          <p>22</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top15">
+                          <p>Chủ Nhật</p>
+                          <p>23</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top16">
+                          <p>Thứ 2</p>
+                          <p>24</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top17">
+                          <p>Thứ 3</p>
+                          <p>25</p>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="nav-link" data-toggle="tab" href="#top18">
+                          <p>Thứ 4</p>
+                          <p>26</p>
+                        </div>
+                      </li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content tab-content-horizontal">
+                      <div id="top11" class="container- tab-pane active">
+
+                        <!-- accordion  -->
+                        <div id="accordion1">
+                          <div class="card-header">
+                            <div class="card-link" data-toggle="collapse" href="#collapse1">
+                              <img src="./img/cgv-cinema-list.jpg" alt="">
+                              <div class="cinema-detail">                               
+                                <p><span class="cinema-brand">CGV</span> - Crescent Mall </p>
+                                <p class="cinema-address">
+                                  Lầu 5, Crescent Mall Đại lộ Nguyễn Văn Linh, Phú Mỹ Hưng Quận 7 TP. Hồ Chí Minh
+
+                                </p>
+                                <a> [Bản đồ]</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="collapse1" class="collapse show" data-parent="#accordion1">
+                            <div class="card-body">
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <div class="card-header">
+                            <div class="card-link" data-toggle="collapse" href="#collapse2">
+                              <img src="./img/cgv-cinema-list.jpg" alt="">
+                              <div class="cinema-detail">
+                                <p><span class="cinema-brand">CGV</span> - Liberty Citypoint </p>
+                                <p class="cinema-address">
+                                  Tầng M-1, Khách sạn Liberty Saigon Citypoint, 59-61 Pasteur, Quận 1, Thành phố, Hồ Chí Minh
+                                </p><a href="" class="address-map"> [Bản đồ]</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="collapse2" class="collapse" data-parent="#accordion1">
+                            <div class="card-body">
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-header">
+                            <div class="card-link" data-toggle="collapse" href="#collapse3">
+                              <img src="./img/cgv-cinema-list.jpg" alt="">
+                              <div class="cinema-detail">
+                                <p><span class="cinema-brand">CGV</span> - Vivo City </p>
+                                <p class="cinema-address">
+                                  Lầu 5, Trung tâm thương mại SC VivoCity - 1058 Nguyễn Văn Linh, Quận 7, TP. Hồ Chí Minh
+                                </p><a href="" class="address-map"> [Bản đồ]</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="collapse3" class="collapse" data-parent="#accordion1">
+                            <div class="card-body">
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                              <div class="section-1">
+                                <p>2D Digital</p>
+                                <button class="btn--chon-gio">
+                                  <span>15:10</span>
+                                  <span>~16:50</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <!-- /accordion  -->
+
+                      </div>
+                      <div id="top12" class="container tab-pane fade">
+                        <p>content top 1.2</p>
+                      </div>
+                      <div id="top13" class="container tab-pane fade">
+                        <p>content top 1.3</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--/horizontal tab -->
+
+                </div>
+
+                <div id="leftbhd" class="container tab-pane fade">
+
+                  <!-- horizontal tab-->
+                  <div class="container">
+                    <div class="">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs tab-pills" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#top21">top 2.1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#top22">top 2.2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#top23">top 2.3</a>
+                        </li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div id="top21" class="container tab-pane active">
+                          <div class="container">
+                            <div class="row">
+                              <p>content top 2.1</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="top22" class="container tab-pane fade">
+                          <p>content top 2.2</p>
+                        </div>
+                        <div id="top23" class="container tab-pane fade">
+                          <p>content top 2.3</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--/horizontal tab -->
+
+                </div>
+                <div id="leftgalaxy" class="container tab-pane fade">
+
+                  <!--horizontal tab-->
+                  <div class="container">
+                    <div class="">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs tab-pills" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#top231">top 3.1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#top32">top 3.2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#top33">top 3.3</a>
+                        </li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div id="top31" class="container tab-pane active"><br>
+                          <div class="container">
+                            <div class="row">
+                              <p>content top 3.1</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="top32" class="container tab-pane fade"><br>
+                          <p>content top 3.2</p>
+                        </div>
+                        <div id="top33" class="container tab-pane fade"><br>
+                          <p>content top 3.3</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--/horizontal tab -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /lịch chiếu table trong tab  -->
+
+        </div>
+
+        <div class="tab-pane fade" id="thongtin">
+          <!-- <div class=""> -->
+            <div class="container-thongtin">
+
+              <div class="col-md-6 col-sm-12 ">
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Ngày công chiếu</p>
+                  <p class="content-info">07.08.2020</p>
+                </div>
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Đạo diễn</p>
+                  <p class="content-info">Anthony Russo, Joe Russo</p>
+                </div>
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Diễn viên</p>
+                  <p class="content-info">Tom Holland, Anthony Mackie, Chadwick Boseman, Sebastian Stan, Paul Rudd, Emily VanCamp, Jeremy Renner, Paul Bettany,
+                  Robert Downey Jr., Chris Evans, Scarlett Johansson, Elizabeth Olsen</p>
+                </div>
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Thể Loại</p>
+                  <p class="content-info">Hành Động, Phiêu Lưu</p>
+                </div>
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Định dạng</p>
+                  <p class="content-info">IMAX/3D/2D</p>
+                </div>
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Quốc Gia SX</p>
+                  <p class="content-info">Mỹ</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="row mb-3 px-3 py-3 text-white">
+                  <p class="content-title">Nội dung</p>
+                  <p class="content-info-full">Captain America: Civil War là câu chuyện theo sau sự kiện Avengers: Age Of Ultron, các liên minh chính phủ trên toàn thế
+                  giới thông qua một hiệp ước được thiết lập để điều chỉnh hoạt động của tất cả siêu anh hùng. Điều này gây ra sự phân cực
+                  trong nội bộ nhóm Avengers, tạo nên hai phe gồm Iron Man và Captain America, gây ra một trận chiến sử thi giữa những
+                  người đồng đội.
+                  
+                  NPH: CGV</p>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
+        </div>
+        <div class="tab-pane fade" id="danhgia">
+          <div class="container-danhgia">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="input-review">
+                  <span class="img-user">
+                    <img src="./img/user-avatar.png" alt="">
+                  </span>
+                  <span class="input-user">
+                    <input type="text" placeholder="Bạn nghĩ gì về phim này?">
+                  </span>
+                  <span class="star-user">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="list-comment">
+                  <div class="user-comment">
+                    <div class="user-icon">
+                      <img src="/." alt="">
+                    </div>
+                    <div class="user-name"></div>
+                    <div class="info-star"></div>
+                  </div>
+                  <div class="list-reply"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- /detail movie  -->
+
+  <!-- partners -->
+  <div class="partner">
+    <div class="partner-wrapper">
+      <div class="row">
+        <div class="col-sm-4">
+          <p class="partner-title hideMobile">TIX</p>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 hideMobile">
+              <a href="">FQA</a><br>
+              <a href="">Brand Guidelines</a>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center mb-3">
+              <a href="">Thỏa thuận sử dụng</a>
+              <a href="">Chính sách bảo mật</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 hideMobile">
+          <p class="partner-title">ĐỐI TÁC</p>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+          <div class="row col-sm-12 col-xs-12 list-partner">
+            <a href=""><img src="./img/cgv.png" alt=""></a>
+            <a href=""><img src="./img/bhd.png" alt=""></a>
+            <a href=""><img src="./img/galaxycine.png" alt=""></a>
+            <a href=""><img src="./img/cinestar.png" alt=""></a>
+            <a href=""><img src="./img/404b8c4b80d77732e7426cdb7e24be20.png" alt=""></a>
+          </div>
+        </div>
+        <div class="col-sm-4 ">
+          <div class="row">
+            <div class="col-sm-6 link-store hideMobile">
+              <p class="partner-title">MOBILE APP</p>
+              <a href=""><img src="./img/apple-logo.png" alt=""></a>
+              <a href=""><img src="./img/android-logo.png" alt=""></a>
+            </div>
+            <div class="col-md-6 col-sm-12 link-social mb-3">
+              <p class="partner-title hideMobile">SOCIAL</p>
+              <a href=""><img src="./img/facebook-logo.png" alt=""></a>
+              <a href=""><img src="./img/logo-zalo.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /partners -->
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="">
+      <div class="container-footer">
+        <div class=" footer-left">
+          <img src="./img/zion-logo.jpg" alt="">
+        </div>
+        <div class=" footer-middle">
+          <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span>
+          <span>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</span>
+          <span>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</span>
+          <span>đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố Hồ Chí
+            Minh
+            cấp.</span>
+          <span>Số Điện Thoại (Hotline): 1900 545 436</span>
+          <span>Email: <a href="mailto:support@tix.vn">support@tix.vn</a></span>
+        </div>
+        <div class=" footer-right">
+          <img src="./img/bo-cong-thuong.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer  -->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+
+</body>
+
+</html>
