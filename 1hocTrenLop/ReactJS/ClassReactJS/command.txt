@@ -53,3 +53,14 @@ state chỉ có trong component class (rcc). còn component function (rfc) thì 
 props có trong cả rcc và rfc
 
 2. Nguồn dữ liệu trong react nên tập trung 1 nơi, 1 chỗ ở component cha tổng, cha lớn nhất
+
+3. Sử dụng css giống như là một module. đặt tên file css có từ module ví dụ: header.module.css
+sau đó import vào thì phải đặt tên class và dùng như một object ví dụ: import [ten_class] './header.module.css'
+- khi sử dụng thì phải gọi ra theo kiểu object. ví dụ ten_class.logo
+4. style trong react thì phải dùng như một object ví dụ
+style = {{
+background-color:'red',
+display:'none'
+}}
+
+-- DÙNG chuỗi giá trị bằng cách bọc trong dấu nháy.
